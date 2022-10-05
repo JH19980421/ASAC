@@ -1,0 +1,96 @@
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    z-index: 800;
+}
+.header .Mainbar {
+    position: relative;
+    width: 87.72%;
+    max-width: 1060px;
+    margin: 0 auto;
+    height: 50px;
+    
+}
+
+.header .Mainbar .MainbarSub {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.header .Mainbar .MainbarSub .Lside {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.header .Mainbar .MainbarSub .Lside .button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;   
+}
+.header .Mainbar .MainbarSub .Lside .Logo{
+    display: block;
+}
+
+.header .Mainbar .MainbarSub .Lside .Logo .i{
+    display: block;
+}
+
+
+.header .Mainbar .MainbarSub .Menu {
+    height: inherit;
+    text-align: center;
+    display: flex;
+    margin: 0;
+}
+
+.header .Mainbar .MainbarSub .Menu ul {
+	width:100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .Mainbar .MainbarSub .Menu ul > li {
+	position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 15px;
+    display: inline-block;
+}
+
+
+.header .Mainbar .MainbarSub .Search {
+    height: 100%;
+    padding: 10px 0;
+
+}
