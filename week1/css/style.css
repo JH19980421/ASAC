@@ -20,8 +20,6 @@ header {
 
     flex-grow: 1;
 
-    border-bottom: 1px solid lightgray;
-
     font-size: 14px;
 
     margin: 4px 400px;
@@ -40,7 +38,7 @@ img {
 }
 img.menu {
     width: 18px;
-    height: 18px;
+    height: 19px;
 }
 img.logo {
     width: 75px;
@@ -88,6 +86,9 @@ img.sns {
 
 .container {
     text-align: center;
+
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 footer {
@@ -101,7 +102,6 @@ footer {
 
     width: 100%;
 
-    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 
     padding: 15px 0;
