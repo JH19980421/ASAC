@@ -2,70 +2,87 @@ a {
     position: relative;
     text-decoration: none;
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 20px;
     font-weight: 600;
     display: inline-block;
     color: rgb(51, 51, 51);
 }
 
+ul {
+
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+li {
+    display: inline-block;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 body {
+    padding-top: 50px;
     margin: 0;
-    font-family: Pretendard,Pretendard JP,Pretendard Std,-apple-system,system-ui,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,Apple SD Gothic Neo,Nanum Gothic,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif;
+    font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     background-color: #fff;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
-    
+    height: 50px;
+    align-items: center;
+
+
 
 }
 
 header .mainbar {
-    max-height: 50px;
+    width: 87.72%;;
+    max-width: 1060px;
     display: flex;
     align-items: center;
     margin: auto;
+    justify-content: space-between;
+
 
 }
-
-header .mainbar ul {
-    list-style: none;
-}
-
-header .mainbar li {
-    float: left;
-}
-
 
 header .mainbar .left {
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
 header .mainbar img.bar {
-    height: 18px;
+    height: 14px;
 }
 
 header .mainbar img.logo {
-    height: 18px;
+    height: 17px;
 }
 
 
 header .mainbar .center {
-    display: flex;
+    display: flex;justify-content: space-evenly;
 }
 
 header .mainbar .center a {
-    padding: 15px;
+    padding: 12px;
 }
 
 
 header .mainbar .right {
     display: flex;
-    line-height: 50px;
 }
 
 header .mainbar .right li {
@@ -77,24 +94,125 @@ header .mainbar .right li {
     width: 2px;
     height: 10px;
     background-color: rgb(225, 226, 227);
-    margin: 22px;
+    /* margin: 22px; */
 }
 
 .dashboardButton {
     font-size: 13px;
     color: #666;
-height: 30px;
-line-height: 30px;
+    height: 30px;
+    line-height: 30px;
     border: 1px solid #e1e2e3;
     border-radius: 15px;
     padding: 0 10px;
     font-weight: 400;
 }
 
-.main{
+.main {
+    height: 1010px;
     border-bottom: 1px solid #ececec;
 }
 
-footer{
+footer {
+    padding: 18px 0 65px;
+    display: block;
+    text-align: center;
+}
+
+.footertop {
+    
+    margin: 0 auto 18px;
+    max-width: 1060px;
+    width: 90%;
+    display: flex;
+justify-content: space-between;
+}
+
+
+.footertop .muenulink {
+}
+
+.footertop .muenulink li{
+   margin-right: 30px;
+}
+
+
+.footertop .muenulink img.logo {
+    vertical-align: middle;
+}
+
+.footertop .sociallink {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footerbottom {
+    margin: 0 auto 18px;
+    padding-top: 25px;
+    max-width: 1060px;
+    width: 90%;
+    display: flex;
+justify-content: space-between;
+    border-top: 1px solid #ececec;
+}
+.footerbottom .adress{
+    text-align: left;
+}
+
+.footerbottom .language{
+    position: relative;
+    width: 250px;
+    height: 36px;
+    float: left;
+}
+
+.footerbottom .language .arrow{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #717171;
+}
+
+.footerbottom .language select{
+    width: 100%;
+    height: 40px;
+    background: #f2f4f7;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 2.1;
+    color: #717171;
+    padding: 0 45px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 500;
+    
+}
+
+.footerbottom .language img{
+    position: absolute;
+    left: 15px;
+    top: 55%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 24px;
+    height: 17px;
+    z-index: 1;
+}
+
+p{
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6666666667em;
+    color: #767676;
 
 }
