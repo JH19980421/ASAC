@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>자판기</title>
+        <link rel="stylesheet" href="신유라_910926_문제2.css">
+    </head>
+    <body>
+        <div class="vendingMachineContainer">
+            <div class="menu item">
+                <div class="menuName">
+                    <div class="menuName" id="cider">사이다</div>
+                    <div class="menuName" id="cola">콜라</div>
+                    <div class="menuName" id="vitamin">비타민 음료</div>
+                </div>
+                <div class="menuPrice">
+                    <div class="menuPrice" id="ciderPrice">500원</div>
+                    <div class="menuPrice" id="colaPrice">1000원</div>
+                    <div class="menuPrice" id="vitaminPrice">300원</div>
+                </div>
+            </div>
+            <div class="coinButton item">
+                <input type="button" class="insertCoin" id="insert100" value="100" />
+                <input type="button" class="insertCoin" id="insert500" value="500" />
+                <input type="button" class="insertCoin" id="insert1000" value="1000" />
+            </div>
+            <div class="result" id="resultView">
+                <input type="button" id="resultButton" value="결과출력" />
+                <div id="resultDisplay">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="신유라_910926_문제2.js"></script>
+    </body>
+</html>
