@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원티드 - 나다운 일의 시작</title>
+
+    <link rel="shortcut icon" href="https://static.wanted.co.kr/favicon/favicon.ico">
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <link rel="stylesheet" href="./css/recruiting.css"/>
+</head>
+<body>
+    <header>
+        <img class="menu", src="./assets/images/menu.png" alt="menu"/>
+        <a href="https://www.wanted.co.kr/">
+            <img class="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted"/>
+        </a>
+        
+        <ul class="category">
+            <li><a href="#">채용</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">직군별 연봉</a></li>
+            <li><a href="#">이력서</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">프리랜서</a></li>
+            <li><a href="#">AI 합격예측</a></li>
+        </ul>
+
+        <div class="header-right">
+            <a href="/">
+                <img class="search" src="./assets/images/search.png" alt="search"/>
+            </a>
+            <a class="login" href="/">회원가입/로그인</a>
+            <p class="divider-column"></p>
+    
+            <div class="organization">기업 서비스</div>            
+        </div>        
+    </header>
+
+    <div class="job-group-container">
+        <div class="job-selector">
+            <p class="bold">개발</p>
+            <button><img class="job-expand" src="./assets/images/chevron-down.png" alt="down"/></button>
+        </div>
+
+        <div class="divider-column big"></div>
+
+        <div class="job-selector detail">
+            <p>개발 전체</p>            
+            <button><img class="job-expand" src="./assets/images/chevron-down.png" alt="down"/></button>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <div class="filter-left">
+            <div class="region">
+                <p>지역</p>
+                <p>한국</p>
+            </div>
+            <div class="years">
+                <p>경력</p>
+                <p>전체</p>
+                <img class="filter-expand" src="./assets/images/arrow-down.png" alt="down"/>
+            </div>
+            <div class="stack">
+                <p>기술스택</p>
+                <img class="filter-expand" src="./assets/images/arrow-down.png" alt="down"/>
+            </div>
+        </div>
+        <div class="filter-right">
+            <div class="order">
+                <p>응답률순</p>
+                <img class="filter-expand" src="./assets/images/arrow-down.png" alt="down"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="keywords-container">
+        <div class="keywords">
+            <button id="money">연봉이 최고의 복지 💰</button>
+            <button id="home">재택근무 🏠</button>
+            <button id="money">연봉이 최고의 복지 💰</button>
+            <button id="home">재택근무 🏠</button>
+            <button id="money">연봉이 최고의 복지 💰</button>
+            <button id="home">재택근무 🏠</button>
+            <button id="money">연봉이 최고의 복지 💰</button>
+            <button id="home">재택근무 🏠</button>
+        </div>
+        <div class="etc-container">
+            <button><img src="./assets/images/chevron-right.png" alt="right"/></button>
+        </div>
+    </div>
+
+    <div class="divider-horizontal"></div>
+
+    <div class="bookmark-container">
+        <img id="bookmark" src="./assets/images/bookmark.png" alt="bookmark"/>
+        <p class="bookmark-text">북마크 모아보기 ></p>
+    </div>
+
+    <div class="recruiting-top">
+        <h2>적극 채용중인 회사</h2>
+
+        <div class="header-card">
+            <div class="header-card-item">
+                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F7111%2Fydhlckrrli3dyd3i__400_400.jpg&w=400&q=75" alt="image"/>
+                <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e2e8ebd6.jpg&w=100&q=75" alt="image"/>
+                <p class="header-card-title">세컨신드롬</p>
+                <p class="header-card-position">15개 포지션</p>
+            </div>
+            <div class="header-card-item">
+                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F7111%2Fydhlckrrli3dyd3i__400_400.jpg&w=400&q=75" alt="image"/>
+                <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e2e8ebd6.jpg&w=100&q=75" alt="image"/>
+                <p class="header-card-title">세컨신드롬</p>
+                <p class="header-card-position">15개 포지션</p>
+            </div>
+            <div class="header-card-item">
+                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F7111%2Fydhlckrrli3dyd3i__400_400.jpg&w=400&q=75" alt="image"/>
+                <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e2e8ebd6.jpg&w=100&q=75" alt="image"/>
+                <p class="header-card-title">세컨신드롬</p>
+                <p class="header-card-position">15개 포지션</p>
+            </div>
+            <div class="header-card-item">
+                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F7111%2Fydhlckrrli3dyd3i__400_400.jpg&w=400&q=75" alt="image"/>
+                <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e2e8ebd6.jpg&w=100&q=75" alt="image"/>
+                <p class="header-card-title">세컨신드롬</p>
+                <p class="header-card-position">15개 포지션</p>
+            </div>
+            <div class="header-card-item">
+                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F7111%2Fydhlckrrli3dyd3i__400_400.jpg&w=400&q=75" alt="image">
+                <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e2e8ebd6.jpg&w=100&q=75" alt="image"/>
+                <p class="header-card-title">세컨신드롬</p>
+                <p class="header-card-position">15개 포지션</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+        <div class="card-item">
+            <img id="bookmark-outline" src="./assets/images/bookmark-outline.png" alt="bookmark">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31425%2Fgcp0hrnnclajprnk__400_400.jpg&w=400&q=75" alt="image"/>
+            <p class="card-title">JAVA 개발자</p>
+            <p>서치파이</p>
+            <div class="card-badge">응답률 매우 높음</div>
+            <p class="card-region">서울 / 한국</p>
+            <p>채용보상금 1,000,000원</p>
+        </div>
+    </div>
+
+</body>
+</html>

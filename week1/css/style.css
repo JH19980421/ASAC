@@ -15,7 +15,7 @@ header {
 
     font-size: 14px;
 
-    margin: 4px 400px;
+    margin: 4px 200px;
 }
 
 .header-right {
@@ -82,7 +82,7 @@ img.sns {
 .container {
     text-align: center;
 
-    margin: 4px 400px;
+    margin: 4px 200px;
 
     border-bottom: 1px solid lightgray;
 }
@@ -154,7 +154,8 @@ img.sns {
     display: flex;
     align-items: center;
 
-    margin: 10px 400px;
+    width: 100%;
+    margin: 10px 200px;
 }
 
 .keywords button {
@@ -320,7 +321,7 @@ img.sns {
     align-items: center;
     justify-content: center;
 
-    margin: 0 400px;
+    margin: 0 200px;
     margin-bottom: 80px;
 }
 .marketing-button {
@@ -343,7 +344,7 @@ img.sns {
 }
 
 .event {
-    margin: 0 400px;
+    margin: 0 200px;
 }
 .container-event {
     display: grid;
@@ -395,8 +396,8 @@ img.sns {
 
     margin-bottom: 90px;
 
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 .subscription-container p {
     text-align: left;
@@ -436,7 +437,7 @@ img.sns {
     justify-content: center;
     justify-content: space-evenly;
 
-    margin: 40px 400px 70px 400px;
+    margin: 40px 200px 70px 200px;
 
     border: 0.5px solid lightgray;
     border-radius: 5px;
@@ -458,7 +459,7 @@ img.sns {
 }
 
 footer {
-    margin: 4px 400px;
+    margin: 4px 200px;
 }
 
 .footer-top {
