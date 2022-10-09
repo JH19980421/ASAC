@@ -1,3 +1,19 @@
+
+h1{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 a {
     position: relative;
     text-decoration: none;
@@ -32,6 +48,7 @@ body {
 }
 
 header {
+    z-index: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +58,7 @@ header {
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     height: 50px;
     align-items: center;
-
+z-index: 999;
 
 
 }
@@ -109,9 +126,605 @@ header .mainbar .right li {
 }
 
 .main {
-    height: 1010px;
+    display: block;
+    margin:0 auto;
+    text-align: center;
+    padding-top: 25px;
     border-bottom: 1px solid #ececec;
 }
+
+.main .section {
+    width: 1060px;
+   display: inline-block;
+   padding : 60px 0;
+}
+
+.main .topbanner{
+    width: 100%;
+    height: 300px
+}
+
+
+.main .section .career{
+  margin-bottom:60px;
+}
+
+.main .section .career .title{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main .section .career .title h2{ 
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: 700;
+    color: #333;
+}
+.main .section .career .title button{ 
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.main .section .career .scroll_button{ 
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main .section .career .scroll_button button{  
+    border: 1px solid lightgray;
+    display: flex;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #888;
+    height: 40px;
+    border-radius: 15px;
+    background-color: white;
+
+}
+
+.main .section .career .scroll_button .left {
+    display: flex;
+    gap: 5px;
+}
+
+.main .section .career .scroll_button .left .arrow {
+    padding: 10px 12px;
+    border-radius: 100%;
+}
+
+
+.main .section .career .scroll_button .right {
+    display: flex;
+
+}
+
+.main .section .career .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: left;
+}
+
+.main .section .career .list li{
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    margin: 0 10px 50px;
+
+}
+
+.main .section .career .list h1, p{
+    display: -webkit-box;
+    /* 라인수 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+/* 넓이가 넘어가면 보이지않게처리 */
+    overflow: hidden;
+ /* 생략부호 표시 */
+    text-overflow: ellipsis; 
+
+}
+.main .section .career .list img {
+    width: 100%;
+    height: 130px;
+    border-radius: 4px;
+}
+
+.main .section .career .list h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333;
+}
+.main .section .career .list .writer p {
+    display: flex; 
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6666666667em;
+    color: #767676;
+}
+
+.main .section .career .list p img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ececec;
+}
+
+.main .section .career .morebutton button {
+    height: 50px;
+    width: 345px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #fff;
+
+    border: 1px solid #e1e2e3;
+}
+
+.main .section .subsection{
+    display: block;
+    max-width: 1060px;
+    padding-top: 60px;
+
+}
+.main .section .subsection .titleline{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.main .section .subsection .titleline .title{
+    margin: auto
+}
+.main .section .subsection .titleline .title h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+.main .section .subsection .titleline .title p{
+    margin: 5px 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+    vertical-align: middle;
+    color: #767676!important;
+}
+
+
+.main .section .subsection .titleline button{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e1e2e3;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.main .section .subsection .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: left;
+}
+
+.main .section .subsection .list li{
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    margin: 30px 10px 50px;
+}
+
+
+.main .section .subsection .list img {
+    width: 100%;
+    height: 130px;
+    border-radius: 4px;
+}
+
+.main .section .subsection .list h1 {
+    font-style: normal;
+    font-weight: 700;
+    color: #333;
+    margin-top: 17px;
+    font-size: 16px;
+}
+.main .section .subsection .list h2{
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.main .section .subsection .list p{
+    float: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.main .section .subsection .list .writer p {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.main .section .subsection .list2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: left;
+}
+
+.main .section .subsection .list2 button{
+    margin-top: 8px;
+    color: #a149e4;
+    border-color: #a149e4;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 6px;
+}
+
+.main .section .subsection .list2 li{
+    display: block;
+   
+    width: calc(50% - 20px);
+    margin: 10px 10px 50px;
+}
+.main .section .subsection .list2 img {
+    width: 100%;
+    height: 273px;
+    border-radius: 4px;
+}
+
+.main .section .subsection .list2 h1 {
+    font-style: normal;
+    font-weight: 700;
+    color: #333;
+    margin-top: 17px;
+    font-size: 16px;
+    color: #333;
+}
+.main .section .subsection .list2  p {
+    font-size: 13px;
+    margin-top: 1px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.main .section .subsection .list2 .logocontain {
+    display: flex;
+    margin-top: 8px;
+
+}
+
+.main .section .subsection .list2 .logocontain img{
+    display: flex;
+    width: 32px;
+    margin-right: 8px;
+    margin-top: 8px;
+    height: 32px;
+
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+
+
+
+
+.main .section .subsection .list2 .card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 17px;
+}
+
+
+
+.main .section .subsection .list2 .card .left{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.main .section .subsection .list2 .card h1{
+ margin: 0;
+}
+
+.main .section .subsection .list2 .card .left .logo{
+    width: 42px;
+    height: 42px;
+    background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.b45e244f.jpg&w=42&q=100);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
+}
+.main .section .subsection .list2 .card .left .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.main .section .subsection .list2 .card .right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.main .section .subsection .list2 .card .right button{ 
+    height: 42px;
+    margin: 0;
+    color: #36f;
+    background-color: #fff;
+    border: 1px solid #e1e2e3;
+    font-size: 15px;
+    padding: 0px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+
+
+
+.main .section .linebanner .textbox{
+    width: 1060px;
+    background-image: linear-gradient(90deg,#01a9fe -12%,#2f5fef 37%,#046afe 72%,#00d2dd 110%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 38.5px;
+
+
+} 
+
+
+
+.main .section .event{
+    padding: 50px 0;
+}
+
+.main .subscribe{
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f7;
+    padding: 60px 0;
+    
+}
+.main .subscribe .sub{
+   display: flex;
+   width: 1060px;
+}
+
+.main .subscribe .sub button{
+    width: 260px;
+    margin-top: 25px;
+    color: #fff;
+    background-color: #36f;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: 700;
+ }
+
+ 
+.main .subscribe .sub h1{
+   color:  #333;
+   font-weight: 700;
+   font-size: 27px;
+}
+
+.main .subscribe .sub p{
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+ }
+
+.main .subscribe .sub .left {
+    width: 45%;
+    text-align: left;
+ 
+ }
+ .main .subscribe .sub .right {
+    width: 55%;
+ }
+ .main .subscribe .sub .right  img{
+    height: 170px;
+ }
+
+.main .section .info{
+    padding: 60px 0 80px;
+}
+
+.main .section .info .title{
+    margin-bottom: 30px;
+}
+
+.main .section .info .title h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+
+}
+
+.main .section .info .gridcontain{
+    display: flex;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    color: #333;
+}
+
+
+.main .section .info .gridcontain .grid{
+    padding: 18px 0 0;
+    border-right: 1px solid #ececec;
+    width: 25%;
+}
+
+.main .section .info .gridcontain h1{
+    margin: 10px;
+    font-size: 16px;
+    color: #333;
+ }
+
+.main .section .info .gridcontain .grid img{ 
+    width: 32px;
+}
+
+.main .section .info .gridcontain .grid h1 img{
+   width: 12px;
+ }
+
+.main .section .divider{
+    /* position: relative; */
+    max-width: 1060px;
+    height: 1px;
+    background-color: #ececec;
+}
+
+
+.main .position{
+    display: block;
+    justify-content: center;
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    margin-bottom: 30px;
+    background: #f4f8fb;
+    background-image: url(https://wanted-dev.static.wanted.co.kr/banner/Jobsfeed_ai_banner.png);  
+}
+
+.main .position  img{
+    width: 114px;
+
+    vertical-align: middle;
+ }
+
+
+.main .position  button{
+    width: 260px;
+    margin-top: 25px;
+    color: #fff;
+    background-color: #36f;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: 700;
+ }
+
+
+.main .position h1{
+   color:  #111;
+   font-size: 22px;
+   font-weight: 700;
+   margin-top: 10px;
+}
+
+.main .position p{
+    float: none;
+    color: #555;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+
+.main .mycareer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 155px;
+    margin-bottom: 20px;
+   background: linear-gradient(90deg,#ddebff -.28%,#b7d8ff);
+}
+.main .mycareer img{
+    width: 230px;
+ }
+
+.main .mycareer .sub{
+    width: 1060px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main .mycareer .sub .title{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .mycareer .sub .title button{
+    align-items: center;
+    justify-content: center;
+    width: 119px;
+    border-radius: 25px;
+    background-color: #5071dc;
+    color: #fff;
+    font-weight: 700;
+    line-height: 16px;
+    margin-top: 10px;
+    height: 36px;
+    font-size: 14px;
+    border: none;
+
+}
+
+
+.main .mycareer .sub .title h1 {
+    font-size: 24px;
+    line-height: 29px;
+    color: #5071dc;
+    font-weight: 700;
+}
+
+.main .section .profile{
+    
+    display: flex;
+    align-items: center;
+
+        font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+    border-left: none;
+
+}
+
+.main .section .profile li:first-child{
+    background-color: #f2f5ff;
+    width: 50%;
+    border-top-left-radius: 38.5px;
+    border-bottom-left-radius: 38.5px;
+}
+
+.main .section .profile li:last-child{
+    background-color: #f2fbf5;
+    width: 50%;
+    border-top-right-radius: 38.5px;
+    border-bottom-right-radius: 38.5px;
+}
+
+.main .section .profile button{
+    margin: 20px;
+    align-items: center;
+    background-color:transparent;
+  border: none;
+}
+
 
 footer {
     padding: 18px 0 65px;
@@ -216,3 +829,6 @@ p{
     color: #767676;
 
 }
+
+
+
