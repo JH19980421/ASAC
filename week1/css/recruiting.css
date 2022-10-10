@@ -26,7 +26,7 @@ header {
 
     font-size: 14px;
 
-    margin: 4px 300px;
+    margin: 4px 350px;
 }
 
 .header-right {
@@ -97,7 +97,7 @@ img.search {
     display: flex;
     align-items: center;
 
-    margin: 30px 300px;
+    margin: 30px 350px;
 }
 
 .job-selector {
@@ -123,7 +123,7 @@ img.search {
 }
 
 .filter-container {
-    margin: 0 300px;
+    margin: 0 350px;
     padding-bottom: 25px;
 
     display: flex;
@@ -186,9 +186,9 @@ img.search {
 .keywords-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    width: 100%;
-    margin: 25px 300px;
+    margin: 10px 350px;
 }
 
 .keywords {
@@ -240,7 +240,7 @@ img.search {
     display: flex;
     align-items: center;
 
-    margin: 50px 300px 30px 300px;
+    margin: 50px 350px 30px 350px;
 }
 
 .bookmark-text{
@@ -252,7 +252,7 @@ img.search {
 }
 
 .recruiting-top {
-    margin: 0 300px;
+    margin: 0 350px;
 }
 
 .header-card {
@@ -302,7 +302,7 @@ img.search {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 15px;
 
-    margin: 50px 300px;
+    margin: 50px 350px;
 }
 
 .card-title {

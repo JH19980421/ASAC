@@ -1,88 +1,25 @@
-const slideList = document.querySelector('.slide');
-const slideItems = document.querySelectorAll('.slide-item');
-const slideButtons = document.querySelector('.slide-buttons');
-const slidePrevButton = document.querySelector('.prev-button');
-const slideNextButton = document.querySelector('.next-button');
+const keywordsContainer = document.querySelector('.keywords-detail');
+const seeMore = document.querySelector('.see-more');
 
-const slideItemWidth = slideItems[0].clientWidth; //슬라이드 아이템 사진 크기
-const slideItemMargin = 15; //슬라이드 아이템 마진 값
-
-const slideCount = slideList.childElementCount;
-const slideLastIndex = slideList.childElementCount - 1;
-let currentSlide = 0;
-
-
-
-/** Animation */
-const setTransition = (val) => {
-    slideList.style.transition = val;
-}
-
-/** Translate */
-const setTranslate = (idx) => {
-    console.log('idx', idx);
-    slideList.style.transform = `translate(-${(idx+1)*slideItemWidth}px, 0)`;
-}
-const resetTranslate = () => {
-    console.log('reset');
-    slideList.style.transform = `translate(-${slideItemWidth}px, 0)`;
-}
-
-
-const pasteFirstAndLastElement = () => {
-    slideList.prepend(slideItems[slideLastIndex].cloneNode(true));
-    console.log('a');
-    slideList.append(slideItems[0].cloneNode(true));
-    console.log(slideItems.length);
-    resetTranslate();
-}
-
-
-
-//버튼 액션 핸들링 함수들
-slidePrevButton.addEventListener('click', () => {
-    currentSlide -= 1;
-    setTransition('transform 0.3s linear');
-    setTranslate(currentSlide);
-
-    //if it was the first slide item
-    if(currentSlide < 0) {
-        console.log('처음입니다!');
-        currentSlide = slideLastIndex;
-
-        setTimeout(() => {
-            setTransition('');
-            setTranslate(currentSlide);
-        }, 350);
-
-    }
-
+seeMore.addEventListener('click', () => {
+    createKeywordCards();
 });
 
-slideNextButton.addEventListener('click', () => {
-    currentSlide += 1;
-    setTransition('transform 0.3s linear');
-    setTranslate(currentSlide);
+createKeywordCards = () => {
+    for(let i=0; i<4; i++) {
+        const keywordsDiv = document.createElement('div');
+        keywordsDiv.classList.add('keywords-card');
+        keywordsDiv.innerHTML = `<img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F4i7K%2Fimage%2FmQzc3JbqvfgapYM0oJWoSEWvxQo.jpg&w=500&q=75" alt="image"/>
+                                <p class="card-title">나의 롤모델을 통해 성장하기</p>
+                                <p class="card-content">
+                                    Prologue. '사람'을 통해 성장의 목표점 구체화 하기
+                                    성장을 위해 갖추어야 하는 생각 요소들이 무엇이 있을까에 대해 최근 이런저런 고민을 하고 있다. 꾸준히 성장하는 사람들은 어떤 마인드셋을 가지고 사는지에 대한 고민인데, 이런 마인드셋을 크게 3가지로 분류를 해볼 수 있지 않을까 싶다.
+                                </p>
+                                <div class="card-badge">
+                                    <img src="https://image.rocketpunch.com/company/4084/wanted_logo_1519203285.jpg?s=400x400&t=inside" alt="badge"/>
+                                    <p class="badge-name">라인플러스 김유진</p>
+                                </div>`;
 
-    //if it was the last slide item
-    if(currentSlide > slideLastIndex) {
-        console.log('마지막입니다!');
-        currentSlide = 0;
-
-        setTimeout(() => {
-            setTransition('');
-            setTranslate(currentSlide);
-        }, 350);
+        keywordsContainer.appendChild(keywordsDiv);
     }
-
-});
-
-
-
-//화면 첫 렌더링
-const render = () => {
-    console.log('render');
-    pasteFirstAndLastElement();
-    console.log(slideCount);
 }
-render();
