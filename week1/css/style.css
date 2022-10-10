@@ -15,7 +15,7 @@ header {
 
     font-size: 14px;
 
-    margin: 4px 200px;
+    margin: 4px 300px;
 }
 
 .header-right {
@@ -68,6 +68,8 @@ img.sns {
     width: max-content;
 
     margin-left: 20px;
+
+    cursor: pointer;
 }
 
 .organization {
@@ -82,7 +84,7 @@ img.sns {
 .container {
     text-align: center;
 
-    margin: 4px 200px;
+    margin: 4px 300px;
 
     border-bottom: 1px solid lightgray;
 }
@@ -97,12 +99,66 @@ img.sns {
     border-bottom: 1px solid lightgray;
 }
 
-.banner {
+.slide-container {
     margin-bottom: 30px;
     margin-top: 25px;
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 315px;
 }
-.banner img {
+.slide {
+    display: flex;
+
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+}
+.slide li:first-child {
+    margin-left: 18.1vw;
+}
+.slide-item {
+    flex: 0 0 auto;
+    list-style: none;
+}
+.slide-image {
+    /* display: block; */
     border-radius: 5px;
+
+    margin: 0 15px;
+}
+
+.slide-buttons {
+    position: absolute;
+
+    background-color: transparent;
+    color: black;
+    text-align: center;
+
+    top: 50%;
+    width: 100%;
+}
+.slide-buttons button {
+    border: 1px solid #aaa;
+    background-color: transparent;
+    border-radius: 10px;
+
+    height: 50px;
+    width: 30px;
+
+    position: absolute;
+
+    transform: translateY(-20%);
+
+    cursor: pointer;
+}
+.prev-button {
+    left: 5%;
+}
+.next-button {
+    right: 5%;
 }
 
 .subtitle-container {
@@ -155,7 +211,7 @@ img.sns {
     align-items: center;
 
     width: 100%;
-    margin: 10px 200px;
+    margin: 10px 300px;
 }
 
 .keywords button {
@@ -206,7 +262,7 @@ img.sns {
     grid-column-gap: 15px;
 }
 .keywords-card {
-    width: 250px;
+    width: 100%;
 
     margin-bottom: 50px;
 }
@@ -321,7 +377,7 @@ img.sns {
     align-items: center;
     justify-content: center;
 
-    margin: 0 200px;
+    margin: 0 300px;
     margin-bottom: 80px;
 }
 .marketing-button {
@@ -344,7 +400,7 @@ img.sns {
 }
 
 .event {
-    margin: 0 200px;
+    margin: 0 300px;
 }
 .container-event {
     display: grid;
@@ -396,8 +452,8 @@ img.sns {
 
     margin-bottom: 90px;
 
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 .subscription-container p {
     text-align: left;
@@ -437,7 +493,7 @@ img.sns {
     justify-content: center;
     justify-content: space-evenly;
 
-    margin: 40px 200px 70px 200px;
+    margin: 40px 300px 70px 300px;
 
     border: 0.5px solid lightgray;
     border-radius: 5px;
@@ -459,7 +515,7 @@ img.sns {
 }
 
 footer {
-    margin: 4px 200px;
+    margin: 4px 300px;
 }
 
 .footer-top {

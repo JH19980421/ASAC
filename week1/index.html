@@ -12,12 +12,12 @@
 <body>
     <header>
         <img class="menu", src="./assets/images/menu.png" alt="menu"/>
-        <a href="https://www.wanted.co.kr/">
+        <a href="./index.html">
             <img class="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted"/>
         </a>
         
         <ul class="category">
-            <li><a href="#">채용</a></li>
+            <li><a href="./recruiting.html">채용</a></li>
             <li><a href="#">이벤트</a></li>
             <li><a href="#">직군별 연봉</a></li>
             <li><a href="#">이력서</a></li>
@@ -41,8 +41,25 @@
     </header>
 
     <div class="container-top">
-        <div class="banner">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100" alt="banner"/>
+        <div class="slide-container">
+            <ul class="slide">
+                <li class="slide-item"> 
+                    <img class="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100" alt="banner"/>
+                </li>
+                <li class="slide-item">
+                    <img class="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100" alt="banner"/>
+                </li>
+                <li class="slide-item">
+                    <img class="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100" alt="banner"/>
+                </li>
+                <li class="slide-item">
+                    <img class="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100" alt="banner"/>
+                </li>
+            </ul>
+            <div class="slide-buttons">
+                <button class="prev-button">&lang;</button>
+                <button class="next-button">&rang;</button>
+            </div>
         </div>
 
         <div id="top" class="subtitle-container">
@@ -357,5 +374,7 @@
 
         </div>
     </footer>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
