@@ -1,4 +1,5 @@
 body{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,13 +15,15 @@ body{
 .header{
     display: flex;
     flex-direction: row;
-    margin:0 auto;
+    margin: 0;
     padding: 0;
-    width: 68.7%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    border: 3px solid orange;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    border-bottom: 1px solid lightgray;
 
 }
 
@@ -29,9 +32,11 @@ body{
     flex-direction: row;
     align-items: center;
     height:50px;
+    width: 69.5%;
     margin: 0;
+    position: relative;
+    left: 5px;
     text-align: center;
-    flex-grow: 1;
     padding: 0;
 }
 
@@ -137,11 +142,6 @@ a{
    
     width: 92px;
 }
-
-
-
-
-
 
 
 
