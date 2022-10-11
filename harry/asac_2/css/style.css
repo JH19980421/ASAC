@@ -1,0 +1,63 @@
+.container {
+    width: 350px;
+    height: 700px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item-content {
+    width: 70px;
+    height: 70px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    font-size: 0.7rem;
+    line-height: 70px;
+}
+
+.label {
+    font-size: 0.85rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 40px;
+}
+
+.coin-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 45px;
+}
+
+.result-button {
+    margin-top: 150px;
+    float: right;
+    margin-right: 30px;
+}
+
+.result-container {
+    width: 80%;
+    height: 100px;
+    margin: 300px 30px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.result-content {
+    font-size: 0.9rem;
+}
