@@ -11,11 +11,19 @@ header {
     display: flex;
     align-items: center;
 
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+
+    z-index: 1;
+
     flex-grow: 1;
 
     font-size: 14px;
 
-    margin: 4px 200px;
+    padding: 4px 225px;
 }
 
 .header-right {
@@ -35,6 +43,8 @@ img {
 img.menu {
     width: 18px;
     height: 19px;
+
+    cursor: pointer;
 }
 img.logo {
     width: 75px;
@@ -43,6 +53,7 @@ img.logo {
 img.search {
     width: 16px;
     margin-right: 20px;
+    margin-top: 2px;
 }
 img.logo-full {
     width: 115px;
@@ -51,6 +62,33 @@ img.logo-full {
 img.sns {
     width: 21px;
     margin-right: 5px;
+}
+
+.menu-expand {
+    width: 300px;
+    height: 94%;
+
+    position: fixed;
+    left: 14.5%;
+    top: 6%;
+    z-index: 2;
+
+    background-color: white;
+    
+    border-radius: 5px;
+
+    text-align: left;
+
+    overflow: hidden;
+}
+.menu-expand ul {
+    list-style: none;
+
+    padding: 0 10px;
+    line-height: 270%;
+
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .category {
@@ -74,11 +112,12 @@ img.sns {
 
 .new-badge {
     position: absolute;
-    top: 14px;
+    top: 12px;
 
-    font-size: 10.5px;
     font-style: normal;
     color: blue;
+
+    transform: translateX(-12%) scale(0.6);
 }
 
 .organization {
@@ -93,7 +132,7 @@ img.sns {
 .container {
     text-align: center;
 
-    margin: 4px 200px;
+    margin: 4px 225px;
 
     border-bottom: 1px solid lightgray;
 }
@@ -104,13 +143,12 @@ img.sns {
 .container-top {
     text-align: center;
 
-    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
 
 .slide-container {
     margin-bottom: 30px;
-    margin-top: 25px;
+    margin-top: 10px;
 
     position: relative;
     overflow: hidden;
@@ -126,24 +164,52 @@ img.sns {
     transform: translate(0, 0);
 }
 .slide li:first-child {
-    margin-left: 11vw;
+    margin-left: 11.4vw;
 }
 .slide-item {
+    position: relative;
+
     flex: 0 0 auto;
     list-style: none;
 }
 .slide-image {
     border-radius: 5px;
 
-    margin: 0 15px;
+    margin: 0 13px;
+}
+.slide-description {
+    position: absolute;
+    left: 35px;
+    bottom: 25px;
 
-    width: 1000px;
-    /* height: 200px; */
-    object-fit: cover;
+    width: 330px;
+    height: 150px;
+
+    background-color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    text-align: left;
+}
+.slide-description p {
+    padding: 0 20px;
+    margin: 10px 0;
+}
+.slide-description p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+
+    padding-top: 15px;
+}
+.slide-description p:last-child {
+    color: blue;
+
+    cursor: pointer;
 }
 
 .slide-buttons {
-    position: absolute;
+    /* position: absolute; */
 
     background-color: transparent;
     color: black;
@@ -160,17 +226,17 @@ img.sns {
     height: 65px;
     width: 33px;
 
-    position: fixed;
+    position: absolute;
 
-    transform: translateY(-40%);
+    transform: translateY(-300%);
 
     cursor: pointer;
 }
 .prev-button {
-    left: 17%;
+    left: 10%;
 }
 .next-button {
-    right: 17%;
+    right: 10%;
 }
 
 .subtitle-container {
@@ -183,12 +249,12 @@ img.sns {
     width: 28px;
     height: 28px;
     margin-left: 5px;
-    margin-top: 16px;
+    margin-top: 19px;
 }
 .subtitle {
     font-weight: bold;
-    font-size: 20px;
-    letter-spacing: -1px;
+    font-size: 22px;
+    letter-spacing: -0.5px;
     margin-bottom: 4px;
 }
 .subtitle-detail {
@@ -216,17 +282,25 @@ img.sns {
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     margin-top: 40px;
 }
 
 .keywords-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    margin: 10px 200px;
+    margin: 10px 225px;
+
+    position: relative;
+    overflow: hidden;
 }
 
+.keywords {
+    display: flex;
+    width: max-content;
+}
 .keywords button {
     border: 1px solid lightgray;
     border-radius: 40px;
@@ -235,9 +309,11 @@ img.sns {
     color: dimgray;
 
     padding: 10px 20px;
-    margin-right: 3px;
+    margin-right: 8px;
 
     font-size: 14px;
+
+    width: max-content;
 
     cursor: pointer;
 }
@@ -249,33 +325,42 @@ img.sns {
     color: blue;
 }
 
-.etc-container button:first-child {
+.etc-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 1px 10px 8px white !important;
+}
+.etc-container button {
     border: 1px solid lightgray;
+
+    background-color: white;
+    color: dimgray;
+
+    width: 37px;
+    height: 37px;
+}
+.etc-container button:first-child {
     border-radius: 100%;
 
-    background-color: white;
-    color: dimgray;
-
-    width: 40px;
-    height: 40px;
+    margin-right: 5px;
 }
 .etc-container button:last-child {
-    border: 1px solid lightgray;
     border-radius: 5px;
-
-    background-color: white;
-    color: dimgray;
-
-    width: 40px;
-    height: 40px;
-
-    box-shadow: 1px 2px 3px 0.5px whitesmoke;
 }
-.etc-container img {
-    width: 18px;
+.etc-container img{
+    width: 16px;
+    padding-top: 2px;
+    padding-left: 2px;
 }
 #more {
-    width: 20px;
+    width: 18px;
+    padding-right: 2px;
 }
 
 .keywords-detail {
@@ -401,7 +486,7 @@ img.sns {
     align-items: center;
     justify-content: center;
 
-    margin: 0 200px;
+    margin: 0 225px;
     margin-bottom: 80px;
 }
 .marketing-button {
@@ -424,7 +509,7 @@ img.sns {
 }
 
 .event {
-    margin: 0 200px;
+    margin: 0 225px;
 }
 .container-event {
     display: grid;
@@ -471,13 +556,13 @@ img.sns {
     align-items: center;
     justify-content: space-between;
 
-    height: 200px;
+    height: 225px;
     background-color: #f7f7f7;
 
     margin-bottom: 90px;
 
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 225px;
+    padding-right: 225px;
 }
 .subscription-container p {
     text-align: left;
@@ -517,7 +602,7 @@ img.sns {
     justify-content: center;
     justify-content: space-evenly;
 
-    margin: 40px 200px 70px 200px;
+    margin: 40px 225px 70px 225px;
 
     border: 0.5px solid lightgray;
     border-radius: 5px;
@@ -539,7 +624,7 @@ img.sns {
 }
 
 footer {
-    margin: 4px 200px;
+    padding: 4px 225px;
 }
 
 .footer-top {
@@ -602,6 +687,13 @@ footer {
     border: 0.01px solid lightgray;
     width: 0;
     height: 120px;
+}
+.divider-horizontal {
+    width: 100%;
+    
+    border: 0.1px solid lightgray;
+
+    margin: 20px 0;
 }
 
 .text-big {

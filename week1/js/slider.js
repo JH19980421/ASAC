@@ -5,7 +5,7 @@ const slidePrevButton = document.querySelector('.prev-button');
 const slideNextButton = document.querySelector('.next-button');
 
 const slideItemWidth = slideItems[0].clientWidth; //슬라이드 아이템 사진 크기
-const slideItemMargin = 15; //슬라이드 아이템 마진 값
+const slideItemMargin = 13; //슬라이드 아이템 마진 값
 
 const slideCount = slideList.childElementCount;
 const slideLastIndex = slideList.childElementCount - 1;
@@ -46,7 +46,7 @@ slidePrevButton.addEventListener('click', () => {
         setTimeout(() => {
             setTransition('');
             setTranslate(currentSlide);
-        }, 350);
+        }, 300);
     }
 });
 
@@ -62,7 +62,7 @@ slideNextButton.addEventListener('click', () => {
         setTimeout(() => {
             setTransition('');
             setTranslate(currentSlide);
-        }, 350);
+        }, 300);
     }
 
 });
