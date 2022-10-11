@@ -16,10 +16,12 @@ const keywordDivEnd = keywordDivWidth - keywordContainerWidth;
 
 const hideKeywordLeftButton = () => {
     keywordPrevButton.style.visibility = 'hidden';
+    keywordPrevButton.style.display = 'none';
 }
 const showKeywordLeftButton = () => {
     keywordPrevButton.style.zIndex = 3;
     keywordPrevButton.style.visibility = 'visible';
+    keywordPrevButton.style.display = 'block';
 }
 const hideKeywordRightButton = () => {
     keywordNextButton.style.visibility = 'hidden';
@@ -45,7 +47,7 @@ const handleKeywordButtons = (current) => {
 keywordNextButton.addEventListener('click', () => {
     keywordDiv.style.transition = 'transform 0.3s ease-out';
     
-    currentKeywordLeft = Math.min(currentKeywordLeft+250, keywordDivEnd);
+    currentKeywordLeft = Math.min(currentKeywordLeft+350, keywordDivEnd);
     if(currentKeywordLeft === keywordDivEnd) {
         keywordDiv.style.transform = `translate(-${keywordDivEnd+40}px, 0)`;
     } else {
@@ -58,7 +60,7 @@ keywordNextButton.addEventListener('click', () => {
 keywordPrevButton.addEventListener('click', () => {
     keywordDiv.style.transition = 'transform 0.3s ease-out';
     
-    currentKeywordLeft = Math.max(currentKeywordLeft-250, 0);
+    currentKeywordLeft = Math.max(currentKeywordLeft-350, 0);
     if(currentKeywordLeft < 0) {
         keywordDiv.style.transform = `translate(0, 0)`;
     } else {

@@ -28,7 +28,7 @@ header {
     background-color: white;
     border-bottom: 1px solid lightgray;
 
-    z-index: 1;
+    z-index: 3;
 
     flex-grow: 1;
 
@@ -46,6 +46,8 @@ header {
 img.menu {
     width: 18px;
     height: 18px;
+
+    cursor: pointer;
 }
 
 img.logo {
@@ -56,6 +58,33 @@ img.logo {
 img.search {
     width: 16px;
     margin-right: 20px;
+}
+
+.menu-expand {
+    width: 300px;
+    height: 94%;
+
+    position: fixed;
+    left: 14.5%;
+    top: 6%;
+    z-index: 2;
+
+    background-color: white;
+    
+    border-radius: 5px;
+
+    text-align: left;
+
+    overflow: hidden;
+}
+.menu-expand ul {
+    list-style: none;
+
+    padding: 0 10px;
+    line-height: 270%;
+
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .category {
@@ -117,7 +146,7 @@ img.search {
     display: flex;
     align-items: center;
 
-    margin: 30px 225px;
+    margin: 30px 225px 0 225px;
 }
 
 .job-selector {
@@ -140,11 +169,25 @@ img.search {
     margin-left: 10px;
 
     background-color: white;
+
+    cursor: pointer;
+}
+
+.sticky-top {
+    background-color: white;
+
+    position: sticky;
+    top: 45px;
+
+    z-index: 2;
+
+    border-bottom: 1px solid lightgray;
 }
 
 .filter-container {
     margin: 0 225px;
     padding-bottom: 25px;
+    padding-top: 30px;
 
     display: flex;
     align-items: center;
@@ -158,11 +201,11 @@ img.search {
 }
 
 .job-expand {
-    width: 18px;
+    width: 16px;
     height: 22px;
 
     padding-top: 2.5px;
-    padding-right: 5px;
+    padding-right: 6px;
 }
 
 .filter-expand {
@@ -215,6 +258,9 @@ img.search {
 
 .keywords {
     display: flex;
+    margin: 15px 0;
+
+    transform: translateX(-40px);
 }
 
 .keywords button {
@@ -225,7 +271,7 @@ img.search {
     color: dimgray;
 
     padding: 7px 13px;
-    margin-right: 3px;
+    margin-right: 5px;
 
     font-size: 12px;
 
@@ -240,6 +286,14 @@ img.search {
     background-color: rgb(243, 249, 254);
 }
 
+.etc-container {
+    position: absolute;
+    right: 0;
+
+    background-color: white;
+
+    box-shadow: 0 1px 10px 8px white !important;
+}
 .etc-container button {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -263,6 +317,34 @@ img.search {
     margin-right: 5px;
 }
 
+.etc-container-left {
+    visibility: hidden;
+
+    background-color: white;
+
+    border-radius: 0 20px 20px 0;
+
+    box-shadow: 0 1px 10px 8px white !important;
+}
+.etc-container-left button {
+    border: 1px solid lightgray;
+    border-radius: 100%;
+
+    background-color: white;
+    color: dimgray;
+
+    width: 37px;
+    height: 37px;
+    
+    margin-right: 5px;
+
+    cursor: pointer;
+}
+.etc-container-left img {
+    width: 16px;
+    padding-top: 2px;
+}
+
 .divider-horizontal {
     border: 0.5px solid lightgray;
 
@@ -283,6 +365,7 @@ img.search {
 }
 #bookmark {
     height: 17px;
+    margin-right: 5px;
 }
 
 .recruiting-top {
@@ -373,4 +456,11 @@ img.search {
 .card-region {
     margin: 10px 0;
     color: #aaa;
+}
+
+.empty-large {
+    height: 100%;
+    width: 100px;
+
+    background-color: transparent;
 }
