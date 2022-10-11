@@ -15,7 +15,7 @@ header {
 
     font-size: 14px;
 
-    margin: 4px 350px;
+    margin: 4px 200px;
 }
 
 .header-right {
@@ -93,7 +93,7 @@ img.sns {
 .container {
     text-align: center;
 
-    margin: 4px 350px;
+    margin: 4px 200px;
 
     border-bottom: 1px solid lightgray;
 }
@@ -126,7 +126,7 @@ img.sns {
     transform: translate(0, 0);
 }
 .slide li:first-child {
-    margin-left: 18.1vw;
+    margin-left: 11vw;
 }
 .slide-item {
     flex: 0 0 auto;
@@ -137,8 +137,8 @@ img.sns {
 
     margin: 0 15px;
 
-    width: 1060px;
-    height: 300px;
+    width: 1000px;
+    /* height: 200px; */
     object-fit: cover;
 }
 
@@ -160,7 +160,7 @@ img.sns {
     height: 65px;
     width: 33px;
 
-    position: absolute;
+    position: fixed;
 
     transform: translateY(-40%);
 
@@ -224,7 +224,7 @@ img.sns {
     align-items: center;
     justify-content: space-between;
 
-    margin: 10px 350px;
+    margin: 10px 200px;
 }
 
 .keywords button {
@@ -401,7 +401,7 @@ img.sns {
     align-items: center;
     justify-content: center;
 
-    margin: 0 350px;
+    margin: 0 200px;
     margin-bottom: 80px;
 }
 .marketing-button {
@@ -424,7 +424,7 @@ img.sns {
 }
 
 .event {
-    margin: 0 350px;
+    margin: 0 200px;
 }
 .container-event {
     display: grid;
@@ -471,13 +471,13 @@ img.sns {
     align-items: center;
     justify-content: space-between;
 
-    height: 350px;
+    height: 200px;
     background-color: #f7f7f7;
 
     margin-bottom: 90px;
 
-    padding-left: 350px;
-    padding-right: 350px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 .subscription-container p {
     text-align: left;
@@ -517,7 +517,7 @@ img.sns {
     justify-content: center;
     justify-content: space-evenly;
 
-    margin: 40px 350px 70px 350px;
+    margin: 40px 200px 70px 200px;
 
     border: 0.5px solid lightgray;
     border-radius: 5px;
@@ -539,7 +539,7 @@ img.sns {
 }
 
 footer {
-    margin: 4px 350px;
+    margin: 4px 200px;
 }
 
 .footer-top {
