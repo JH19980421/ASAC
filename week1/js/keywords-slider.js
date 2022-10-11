@@ -15,20 +15,16 @@ const keywordDivEnd = keywordDivWidth - keywordContainerWidth;
 
 
 const hideKeywordLeftButton = () => {
-    // keywordPrevButton.style.display = 'none';
     keywordPrevButton.style.visibility = 'hidden';
 }
 const showKeywordLeftButton = () => {
-    // keywordPrevButton.style.display = 'block';
     keywordPrevButton.style.zIndex = 3;
     keywordPrevButton.style.visibility = 'visible';
 }
 const hideKeywordRightButton = () => {
-    // keywordNextButton.style.display = 'none';
     keywordNextButton.style.visibility = 'hidden';
 }
 const showKeywordRightButton = () => {
-    // keywordNextButton.style.display = 'block !important';
     keywordNextButton.style.zIndex = 3;
 
     keywordNextButton.style.visibility = 'visible';
@@ -71,5 +67,3 @@ keywordPrevButton.addEventListener('click', () => {
 
     handleKeywordButtons(currentKeywordLeft);
 });
-
-console.log(keywordDivEnd);

@@ -12,6 +12,24 @@ const slideLastIndex = slideList.childElementCount - 1;
 let currentSlide = 0;
 
 
+const autoSlide = () => {
+    setInterval(() => {
+        currentSlide += 1;
+        setTransition('transform 0.7s ease-out');
+        setTranslate(currentSlide);
+
+        //if it was the last slide item
+        if(currentSlide > slideLastIndex) {
+            currentSlide = 0;
+
+            setTimeout(() => {
+                setTransition('');
+                setTranslate(currentSlide);
+            }, 300);
+        }
+    }, 4000);
+}
+
 /** Animation */
 const setTransition = (val) => {
     slideList.style.transition = val;
@@ -36,7 +54,7 @@ const pasteFirstAndLastElement = () => {
 //버튼 액션 핸들링 함수들
 slidePrevButton.addEventListener('click', () => {
     currentSlide -= 1;
-    setTransition('transform 0.4s ease-out');
+    setTransition('transform 0.7s ease-out');
     setTranslate(currentSlide);
 
     //if it was the first slide item
@@ -52,7 +70,7 @@ slidePrevButton.addEventListener('click', () => {
 
 slideNextButton.addEventListener('click', () => {
     currentSlide += 1;
-    setTransition('transform 0.4s ease-out');
+    setTransition('transform 0.7s ease-out');
     setTranslate(currentSlide);
 
     //if it was the last slide item
@@ -64,7 +82,6 @@ slideNextButton.addEventListener('click', () => {
             setTranslate(currentSlide);
         }, 300);
     }
-
 });
 
 
@@ -72,5 +89,6 @@ slideNextButton.addEventListener('click', () => {
 //화면 첫 렌더링
 const render = () => {
     pasteFirstAndLastElement();
+    autoSlide();
 }
 render();

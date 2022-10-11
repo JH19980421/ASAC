@@ -299,7 +299,6 @@ img.sns {
 
 .keywords {
     display: flex;
-    width: max-content;
 }
 .keywords button {
     border: 1px solid lightgray;
@@ -338,6 +337,7 @@ img.sns {
 }
 .etc-container button {
     border: 1px solid lightgray;
+    border-radius: 5px;
 
     background-color: white;
     color: dimgray;
@@ -352,10 +352,7 @@ img.sns {
 
     margin-right: 5px;
 } */
-.etc-container button {
-    border-radius: 5px;
-}
-.etc-container img{
+.etc-container img {
     width: 16px;
     padding-top: 2px;
     padding-left: 2px;
@@ -368,8 +365,6 @@ img.sns {
     border-radius: 100%;
 
     margin-right: 5px;
-
-    /* display: none; */
 }
 
 .etc-container-left {
