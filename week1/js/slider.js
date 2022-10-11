@@ -36,7 +36,7 @@ const pasteFirstAndLastElement = () => {
 //버튼 액션 핸들링 함수들
 slidePrevButton.addEventListener('click', () => {
     currentSlide -= 1;
-    setTransition('transform 0.3s linear');
+    setTransition('transform 0.4s ease-out');
     setTranslate(currentSlide);
 
     //if it was the first slide item
@@ -52,7 +52,7 @@ slidePrevButton.addEventListener('click', () => {
 
 slideNextButton.addEventListener('click', () => {
     currentSlide += 1;
-    setTransition('transform 0.3s linear');
+    setTransition('transform 0.4s ease-out');
     setTranslate(currentSlide);
 
     //if it was the last slide item

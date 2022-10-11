@@ -22,11 +22,19 @@ header {
     display: flex;
     align-items: center;
 
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+
+    z-index: 1;
+
     flex-grow: 1;
 
     font-size: 14px;
 
-    margin: 4px 350px;
+    padding: 4px 225px;
 }
 
 .header-right {
@@ -57,14 +65,26 @@ img.search {
 
     text-align: center;
 
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
-.category li{
+.category li {
     float: left;
     width: max-content;
 
-    margin-left: 20px;
+    margin-left: 30px;
+
+    cursor: pointer;
+}
+
+.new-badge {
+    position: absolute;
+    top: 12px;
+
+    font-style: normal;
+    color: blue;
+
+    transform: translateX(-12%) scale(0.6);
 }
 
 .organization {
@@ -97,7 +117,7 @@ img.search {
     display: flex;
     align-items: center;
 
-    margin: 30px 350px;
+    margin: 30px 225px;
 }
 
 .job-selector {
@@ -123,7 +143,7 @@ img.search {
 }
 
 .filter-container {
-    margin: 0 350px;
+    margin: 0 225px;
     padding-bottom: 25px;
 
     display: flex;
@@ -188,7 +208,7 @@ img.search {
     align-items: center;
     justify-content: space-between;
 
-    margin: 10px 350px;
+    margin: 10px 225px;
 }
 
 .keywords {
@@ -240,7 +260,7 @@ img.search {
     display: flex;
     align-items: center;
 
-    margin: 50px 350px 30px 350px;
+    margin: 50px 225px 30px 225px;
 }
 
 .bookmark-text{
@@ -252,7 +272,7 @@ img.search {
 }
 
 .recruiting-top {
-    margin: 0 350px;
+    margin: 0 225px;
 }
 
 .header-card {
@@ -302,7 +322,7 @@ img.search {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 15px;
 
-    margin: 50px 350px;
+    margin: 50px 225px;
 }
 
 .card-title {
