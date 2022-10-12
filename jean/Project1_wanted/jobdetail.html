@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채용정보 원티드</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.webp" />
+    <!-- <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');</style>
+    <link rel="stylesheet" href="//static.wanted.co.kr/vendor/font-awesome/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
+   -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="mainbar">
+            <div class="left">
+                <img class="bar" src="img/bar.png">
+                <a href="https://www.wanted.co.kr/"> <img class="logo" src="img/logo.png"> </a>
+            </div>
+    
+            <div class="center">
+                <ul>
+                    <li><a href="/">채용</a></li>
+                    <li><a href="/">이벤트</a></li>
+                    <li><a href="/">직군별 연봉</a></li>
+                    <li><a href="/">이력서</a></li>
+                    <li><a href="/" class="" aria-label="">커뮤니티<em><svg xmlns="http://www.w3.org/2000/svg" width="18" height="11" viewBox="0 0 18 11"> <g fill="none" fill-rule="evenodd" font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo" font-size="9" font-weight="500"> <g fill="#36F"> <g> <g> <g> <g> <g> <g><text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)"> <tspan x="0" y="8">New</tspan> </text></g> </g> </g> </g> </g> </g> </g> </g> </svg></em></a></li>
+                    <li><a href="/">프리랜서</a></li>
+                    <li><a href="/aiscore/resume" class="" aria-label="">AI 합격예측<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="11" viewBox="0 0 18 11"> <g fill="none" fill-rule="evenodd" font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo" font-size="9" font-weight="500"> <g fill="#36F"> <g> <g> <g> <g> <g> <g><text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)"> <tspan x="0" y="8">Beta</tspan> </text></g> </g> </g> </g> </g> </g> </g> </g> </svg></span></a></li>
+                </ul>
+            </div>
+    
+            <div class="right">
+                <ul>
+                    <li><a href="/"><svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"> <defs> <path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"> </path> </defs> <g fill="none" fill-rule="evenodd"> <use fill="#333" fill-rule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use> </g> </svg></a></li>
+                    <li><a href="/">회원가입/로그인</a></li>
+                    <li id="vborder"></li>
+                    <li><a class="dashboardButton" href="/">기업 서비스</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="category">
+        <div class="joblist">
+            <p>전체</p>
+            <button><img src="img/down-arrow.png" alt="down"/></button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="joblist" style="display: none;">
+            <p>개발전체</p>
+            <button><img src="img/down-arrow.png" alt="down"/></button>
+        </div>
+
+    </div>
+
+    <div class="filter">
+        <div class="filterlist">
+            <div class="left">
+                <button>
+                    <p>지역</p>
+                    <p>부산</p>
+                </button>
+                <button>
+                    <p>경력</p>
+                    <p>전체 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="https://www.w3.org/2000/svg"><path d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z" fill="#333333"></path></svg></p>
+                </button>
+                <button>
+                    <p>기술스택 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="https://www.w3.org/2000/svg"><path d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z" fill="#333333"></path></svg></p>
+                </button>
+            </div>
+    
+            <div class="right">
+                <button>
+                    <p>응답률순 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="https://www.w3.org/2000/svg"><path d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z" fill="#333333"></path></svg></p>
+                </button>
+            </div>
+    
+        </div>
+        <div class="keywords">
+            <ul class="keywordslides">  
+                <li><button>연봉이 최고의 복지</button></li>
+                <li><button>재택 근무</button></li>
+                <li><button>퇴사율 10%이하</button></li>
+                <li><button>급성장 중</button></li>
+                <li><button> 벙역특례</button></li>
+                <li><button>50인 이하</button></li>
+                <li><button>50인 이상</button></li>
+                <li><button>업력 5년 이상</button></li>
+                <li><button>50인 이상</button></li>
+                <li><button>업력 5년 이상</button></li>
+                <li><button>급성장 중</button></li>
+                <li><button> 벙역특례</button></li>
+                <li><button>50인 이하</button></li>
+                <li><button>50인 이상</button></li>
+                <li><button>급성장 중</button></li>
+                <li><button> 벙역특례</button></li>
+
+            </ul>
+            <p class="keywordsbutton">
+        
+                <span class="keyword_prev"> < </span>
+                <span class="keyword_next"> > </span>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="job_main">
+        <div class="bookmark">
+            <a href="/#"><p>
+                <svg width="13" height="17" viewBox="0 0 13 17" style="color:#36f"><defs><path id="bookmarkIconFill" d="M6.25 13.21L.905 16.22c-.403.228-.905-.06-.905-.517V.596C0 .267.27 0 .605 0h11.29c.334 0 .605.267.605.596v15.107c0 .458-.502.745-.905.518L6.25 13.209z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(.188)"><use fill="currentColor" xlink:href="#bookmarkIconFill"></use></g></svg>
+                북마크모아보기
+                <svg width="12" height="12" viewBox="0 0 12 12"><path fill="currentColor" d="M4.22 9.72a.75.75 0 001.06 1.06l4.25-4.25a.75.75 0 000-1.06L5.28 1.22a.75.75 0 00-1.06 1.06L7.94 6 4.22 9.72z"></path></svg>
+            </p></a>
+        </div>
+        <div class="hiring">
+            <h1>적극 채용중인 회사</h1>
+            <div class="hiring_list">
+
+                <div class="item"> <a href="/#"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10785%2Fxyb93wefrghj3ppy__400_400.png&w=400&q=75"> <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ab46764a.png&w=100&q=75"> <div class="detail"> <h1>로민</h1> <p>11개 포지션</p> </div> </div> </a>
+                <div class="item"> <a href="/#"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10785%2Fxyb93wefrghj3ppy__400_400.png&w=400&q=75"> <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ab46764a.png&w=100&q=75"> <div class="detail"> <h1>로민</h1> <p>11개 포지션</p> </div> </div> </a>
+                <div class="item"> <a href="/#"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10785%2Fxyb93wefrghj3ppy__400_400.png&w=400&q=75"> <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ab46764a.png&w=100&q=75"> <div class="detail"> <h1>로민</h1> <p>11개 포지션</p> </div> </div> </a>
+                <div class="item"> <a href="/#"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10785%2Fxyb93wefrghj3ppy__400_400.png&w=400&q=75"> <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ab46764a.png&w=100&q=75"> <div class="detail"> <h1>로민</h1> <p>11개 포지션</p> </div> </div> </a>
+                <div class="item"> <a href="/#"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10785%2Fxyb93wefrghj3ppy__400_400.png&w=400&q=75"> <img id="logo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ab46764a.png&w=100&q=75"> <div class="detail"> <h1>로민</h1> <p>11개 포지션</p> </div> </div> </a>
+
+            </div>
+
+        </div>
+        
+        <div class="company_list">
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+            <div class="item"> <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"> <div class="detail"> <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p> </div> </div>
+
+            
+
+        </div>
+    </div>
+
+    <!-- <footer>
+        <div class="footertop">
+            <div class="muenulink">
+                <ul>
+                    <li> <img class="logo" src="img/logo2.webp"></li>
+                    <li><a href="/">기업소개</a></li>
+                    <li><a href="/">이용약관</a></li>
+                    <li><a href="/">개인정보</a></li>
+                    <li><a href="/">개인정보 처리방침</a></li>
+                    <li><a href="/">고객센터</a></li>
+                </ul>
+            </div>
+            <div class=" sociallink">
+                <a href="https://www.instagram.com/wantedjobs.kr/" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_instagram.png&amp;w=20&amp;q=100" alt="instagram"></a>
+                <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_youtube.png&amp;w=25&amp;q=100" alt="youtube"></a>
+                <a href="https://www.facebook.com/wantedkr" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_facebook.png&amp;w=20&amp;q=100" alt="facebook"></a>
+                <a href="https://blog.naver.com/wantedlab" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_blog.png&amp;w=20&amp;q=100" alt="blog"></a>
+                <a href="https://pf.kakao.com/_XqCIxl" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_kakao.png&amp;w=19&amp;q=100" alt="kakao"></a>
+                <a href="https://post.naver.com/my.nhn?memberNo=18284175" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_post.png&amp;w=20&amp;q=100" alt="post"></a>
+                <a href="https://apps.apple.com/kr/app/id1074569961" class="" aria-label="" target="_blank" rel="noopener noreferrer"><img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_apple.png&amp;w=17&amp;q=100" alt="apple"></a>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <div class="adress">
+                <p>(주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300 롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147<br>유료직업소개사업등록번호 : (국내)
+                    제2020-3230259-14-5-00018호 | (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 | 02-539-7118<br>© Wantedlab,
+                    Inc.
+                </p>
+            </div>
+    
+            <div class="language">
+                <img src="https://static.wanted.co.kr/images/userweb/ico_KR.svg" alt="country flag KR">
+                <select>
+                    <option value="KR">한국 (한국어)</option>
+                    <option value="JP">日本 (日本語)</option>
+                    <option value="WW">Worldwide (English)</option>
+                    <option value="SG">Singapore (English)</option>
+                </select>
+                <i class="arrow"><img src="img/arrow.png" class="arrow"></i>
+            </div>
+    
+    
+        </div>
+    </footer> -->
+
+</body>
+
+</html>

@@ -1,3 +1,28 @@
+.filter {
+    z-index: 999;
+    margin: auto;
+    width: 100%;
+   background-color: #fff;
+    position: sticky;
+    top: 50px;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /*수직 정렬*/
+    justify-content: center;
+    align-content: center;
+    border-bottom: 1px solid gainsboro;
+}
+.filter .filterlist{
+    width: 1060px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  
+    border-bottom: 1px solid gainsboro;
+  
+  }
 
 h1{
     margin: 0;
@@ -59,7 +84,7 @@ header {
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     height: 50px;
     align-items: center;
-z-index: 999;
+z-index: 99;
 
 
 }
@@ -126,7 +151,159 @@ header .mainbar .right li {
     font-weight: 400;
 }
 
+
+.category{
+    display: flex;
+    width: 1060px;
+    background: #fff;
+    padding-top: 40px;
+    margin: auto;
+}
+.category .joblist{
+    display: flex;
+
+}
+.category .divider {
+    border: 1px solid #e1e2e3;
+    width: 0px;
+    margin: 0 25px;
+}
+
+
+
+.category .joblist button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    border: 1px solid #e1e2e3;
+    border-radius: 100%;
+    background-color: #fff;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: .3s;   
+}
+
+
+.category .joblist p {
+    margin-right: 16px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #333;
+}
+
+.category .joblist:last-child p {
+ font-weight: 400;
+
+}
+
+
+
+.filter .filterlist .left {
+    display: flex;
+    gap: 20px;
+}
+
+.filter .filterlist button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    background-color: #fff;
+
+}
+
+
+.filter .filterlist button p:first-child {
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400 !important;
+    letter-spacing: normal;
+    color: #333 !important;
+}
+
+.filter .filterlist button p:last-child {
+    color: #36f;
+    font-weight: 600;
+    margin-right: 0;
+}
+
+.filter .filterlist .right {
+    display: flex;
+}
+
+
+
+.filter .keywords {
+    display: flex;
+    margin: 30px 0;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+
+    width: 1060px;
+    height: 40px;
+
+}
+
+.filter .keywords .keywordslides  {
+    position: absolute;
+  left: 0;
+  top: 0;
+  width: 2500px; 
+  transition: left 0.5s ease-out; 
+}
+
+.filter .keywords .keywordslides button  {
+    display: flex;
+    position: relative;
+    height: 32px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 8px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #333;
+    border: none;
+}
+.filter .keywords .keywordsbutton span {
+    font-size: 15px;
+    font-weight: 900;
+    position: absolute;
+    color: black;
+    text-align: center;
+    border-radius: 100%;
+    padding: 5px 11px;
+    background-color: #fff;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+
+}
+
+  .filter .keywords .keywordsbutton span:first-child {
+      left: 0;
+      display: none;
+  }
+  .filter .keywords .keywordsbutton span:last-child {
+    right: 0;
+}
+ 
+  
+
+/* body */
 .main {
+ 
     display: block;
     margin:0 auto;
     text-align: center;
@@ -774,6 +951,173 @@ li {
     background-color:transparent;
   border: none;
 }
+
+.job_main{
+    display: block;
+    width: 1060px;
+margin: auto;
+
+}
+.job_main .bookmark{
+ display: flex;
+ margin: 30px 0;
+
+}
+
+
+.job_main .bookmark p {
+        color: #36f;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+
+.job_main .hiring{
+    
+}
+.job_main .hiring h1{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -.3px;
+    color: #333;
+    margin: 20px 0 14px;
+}
+
+.job_main .hiring .hiring_list{
+    display: flex; 
+    justify-content: space-between;
+    gap: 5px;
+    
+}
+
+.job_main .hiring .hiring_list .item{
+    width: 25%;
+    border: 1px solid lightgray;
+    border-radius: 2%;
+    position: relative;
+
+}
+
+.job_main .hiring .hiring_list .item #logo{
+    background-color: #000;
+    position: absolute;
+    top: 110px;
+    left: 18px;
+    width: 50px;
+    height: 50px;  
+    z-index: 0;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
+    background-color:#fff;
+}
+
+.job_main .hiring .hiring_list .item img{
+    width: 100%;
+    border-radius: 2% 2% 0 0;
+
+}
+.job_main .hiring .hiring_list .item .detail{
+    margin: 0 9px;
+    padding: 34px 16px 0;
+    height: 80px;
+    position: relative;
+
+}
+
+.job_main .hiring .hiring_list .item .detail h1{
+    margin: 0;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+
+
+}
+
+
+.job_main .company_list{
+     display: flex;
+     flex-wrap: wrap;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+
+     flex-direction: row;
+gap:10px;
+
+    margin-top: 50px;
+}
+
+.job_main .company_list .item{
+    display: block;
+    width: 24%;
+    margin-bottom: 20px;
+}
+
+.job_main .company_list .item img{
+   height: 187px;
+   width: 100%;
+   object-fit :cover;
+}
+
+
+
+
+.job_main .company_list .item .detail {
+    padding: 14px 0; 
+
+}
+.job_main .company_list .item .detail button{
+    border: 1px solid #00aead;
+    color: #00aead;
+    border-radius: 2px;
+    background-color: #fff;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    height: 19px;
+    line-height: 19px;
+    margin-top: 4px;
+    padding: 0 5px;
+
+}
+
+.job_main .company_list .item .detail h1{
+color: #333;
+font-size: 18px;
+font-weight: 600;
+}
+
+.job_main .company_list .item .detail h2{
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+     
+}
+
+.job_main .company_list .item .detail h3{
+    font-weight: 400;
+    color: #999;
+    font-size: 14px;
+    margin : 10px 0 0 0;
+}
+
+.job_main .company_list .item .detail p{
+    margin-top: 10px;
+    color: #606060;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    word-break: break-word;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 
 
 footer {
