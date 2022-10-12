@@ -25,9 +25,9 @@ const autoSlide = () => {
             setTimeout(() => {
                 setTransition('');
                 setTranslate(currentSlide);
-            }, 300);
+            }, 700);
         }
-    }, 4000);
+    }, 3000);
 }
 
 /** Animation */
@@ -64,7 +64,7 @@ slidePrevButton.addEventListener('click', () => {
         setTimeout(() => {
             setTransition('');
             setTranslate(currentSlide);
-        }, 300);
+        }, 700);
     }
 });
 
