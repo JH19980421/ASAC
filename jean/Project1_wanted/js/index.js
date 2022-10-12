@@ -2,6 +2,7 @@
 
 var slides = document.querySelector('.slides');
 slide = document.querySelectorAll('.slides li');
+info =document.querySelector('#slideShow .banner_info');
 currentIdx=1;
 slideCount=slide.length;
 prev = document.querySelector('.prev'); 
@@ -44,6 +45,22 @@ setTimeout(function () {
 }, 100);
 
 }
+
+function changeOpacity() {
+
+    var opacityValue = 0;
+    info.style.opacity=opacityValue;
+
+    function doChange() {
+        if (++opacityValue >= 100) {
+            return;
+        }
+        info.style.opacity = opacityValue / 100;
+      
+    };
+    setInterval(doChange, 5);
+};
+
 next.addEventListener('click', function () {
 moveSlide(currentIdx +1);
 });
@@ -53,6 +70,8 @@ moveSlide(currentIdx -1);
 });
 
 function moveSlide(idx){
+
+changeOpacity();
 
 currentIdx=idx;
 current =-idx * (slideWidth+slideMargin);
@@ -96,3 +115,12 @@ balance=(window.innerWidth-slideWidth )/2  - slideMargin ;
 slides.style.left =   current + balance + 'px';
 
 }
+
+
+
+
+
+
+
+
+////////////modal

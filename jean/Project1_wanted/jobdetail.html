@@ -11,10 +11,58 @@
     <link rel="stylesheet" href="//static.wanted.co.kr/vendor/font-awesome/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
    -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <img src="img/logo.png">
+                <button class="close-area"><svg width="24" height="24" viewBox="0 0 24 24" color="#999"> <path fill="currentColor" d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z"> </path> </svg></button>
+            </div>
+    
+            <div class="modal-body">
+                <div class="title">
+                    <h1>직장인을 위한<br>커리어 플랫폼, 원티드!</h1>
+                    <h2>커리어 성장과 행복을 위한 여정<br> 지금 원티드에서 시작하세요.</h2>
+                </div>
+    
+                <div class="login">
+                    <div class="login_email">
+                        <label for="email" class="email_label">이메일</label>
+                        <div class="email_inputobx"><input type="email" placeholder="이메일을 입력해 주세요." id="email" value="">
+                        </div>
+                    </div>
+    
+                    <div class="login_panel">
+                        <button type="button" class="login_email_button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"> <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect> <path d="M3.2 5.6L12 12l8.8-6.4"></path> </g>
+                            </svg>이메일로 계속하기</button>
+                        <div class="login_panel_divider"></div>
+                        <div class="login_panel_social">다음 계정으로 계속하기</div>
+                        <div class="login_panel_socialbox">
+                            <ul>
+                                <li><a href="/"><img src="img/kakao.png"> <p>kakao</p> </a> </li>
+                                <li><a href="/"><img src="img/facebook.png"> <p>facebook</p> </a></li>
+                                <li><a href="/"><img src="img/google.png"> <p>google</p> </a></li>
+                                <li><a href="/"><img src="img/apple.png"> <p>apple</p> </a></li>
+                            </ul>
+    
+                        </div>
+                    </div>
+                    <p class="modail_footer">
+                        걱정마세요! 여러분의 지원 활동은 SNS에 노출되지 않습니다.<br>회원가입 시 
+                        <a href="https://help.wanted.co.kr/hc/ko/articles/360035484292" >개인정보 처리방침</a> 과
+                         <a href="https://help.wanted.co.kr/hc/ko/articles/360035844551" >이용약관</a> 을 확인하였으며, 동의합니다.
+                    </p>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header>
         <div class="mainbar">
             <div class="left">
@@ -37,7 +85,7 @@
             <div class="right">
                 <ul>
                     <li><a href="/"><svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"> <defs> <path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"> </path> </defs> <g fill="none" fill-rule="evenodd"> <use fill="#333" fill-rule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use> </g> </svg></a></li>
-                    <li><a href="/">회원가입/로그인</a></li>
+                    <li><a id="btn-modal">회원가입/로그인</a></li>
                     <li id="vborder"></li>
                     <li><a class="dashboardButton" href="/">기업 서비스</a></li>
                 </ul>
@@ -105,8 +153,8 @@
             </ul>
             <p class="keywordsbutton">
         
-                <span class="keyword_prev"> < </span>
-                <span class="keyword_next"> > </span>
+                <span class="prev"> <img src="img/left-arrow.png"></span>
+                <span class="next"> <img src="img/right-arrow.png"> </span>
             </p>
         </div>
     </div>
@@ -208,6 +256,8 @@
         </div>
     </footer> -->
 
+    <script src="./js/index.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

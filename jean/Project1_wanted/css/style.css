@@ -1,5 +1,5 @@
 .filter {
-    z-index: 999;
+    z-index: 10;
     margin: auto;
     width: 100%;
    background-color: #fff;
@@ -127,6 +127,11 @@ header .mainbar .center a {
 header .mainbar .right {
     display: flex;
 }
+
+header .mainbar .right a{
+    cursor: pointer;
+}
+
 
 header .mainbar .right li {
     margin-left: 10px;
@@ -284,11 +289,15 @@ header .mainbar .right li {
     color: black;
     text-align: center;
     border-radius: 100%;
-    padding: 5px 11px;
+    padding: 5px 8px;
     background-color: #fff;
     border: 1px solid gainsboro;
     cursor: pointer;
 
+}
+
+.filter .keywords .keywordsbutton img {
+ width: 16px;
 }
 
   .filter .keywords .keywordsbutton span:first-child {
@@ -327,6 +336,65 @@ li {
     margin: auto;
     overflow: hidden;
 }
+.banner_info{
+    position: absolute;
+    bottom: 28px;
+    width: 330px;
+    height: 146px;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 1;
+    text-align: left;
+    left: 450px;
+
+}
+.banner_info  h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #333;
+    width: "auto";
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.banner_info  h3{
+    margin: 0 20px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 1.64;
+    color: #333;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.banner_info  .banner_divider{
+    height: 1px;
+    margin: 0;
+    background-color: #ececec;
+    border: none;
+}
+
+.banner_info  a{
+    margin: 15px 0 0 13px;
+    color: blue;
+    text-align:center;
+}
+
+.banner_info  svg{
+    width: 1em;
+    height: 1em;
+    font-size: 11px;
+}
+
+
+
   .slides {
     position: absolute;
     left: 0;
@@ -344,28 +412,25 @@ li {
     background-color: transparent;
     color: black;
     text-align: center;
-    border-radius: 50%;
-    padding: 10px 20px;
-    top: 50%;
+    border-radius: 33%;
+    padding: 15px 6px;
+    top: 43%;
    background-color: #fff;
    opacity: 0.6;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 25px;;
   } 
-  
+  .controller img {
+   width: 16px;
+  } 
   .prev {
-    left: 300px;
+    left: 320px;
   } 
   
-  .prev:hover {
-    transform: translateX(-10px);
-  }
+ 
   .next {
-    right: 300px;
+    right: 320px;
   } 
-  .next:hover {
-    transform: translateX(10px);
-  }
   
 
 
@@ -424,6 +489,7 @@ li {
 .main .section .career .scroll_button .left .arrow {
     padding: 10px 12px;
     border-radius: 100%;
+
 }
 
 
@@ -536,6 +602,10 @@ li {
     border: 1px solid #e1e2e3;
     border-radius: 50%;
     background-color: #fff;
+}
+
+.main .section .subsection .titleline img{
+  width: 16px;
 }
 
 .main .section .subsection .list {
@@ -1226,3 +1296,185 @@ p{
 
 
 
+#modal.modal-overlay {
+
+    display: none;
+    background-color: rgba(0,0,0,.5); 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+width: 100%;
+height: 100%;
+}
+#modal .modal-window {
+    position: relative;
+
+    z-index: 10;
+
+    width: 400px;
+    height: 500px   ;
+
+    max-height: 500px;
+/* 스크롤활성화 */
+    overflow-y: auto;
+/* 스크롤체이닝금지 */
+overscroll-behavior: contain;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+
+#modal .modal-header {
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    word-wrap: break-word;
+    
+}
+
+#modal .modal-header img{
+    height: 16px;
+}
+#modal .modal-header button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    border: 0;
+    background: none;
+
+}
+.close-area{
+    cursor: pointer;
+}
+
+#modal .modal-body{
+    
+    padding: 20px
+} 
+#modal .modal-body .title{
+    text-align: center;
+    word-break: break-word;
+    margin-top: 24px;
+    margin-bottom: 40px;
+} 
+
+#modal .modal-body .title h1{
+    line-height: 1.54;
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+} 
+
+
+#modal .modal-body .title h2{
+    margin-top: 16px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+
+#modal .modal-body .login{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+} 
+
+.login_email{
+    padding-bottom: 18px;
+}
+.email_label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+}
+.email_inputobx { 
+    width: 100%;
+}
+
+.email_inputobx input{ 
+    margin-top: 11px;
+
+    width: 320px;
+    height: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    background-color: #fff;
+    font-size: 14px;
+    color: rgb(240, 239, 239);
+}
+
+.login_email_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    border: 0;
+    border-radius: 27px;
+    background-color: #36f;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login_panel_divider::after {
+    display: block;
+    content: "or";
+    color: #969696;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    margin: 13px auto;
+    white-space: pre;
+}
+.login_panel_social{
+    text-align: center;
+    color: #767676;
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+.login_panel_socialbox {
+    width: 100%;;
+    text-align: center;
+}
+.login_panel_socialbox ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login_panel_socialbox li a{
+    display: flex;
+    flex-direction: column;
+}
+.login_panel_socialbox img{
+    width: 54px;
+    border-radius: 100%;
+}
+.modal_footer{
+    margin-top: 26px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+}
