@@ -1,6 +1,6 @@
 footer {
-    margin: 0px 200px;
     background-color: white;
+    margin: 0 200px;
 }
 
 .footer_top {
@@ -42,7 +42,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    margin: 0 30px
 }
 
 .address {
@@ -50,8 +50,8 @@ footer {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.6666666667em;
+    padding: 0 25px;
     color: #767676;
-    width: calc(100%-290px);
 }
 
 .address > p {
