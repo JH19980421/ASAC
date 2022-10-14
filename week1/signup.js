@@ -14,8 +14,8 @@ btnOpenPopup.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    data.style.visibility = 'hidden';
-    modal.style.visibility = 'visible';
+    data.style.visibility = 'visible';
+    modal.style.visibility = 'hidden';
     document.body.style = 'overflow: hidden';
     document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
 });

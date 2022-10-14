@@ -1,6 +1,9 @@
 * {
-   font-family:  sans-serif;
+   /* font-family:  sans-serif; */
+   font-family: Pretendard,Pretendard JP,Pretendard Std;
 }
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 a {
     text-decoration: none;

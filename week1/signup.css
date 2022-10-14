@@ -8,6 +8,9 @@
     visibility: hidden;
 }
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
 .modal_body {
     position: absolute;
     top: 50%;

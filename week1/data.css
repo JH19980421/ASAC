@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 .NameModal {
     position: absolute;
     top: 0;
@@ -9,6 +11,8 @@
 }
 
 .Name_body {
+    display: block;
+    overflow-y: auto;
     top: 50%;
     left: 50%;
     width: 320px ;
@@ -18,6 +22,10 @@
     text-align: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+}
+
+.Name_body::-webkit-scrollbar {
+    display: none;
 }
 
 .Name_title {
@@ -31,13 +39,13 @@
     margin: 40px 0 0;
     float: left;
     font-size: 12px;
-    color: #767676;
+    color: gray;
 
 }
 
 .nameBox {
     border-radius: 5px;
-    border-color: #767676;
+    border-color: #e1e2e3;
     margin: 10px 0 0;
     width: inherit;
     padding: 15px 0 15px;
@@ -47,7 +55,7 @@
 .number {
     margin: 20px 0 0;
     padding: 15px 0  15px;
-    border-color: #767676;
+    border-color: #e1e2e3;
     border-radius: 5px;
     width: inherit;
 }
@@ -62,14 +70,16 @@
     margin: 20px 0 0;
     padding: 15px 0 15px;
     border-right: 15px;
-    border-color: #767676;
+    border-radius: 5px;
+    border-color: #e1e2e3;
 }
 
 .numberBtn {
     flex-grow: 1;
     margin: 20px 0 0;
     padding: 15px 0  15px;
-    border: 1px solid gray;
+    border: 1px solid #e1e2e3;
+    border-radius: 5px;
     background-color: white;
     color: blue;
     text-align: center;
@@ -80,9 +90,50 @@
 
 .certif {
     border-radius: 5px;
-    border-color: #767676;
+    border-color: #e1e2e3;
     margin: 20px 0 0;
     width: inherit;
     padding: 15px 0 15px;
-    background-color: dimgray;
+    background-color: #f2f4f7 !important;
+}
+
+.close {
+    margin: 5px 0 0;
+    width: 20px;
+    height: 20px;
+    float: right;
+    align-items: center;
+}
+
+.checkpwd {
+    margin: 5px 0 0;
+    float: left;
+    font-size: 12px;
+    color: gray;
+}
+.check {
+    margin: 60px 0 0;
+}
+
+#bot {
+   padding-bottom: 20px;
+   border-bottom: 1px solid #e1e2e3;
+   width: 100%;
+}
+.checkAll {
+   display: flex;
+   float: left;
+   align-items: center;
+   width: inherit;
+}
+
+.checkAll :first-child {
+    margin: 10px 15px 0 0;
+    float: left;
+}
+
+.checkAll :last-child {
+    margin: 10px 0 0;
+    color: gray;
+    float: left;
 }
