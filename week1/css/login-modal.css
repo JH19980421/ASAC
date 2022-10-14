@@ -1,0 +1,281 @@
+input {
+    width: 91%;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    padding: 15px;
+
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.login-modal {
+    display: none;
+
+    position: fixed;
+    left: 37.5%;
+    top: 10%;
+    
+    background-color: white;
+
+    width: 25%;
+    height: 80%;
+
+    border-radius: 5px;
+
+    z-index: 5;
+
+    overflow-y: scroll;
+
+    text-align: center;
+
+    padding: 0 20px;
+}
+.login-modal::-webkit-scrollbar {
+    display: none;
+}
+
+#modal-logo {
+    margin: 0;
+}
+
+.login-modal-header {
+    width: auto;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.login-modal-header p {
+    font-size: 16px;
+
+    margin: 0;
+}
+
+.login-modal-close {
+    position: absolute;
+
+    top: 3.5%;
+    right: 6%;
+
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+.login-modal-title {
+    padding: 0 30px;
+}
+.login-modal-title h1 {
+    line-height: 160%;
+}
+.login-modal-title p {
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.email-label {
+    text-align: left;
+}
+
+.email-input {
+    /* width: 90%; */
+
+    /* border: 1px solid lightgray;
+    border-radius: 5px;
+
+    padding: 15px;
+
+    font-size: 16px; */
+}
+
+.email-continue {
+    width: 100%;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 18px;
+    color: white;
+    
+    background-color: #36f;
+
+    padding: 15px;
+}
+
+.sns-login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    margin-top: 20px;
+}
+
+.sns-login img {
+    width: 50px;
+    height: 50px;
+}
+
+.login-modal-bottom {
+    padding: 0 10px;
+}
+
+.empty-space__medium {
+    width: auto;
+    height: 30px;
+
+    background-color: transparent;
+}
+
+
+
+
+
+.login-modal-join {
+    display: none;
+
+    position: fixed;
+    left: 37.5%;
+    top: 10%;
+    
+    background-color: white;
+
+    width: 25%;
+    height: 80%;
+
+    border-radius: 5px;
+
+    z-index: 5;
+
+    overflow-y: scroll;
+
+    text-align: left;
+
+    padding: 0 20px;
+}
+
+.region-select {
+    width: 100%;
+
+    background-color: white;
+
+    padding: 13px 10px;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    font-size: 15px;
+    
+    margin-bottom: 10px;
+}
+
+.phone-auth {
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+.phone-auth input {
+    width: 55%;
+    margin: 0;
+}
+.phone-auth button {
+    width: 33%;
+
+    padding: 15px 0;
+    margin-left: 5px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: rgb(225, 225, 225);
+
+    cursor: default;
+}
+
+#check-auth {
+    background-color: rgb(225, 225, 225);
+
+    margin-bottom: 20px;
+}
+
+.check-password {
+    margin-top: 5px;
+    margin-bottom: 30px;
+
+    font-size: 14px;
+}
+
+.agreement {
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.agreement input {
+    width: 15px;
+    height: 15px;
+}
+
+#agreement-divider {
+    margin: 3px 0;
+    margin-bottom: 15px;
+}
+
+.agreement-item {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    
+    margin-top: 10px;
+}
+.agreement-item p {
+    margin: 0;
+}
+
+.agreement-item-check {
+    display: flex;
+
+    height: fit-content;
+}
+.agreement-item-check input {
+    width: 15px;
+    height: 15px;
+}
+.agreement-item-check p {
+    margin: 0;
+}
+
+.join-submit-container {
+    position: sticky;
+    bottom: 0;
+
+    background-color: white;
+}
+
+.join-submit {
+    width: 93%;
+
+    margin: 10px 10px;
+
+    background-color: #36f;
+    color: white;
+    font-size: 14px;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 15px 0;
+}

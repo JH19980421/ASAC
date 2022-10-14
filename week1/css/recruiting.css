@@ -464,3 +464,17 @@ img.search {
 
     background-color: transparent;
 }
+
+.hider {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 4;
+
+    background-color: rgba(105, 105, 105, 0.7);
+}
