@@ -18,13 +18,11 @@ const showResult = () => {
 }
 
 
-
 setTimeout(() => {
     hideLoadingImage();
     showResult();
 
 }, 3000);
-
 
 
 showLoadingImage();
