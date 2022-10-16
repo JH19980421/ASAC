@@ -37,7 +37,6 @@ slides.style.width = newWidth + 'px';
 
 balance=(window.innerWidth-slideWidth )/2 - slideMargin  ;
 current=  -(slideWidth +slideMargin) * 1 ;
-
 slides.style.left = current+balance + 'px';
 //
 setTimeout(function () {

@@ -1,44 +1,436 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    overflow: scroll;
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+
+/**
+   * Remove the margin in all browsers.
+   */
+
+body {
+    margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+main {
+    display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+hr {
+    border-top: 1px solid #eee;
+
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+
+a {
+    background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+    font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+img {
+    border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+details {
+    display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+    display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+template {
+    display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+[hidden] {
+    display: none;
+}
+
+
+
 .filter {
     z-index: 10;
     margin: auto;
     width: 100%;
-   background-color: #fff;
+    background-color: #fff;
     position: sticky;
     top: 50px;
     height: 180px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; /*수직 정렬*/
+    flex-direction: column;
+    /*수직 정렬*/
     justify-content: center;
     align-content: center;
     border-bottom: 1px solid gainsboro;
 }
-.filter .filterlist{
+
+.filter .filterlist {
     width: 1060px;
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: space-between;
-  
-    border-bottom: 1px solid gainsboro;
-  
-  }
 
-h1{
+    border-bottom: 1px solid gainsboro;
+
+}
+
+h1 {
     margin: 0;
     padding: 0;
     border: 0;
 }
-h2{
+
+h2 {
     margin: 0;
     padding: 0;
     border: 0;
 }
-p{
+
+p {
     margin: 0;
     padding: 0;
     border: 0;
 }
+
 a {
     position: relative;
     text-decoration: none;
@@ -56,6 +448,7 @@ ul {
     padding: 0px;
     margin: 0;
 }
+
 li {
     display: inline-block;
 }
@@ -67,14 +460,14 @@ img {
 }
 
 body {
-    
+
     padding-top: 50px;
     margin: 0;
     font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
 }
 
 header {
- 
+
     position: fixed;
     top: 0;
     left: 0;
@@ -84,21 +477,55 @@ header {
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     height: 50px;
     align-items: center;
-z-index: 99;
+    z-index: 99;
 
 
 }
 
 header .mainbar {
-    width: 87.72%;;
+    width: 87.72%;  
+    
     max-width: 1060px;
-    display: flex;
+    display: flex;  
     align-items: center;
     margin: auto;
     justify-content: space-between;
 
 
 }
+
+.dropdown{
+    position : relative;
+    display : inline-block;
+  }
+  
+  .dropdown-content{
+    
+    display : none;
+    position : absolute;
+    z-index : 1;
+   height: calc(100vh - 50px);
+    width: 220px;
+    background-color: #fff;
+    overflow-y: auto;
+
+  }
+  
+  .dropdown-content a{
+    display : block;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: normal;
+    
+  }
+  .dropdown-content a:first-child{
+    margin-top: 20px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 header .mainbar .left {
     display: flex;
@@ -116,7 +543,8 @@ header .mainbar img.logo {
 
 
 header .mainbar .center {
-    display: flex;justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 header .mainbar .center a {
@@ -128,7 +556,7 @@ header .mainbar .right {
     display: flex;
 }
 
-header .mainbar .right a{
+header .mainbar .right a {
     cursor: pointer;
 }
 
@@ -157,17 +585,19 @@ header .mainbar .right li {
 }
 
 
-.category{
+.category {
     display: flex;
     width: 1060px;
     background: #fff;
     padding-top: 40px;
     margin: auto;
 }
-.category .joblist{
+
+.category .joblist {
     display: flex;
 
 }
+
 .category .divider {
     border: 1px solid #e1e2e3;
     width: 0px;
@@ -176,7 +606,7 @@ header .mainbar .right li {
 
 
 
-.category .joblist button{
+.category .joblist button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +618,7 @@ header .mainbar .right li {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    transition: .3s;   
+    transition: .3s;
 }
 
 
@@ -201,7 +631,7 @@ header .mainbar .right li {
 }
 
 .category .joblist:last-child p {
- font-weight: 400;
+    font-weight: 400;
 
 }
 
@@ -256,15 +686,15 @@ header .mainbar .right li {
 
 }
 
-.filter .keywords .keywordslides  {
+.filter .keywords .keywordslides {
     position: absolute;
-  left: 0;
-  top: 0;
-  width: 2500px; 
-  transition: left 0.5s ease-out; 
+    left: 0;
+    top: 0;
+    width: 2500px;
+    transition: left 0.5s ease-out;
 }
 
-.filter .keywords .keywordslides button  {
+.filter .keywords .keywordslides button {
     display: flex;
     position: relative;
     height: 32px;
@@ -282,6 +712,7 @@ header .mainbar .right li {
     color: #333;
     border: none;
 }
+
 .filter .keywords .keywordsbutton span {
     font-size: 15px;
     font-weight: 900;
@@ -297,34 +728,36 @@ header .mainbar .right li {
 }
 
 .filter .keywords .keywordsbutton img {
- width: 16px;
+    width: 16px;
 }
 
-  .filter .keywords .keywordsbutton span:first-child {
-      left: 0;
-      display: none;
-  }
-  .filter .keywords .keywordsbutton span:last-child {
+.filter .keywords .keywordsbutton span:first-child {
+    left: 0;
+    display: none;
+}
+
+.filter .keywords .keywordsbutton span:last-child {
     right: 0;
 }
- 
-  
+
+
 
 /* body */
 .main {
- 
+
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
     padding-top: 25px;
-    border-bottom: 1px solid #ececec;
+
 }
 
 .main .section {
     width: 1060px;
-   display: inline-block;
-   padding : 60px 0;
+    display: inline-block;
+    padding: 60px 0;
 }
+
 li {
     list-style-type: none;
 }
@@ -336,7 +769,8 @@ li {
     margin: auto;
     overflow: hidden;
 }
-.banner_info{
+
+.banner_info {
     position: absolute;
     bottom: 28px;
     width: 330px;
@@ -348,7 +782,8 @@ li {
     left: 450px;
 
 }
-.banner_info  h2{
+
+.banner_info h2 {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 20px;
@@ -362,7 +797,7 @@ li {
     overflow: hidden;
 }
 
-.banner_info  h3{
+.banner_info h3 {
     margin: 0 20px;
     height: 44px;
     font-size: 14px;
@@ -374,20 +809,20 @@ li {
     overflow: hidden;
 }
 
-.banner_info  .banner_divider{
+.banner_info .banner_divider {
     height: 1px;
     margin: 0;
     background-color: #ececec;
     border: none;
 }
 
-.banner_info  a{
+.banner_info a {
     margin: 15px 0 0 13px;
     color: blue;
-    text-align:center;
+    text-align: center;
 }
 
-.banner_info  svg{
+.banner_info svg {
     width: 1em;
     height: 1em;
     font-size: 11px;
@@ -395,19 +830,21 @@ li {
 
 
 
-  .slides {
+.slides {
     position: absolute;
     left: 0;
     top: 0;
-  } 
-  .slides.delay{
-	transition: 0.4s ease-out;
-  } 
-
-  .slides li:not(:last-child){	
-	margin-right: 20px;
 }
-  .controller span {
+
+.slides.delay {
+    transition: 0.4s ease-out;
+}
+
+.slides li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.controller span {
     position: absolute;
     background-color: transparent;
     color: black;
@@ -415,60 +852,63 @@ li {
     border-radius: 33%;
     padding: 15px 6px;
     top: 43%;
-   background-color: #fff;
-   opacity: 0.6;
+    background-color: #fff;
+    opacity: 0.6;
     cursor: pointer;
-    font-size: 25px;;
-  } 
-  .controller img {
-   width: 16px;
-  } 
-  .prev {
-    left: 320px;
-  } 
-  
- 
-  .next {
-    right: 320px;
-  } 
-  
-
-
-
-
-
-.main .section .career{
-  margin-bottom:60px;
+    font-size: 25px;
 }
 
-.main .section .career .title{ 
+.controller img {
+    width: 16px;
+}
+
+.prev {
+    left: 320px;
+}
+
+
+.next {
+    right: 320px;
+}
+
+
+
+
+
+
+.main .section .career {
+    margin-bottom: 60px;
+}
+
+.main .section .career .title {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.main .section .career .title h2{ 
+.main .section .career .title h2 {
     font-size: 18px;
     line-height: 1.33;
     font-weight: 700;
     color: #333;
 }
-.main .section .career .title button{ 
+
+.main .section .career .title button {
     border: none;
     background-color: rgba(0, 0, 0, 0);
 }
 
 
-.main .section .career .scroll_button{ 
+.main .section .career .scroll_button {
     margin: 20px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
-.main .section .career .scroll_button button{  
+.main .section .career .scroll_button button {
     border: 1px solid lightgray;
     display: flex;
     padding: 10px 20px;
@@ -483,9 +923,51 @@ li {
 
 .main .section .career .scroll_button .left {
     display: flex;
-    gap: 5px;
+    width: 100%;
+    margin-right: 10px;
+    justify-content: space-between;
+
 }
 
+.toggleSwitch {
+    width: 60px;
+    height: 40px;
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid rgb(243, 241, 241);
+    cursor: pointer;
+
+  }
+  
+   /* 토글 버튼 */
+  .toggleSwitch .toggleButton {
+    /* 버튼은 토글보다 작아야함  */
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    border: 1px solid rgb(223, 223, 223);
+    /* background-image: url("../img/right-arrow.png"); */
+  }
+
+  .toggleSwitch .toggleButton img{
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top:10px;
+position: absolute;
+
+  }
+
+
+.main .section .career .scroll_button .left .select{
+    display: flex;
+    gap: 10px;
+
+}
 .main .section .career .scroll_button .left .arrow {
     padding: 10px 12px;
     border-radius: 100%;
@@ -496,6 +978,7 @@ li {
 .main .section .career .scroll_button .right {
     display: flex;
 
+
 }
 
 .main .section .career .list {
@@ -505,7 +988,7 @@ li {
     text-align: left;
 }
 
-.main .section .career .list li{
+.main .section .career .list li {
     display: flex;
     flex-direction: column;
     width: calc(25% - 20px);
@@ -513,17 +996,19 @@ li {
 
 }
 
-.main .section .career .list h1, p{
+.main .section .career .list h1,
+p {
     display: -webkit-box;
     /* 라인수 */
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 
     overflow: hidden;
- /* 생략부호 표시 */
-    text-overflow: ellipsis; 
+    /* 생략부호 표시 */
+    text-overflow: ellipsis;
 
 }
+
 .main .section .career .list img {
     width: 100%;
     height: 130px;
@@ -537,8 +1022,9 @@ li {
     line-height: 24px;
     color: #333;
 }
+
 .main .section .career .list .writer p {
-    display: flex; 
+    display: flex;
     align-items: center;
     font-size: 12px;
     font-weight: 500;
@@ -564,37 +1050,40 @@ li {
     border: 1px solid #e1e2e3;
 }
 
-.main .section .subsection{
+.main .section .subsection {
     display: block;
     max-width: 1060px;
     padding-top: 60px;
 
 }
-.main .section .subsection .titleline{
+
+.main .section .subsection .titleline {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.main .section .subsection .titleline .title{
+.main .section .subsection .titleline .title {
     margin: auto
 }
-.main .section .subsection .titleline .title h1{
+
+.main .section .subsection .titleline .title h1 {
     font-size: 22px;
     font-weight: 700;
     color: #333;
 }
-.main .section .subsection .titleline .title p{
+
+.main .section .subsection .titleline .title p {
     margin: 5px 0 0;
     font-size: 13px;
     font-weight: 500;
     line-height: normal;
     vertical-align: middle;
-    color: #767676!important;
+    color: #767676 !important;
 }
 
 
-.main .section .subsection .titleline button{
+.main .section .subsection .titleline button {
     display: flex;
     align-items: center;
     width: 30px;
@@ -604,8 +1093,8 @@ li {
     background-color: #fff;
 }
 
-.main .section .subsection .titleline img{
-  width: 16px;
+.main .section .subsection .titleline img {
+    width: 16px;
 }
 
 .main .section .subsection .list {
@@ -615,7 +1104,7 @@ li {
     text-align: left;
 }
 
-.main .section .subsection .list li{
+.main .section .subsection .list li {
     display: flex;
     flex-direction: column;
     width: calc(25% - 20px);
@@ -636,14 +1125,15 @@ li {
     margin-top: 17px;
     font-size: 16px;
 }
-.main .section .subsection .list h2{
+
+.main .section .subsection .list h2 {
     color: #333;
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.main .section .subsection .list p{
+.main .section .subsection .list p {
     float: none;
     display: block;
     margin-top: 10px;
@@ -664,7 +1154,7 @@ li {
     text-align: left;
 }
 
-.main .section .subsection .list2 button{
+.main .section .subsection .list2 button {
     margin-top: 8px;
     color: #a149e4;
     border-color: #a149e4;
@@ -674,12 +1164,13 @@ li {
     padding: 0 6px;
 }
 
-.main .section .subsection .list2 li{
+.main .section .subsection .list2 li {
     display: block;
-   
+
     width: calc(50% - 20px);
     margin: 10px 10px 50px;
 }
+
 .main .section .subsection .list2 img {
     width: 100%;
     height: 273px;
@@ -694,7 +1185,8 @@ li {
     font-size: 16px;
     color: #333;
 }
-.main .section .subsection .list2  p {
+
+.main .section .subsection .list2 p {
     font-size: 13px;
     margin-top: 1px;
     font-weight: 500;
@@ -707,21 +1199,21 @@ li {
 
 }
 
-.main .section .subsection .list2 .logocontain img{
+.main .section .subsection .list2 .logocontain img {
     display: flex;
     width: 32px;
     margin-right: 8px;
     margin-top: 8px;
     height: 32px;
 
-    border: 1px solid rgba(0,0,0,.05);
+    border: 1px solid rgba(0, 0, 0, .05);
 }
 
 
 
 
 
-.main .section .subsection .list2 .card{
+.main .section .subsection .list2 .card {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -730,36 +1222,38 @@ li {
 
 
 
-.main .section .subsection .list2 .card .left{
+.main .section .subsection .list2 .card .left {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
-.main .section .subsection .list2 .card h1{
- margin: 0;
+
+.main .section .subsection .list2 .card h1 {
+    margin: 0;
 }
 
-.main .section .subsection .list2 .card .left .logo{
+.main .section .subsection .list2 .card .left .logo {
     width: 42px;
     height: 42px;
     background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.b45e244f.jpg&w=42&q=100);
     box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
 }
-.main .section .subsection .list2 .card .left .title{
+
+.main .section .subsection .list2 .card .left .title {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 
-.main .section .subsection .list2 .card .right{
+.main .section .subsection .list2 .card .right {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
 
 
-.main .section .subsection .list2 .card .right button{ 
+.main .section .subsection .list2 .card .right button {
     height: 42px;
     margin: 0;
     color: #36f;
@@ -774,9 +1268,9 @@ li {
 
 
 
-.main .section .linebanner .textbox{
+.main .section .linebanner .textbox {
     width: 1060px;
-    background-image: linear-gradient(90deg,#01a9fe -12%,#2f5fef 37%,#046afe 72%,#00d2dd 110%);
+    background-image: linear-gradient(90deg, #01a9fe -12%, #2f5fef 37%, #046afe 72%, #00d2dd 110%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -787,27 +1281,28 @@ li {
     border-radius: 38.5px;
 
 
-} 
+}
 
 
 
-.main .section .event{
+.main .section .event {
     padding: 50px 0;
 }
 
-.main .subscribe{
+.main .subscribe {
     display: flex;
     justify-content: center;
     background-color: #f7f7f7;
     padding: 60px 0;
-    
-}
-.main .subscribe .sub{
-   display: flex;
-   width: 1060px;
+
 }
 
-.main .subscribe .sub button{
+.main .subscribe .sub {
+    display: flex;
+    width: 1060px;
+}
+
+.main .subscribe .sub button {
     width: 260px;
     margin-top: 25px;
     color: #fff;
@@ -817,49 +1312,51 @@ li {
     font-size: 16px;
     border-radius: 25px;
     font-weight: 700;
- }
-
- 
-.main .subscribe .sub h1{
-   color:  #333;
-   font-weight: 700;
-   font-size: 27px;
 }
 
-.main .subscribe .sub p{
+
+.main .subscribe .sub h1 {
+    color: #333;
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.main .subscribe .sub p {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
- }
+}
 
 .main .subscribe .sub .left {
     width: 45%;
     text-align: left;
- 
- }
- .main .subscribe .sub .right {
-    width: 55%;
- }
- .main .subscribe .sub .right  img{
-    height: 170px;
- }
 
-.main .section .info{
+}
+
+.main .subscribe .sub .right {
+    width: 55%;
+}
+
+.main .subscribe .sub .right img {
+    height: 170px;
+}
+
+.main .section .info {
     padding: 60px 0 80px;
 }
 
-.main .section .info .title{
+.main .section .info .title {
     margin-bottom: 30px;
 }
 
-.main .section .info .title h1{
+.main .section .info .title h1 {
     font-size: 22px;
     font-weight: 700;
     color: #333;
 
 }
 
-.main .section .info .gridcontain{
+.main .section .info .gridcontain {
     display: flex;
     border: 1px solid #ececec;
     border-radius: 4px;
@@ -867,27 +1364,27 @@ li {
 }
 
 
-.main .section .info .gridcontain .grid{
+.main .section .info .gridcontain .grid {
     padding: 18px 0 0;
     border-right: 1px solid #ececec;
     width: 25%;
 }
 
-.main .section .info .gridcontain h1{
+.main .section .info .gridcontain h1 {
     margin: 10px;
     font-size: 16px;
     color: #333;
- }
+}
 
-.main .section .info .gridcontain .grid img{ 
+.main .section .info .gridcontain .grid img {
     width: 32px;
 }
 
-.main .section .info .gridcontain .grid h1 img{
-   width: 12px;
- }
+.main .section .info .gridcontain .grid h1 img {
+    width: 12px;
+}
 
-.main .section .divider{
+.main .section .divider {
     /* position: relative; */
     max-width: 1060px;
     height: 1px;
@@ -895,24 +1392,24 @@ li {
 }
 
 
-.main .position{
+.main .position {
     display: block;
     justify-content: center;
     background-color: #f7f7f7;
     padding: 50px 0;
     margin-bottom: 30px;
     background: #f4f8fb;
-    background-image: url(https://wanted-dev.static.wanted.co.kr/banner/Jobsfeed_ai_banner.png);  
+    background-image: url(https://wanted-dev.static.wanted.co.kr/banner/Jobsfeed_ai_banner.png);
 }
 
-.main .position  img{
+.main .position img {
     width: 114px;
 
     vertical-align: middle;
- }
+}
 
 
-.main .position  button{
+.main .position button {
     width: 260px;
     margin-top: 25px;
     color: #fff;
@@ -922,17 +1419,17 @@ li {
     font-size: 16px;
     border-radius: 25px;
     font-weight: 700;
- }
-
-
-.main .position h1{
-   color:  #111;
-   font-size: 22px;
-   font-weight: 700;
-   margin-top: 10px;
 }
 
-.main .position p{
+
+.main .position h1 {
+    color: #111;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.main .position p {
     float: none;
     color: #555;
     font-size: 16px;
@@ -940,19 +1437,20 @@ li {
 }
 
 
-.main .mycareer{
+.main .mycareer {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 155px;
     margin-bottom: 20px;
-   background: linear-gradient(90deg,#ddebff -.28%,#b7d8ff);
+    background: linear-gradient(90deg, #ddebff -.28%, #b7d8ff);
 }
-.main .mycareer img{
-    width: 230px;
- }
 
-.main .mycareer .sub{
+.main .mycareer img {
+    width: 230px;
+}
+
+.main .mycareer .sub {
     width: 1060px;
     display: flex;
     justify-content: space-between;
@@ -960,12 +1458,12 @@ li {
 
 }
 
-.main .mycareer .sub .title{
+.main .mycareer .sub .title {
     display: flex;
     flex-direction: column;
 }
 
-.main .mycareer .sub .title button{
+.main .mycareer .sub .title button {
     align-items: center;
     justify-content: center;
     width: 119px;
@@ -989,54 +1487,55 @@ li {
     font-weight: 700;
 }
 
-.main .section .profile{
-    
+.main .section .profile {
+
     display: flex;
     align-items: center;
 
-        font-size: 18px;
+    font-size: 18px;
     font-weight: 500;
     justify-content: center;
     border-left: none;
 
 }
 
-.main .section .profile li:first-child{
+.main .section .profile li:first-child {
     background-color: #f2f5ff;
     width: 50%;
     border-top-left-radius: 38.5px;
     border-bottom-left-radius: 38.5px;
 }
 
-.main .section .profile li:last-child{
+.main .section .profile li:last-child {
     background-color: #f2fbf5;
     width: 50%;
     border-top-right-radius: 38.5px;
     border-bottom-right-radius: 38.5px;
 }
 
-.main .section .profile button{
+.main .section .profile button {
     margin: 20px;
     align-items: center;
-    background-color:transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
-.job_main{
+.job_main {
     display: block;
     width: 1060px;
-margin: auto;
+    margin: auto;
 
 }
-.job_main .bookmark{
- display: flex;
- margin: 30px 0;
+
+.job_main .bookmark {
+    display: flex;
+    margin: 30px 0;
 
 }
 
 
 .job_main .bookmark p {
-        color: #36f;
+    color: #36f;
     font-size: 15px;
     font-weight: 600;
     font-stretch: normal;
@@ -1045,10 +1544,9 @@ margin: auto;
     letter-spacing: normal;
 }
 
-.job_main .hiring{
-    
-}
-.job_main .hiring h1{
+.job_main .hiring {}
+
+.job_main .hiring h1 {
     font-size: 22px;
     font-weight: 600;
     line-height: normal;
@@ -1057,14 +1555,14 @@ margin: auto;
     margin: 20px 0 14px;
 }
 
-.job_main .hiring .hiring_list{
-    display: flex; 
+.job_main .hiring .hiring_list {
+    display: flex;
     justify-content: space-between;
     gap: 5px;
-    
+
 }
 
-.job_main .hiring .hiring_list .item{
+.job_main .hiring .hiring_list .item {
     width: 25%;
     border: 1px solid lightgray;
     border-radius: 2%;
@@ -1072,24 +1570,25 @@ margin: auto;
 
 }
 
-.job_main .hiring .hiring_list .item #logo{
+.job_main .hiring .hiring_list .item #logo {
     background-color: #000;
     position: absolute;
     top: 110px;
     left: 18px;
     width: 50px;
-    height: 50px;  
+    height: 50px;
     z-index: 0;
     box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
-    background-color:#fff;
+    background-color: #fff;
 }
 
-.job_main .hiring .hiring_list .item img{
+.job_main .hiring .hiring_list .item img {
     width: 100%;
     border-radius: 2% 2% 0 0;
 
 }
-.job_main .hiring .hiring_list .item .detail{
+
+.job_main .hiring .hiring_list .item .detail {
     margin: 0 9px;
     padding: 34px 16px 0;
     height: 80px;
@@ -1097,7 +1596,7 @@ margin: auto;
 
 }
 
-.job_main .hiring .hiring_list .item .detail h1{
+.job_main .hiring .hiring_list .item .detail h1 {
     margin: 0;
     position: relative;
     font-size: 16px;
@@ -1108,38 +1607,39 @@ margin: auto;
 }
 
 
-.job_main .company_list{
-     display: flex;
-     flex-wrap: wrap;
-     flex-wrap: wrap;
-     justify-content: flex-start;
+.job_main .company_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
-     flex-direction: row;
-gap:10px;
+    flex-direction: row;
+    gap: 10px;
 
     margin-top: 50px;
 }
 
-.job_main .company_list .item{
+.job_main .company_list .item {
     display: block;
     width: 24%;
     margin-bottom: 20px;
 }
 
-.job_main .company_list .item img{
-   height: 187px;
-   width: 100%;
-   object-fit :cover;
+.job_main .company_list .item img {
+    height: 187px;
+    width: 100%;
+    object-fit: cover;
 }
 
 
 
 
 .job_main .company_list .item .detail {
-    padding: 14px 0; 
+    padding: 14px 0;
 
 }
-.job_main .company_list .item .detail button{
+
+.job_main .company_list .item .detail button {
     border: 1px solid #00aead;
     color: #00aead;
     border-radius: 2px;
@@ -1154,28 +1654,28 @@ gap:10px;
 
 }
 
-.job_main .company_list .item .detail h1{
-color: #333;
-font-size: 18px;
-font-weight: 600;
+.job_main .company_list .item .detail h1 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.job_main .company_list .item .detail h2{
+.job_main .company_list .item .detail h2 {
     color: #333;
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
-     
+
 }
 
-.job_main .company_list .item .detail h3{
+.job_main .company_list .item .detail h3 {
     font-weight: 400;
     color: #999;
     font-size: 14px;
-    margin : 10px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
-.job_main .company_list .item .detail p{
+.job_main .company_list .item .detail p {
     margin-top: 10px;
     color: #606060;
     font-size: 13px;
@@ -1194,23 +1694,23 @@ footer {
     padding: 18px 0 65px;
     display: block;
     text-align: center;
+    border-top: 1px solid gainsboro;
 }
 
 .footertop {
-    
+
     margin: 0 auto 18px;
     max-width: 1060px;
     width: 90%;
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 
-.footertop .muenulink {
-}
+.footertop .muenulink {}
 
-.footertop .muenulink li{
-   margin-right: 30px;
+.footertop .muenulink li {
+    margin-right: 30px;
 }
 
 
@@ -1230,21 +1730,22 @@ justify-content: space-between;
     max-width: 1060px;
     width: 90%;
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
     border-top: 1px solid #ececec;
 }
-.footerbottom .adress{
+
+.footerbottom .adress {
     text-align: left;
 }
 
-.footerbottom .language{
+.footerbottom .language {
     position: relative;
     width: 250px;
     height: 36px;
     float: left;
 }
 
-.footerbottom .language .arrow{
+.footerbottom .language .arrow {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -1257,7 +1758,7 @@ justify-content: space-between;
     color: #717171;
 }
 
-.footerbottom .language select{
+.footerbottom .language select {
     width: 100%;
     height: 40px;
     background: #f2f4f7;
@@ -1271,10 +1772,10 @@ justify-content: space-between;
     -moz-appearance: none;
     appearance: none;
     font-weight: 500;
-    
+
 }
 
-.footerbottom .language img{
+.footerbottom .language img {
     position: absolute;
     left: 15px;
     top: 55%;
@@ -1285,7 +1786,7 @@ justify-content: space-between;
     z-index: 1;
 }
 
-p{
+p {
     float: left;
     font-size: 12px;
     font-weight: 500;
@@ -1299,7 +1800,7 @@ p{
 #modal.modal-overlay {
 
     display: none;
-    background-color: rgba(0,0,0,.5); 
+    background-color: rgba(0, 0, 0, .5);
     top: 0;
     left: 0;
     right: 0;
@@ -1307,48 +1808,63 @@ p{
     position: fixed;
     overflow: hidden;
     z-index: 9999;
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 #modal .modal-window {
     position: relative;
 
     z-index: 10;
 
     width: 400px;
-    height: 500px   ;
+    height: 670px;
 
-    max-height: 500px;
-/* 스크롤활성화 */
+    max-height: calc(100vh - 150px);
+    /* 스크롤활성화 */
     overflow-y: auto;
-/* 스크롤체이닝금지 */
-overscroll-behavior: contain;
+    /* 스크롤체이닝금지 */
+    overscroll-behavior: contain;
 
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     background: #fff;
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
+
+#modal .modal-window::-webkit-scrollbar {
     display: none;
-  }
+}
 
 #modal .modal-header {
+    display: flex;
+    justify-content: center;
     padding: 16px 0;
     position: relative;
     text-align: center;
     word-wrap: break-word;
-    
+
 }
 
-#modal .modal-header img{
+#modal .modal-header h1{
+   
+    position: relative;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+
+#modal .modal-header img {
     height: 16px;
 }
-#modal .modal-header button{
+
+#modal .modal-header button {
     position: absolute;
     top: 0;
     right: 0;
@@ -1357,30 +1873,32 @@ overscroll-behavior: contain;
     background: none;
 
 }
-.close-area{
+
+.close-area {
     cursor: pointer;
 }
 
-#modal .modal-body{
-    
+#modal .modal-body {
+
     padding: 20px
-} 
-#modal .modal-body .title{
+}
+
+#modal .modal-body .title {
     text-align: center;
     word-break: break-word;
     margin-top: 24px;
     margin-bottom: 40px;
-} 
+}
 
-#modal .modal-body .title h1{
+#modal .modal-body .title h1 {
     line-height: 1.54;
     font-size: 26px;
     font-weight: 600;
     color: #333;
-} 
+}
 
 
-#modal .modal-body .title h2{
+#modal .modal-body .title h2 {
     margin-top: 16px;
     line-height: 1.5;
     font-size: 16px;
@@ -1389,25 +1907,27 @@ overscroll-behavior: contain;
 }
 
 
-#modal .modal-body .login{
+#modal .modal-body .login {
     position: relative;
     overflow: hidden;
     z-index: 1;
-} 
+}
 
-.login_email{
+.login_email {
     padding-bottom: 18px;
 }
-.email_label{
+
+.email_label {
     font-size: 14px;
     font-weight: 400;
     color: #767676;
 }
-.email_inputobx { 
+
+.email_inputobx {
     width: 100%;
 }
 
-.email_inputobx input{ 
+.email_inputobx input {
     margin-top: 11px;
 
     width: 320px;
@@ -1418,9 +1938,16 @@ overscroll-behavior: contain;
     border: 1px solid #999999;
     background-color: #fff;
     font-size: 14px;
-    color: rgb(240, 239, 239);
+    color: #000;
 }
+.email_error{
+    display: none;
+    color: #fe415c;
+    bottom: 0;
+    margin-top: 6px;
+    font-size: 12px;
 
+}
 .login_email_button {
     display: flex;
     justify-content: center;
@@ -1447,7 +1974,8 @@ overscroll-behavior: contain;
     margin: 13px auto;
     white-space: pre;
 }
-.login_panel_social{
+
+.login_panel_social {
     text-align: center;
     color: #767676;
     margin-bottom: 17px;
@@ -1455,26 +1983,578 @@ overscroll-behavior: contain;
 }
 
 .login_panel_socialbox {
-    width: 100%;;
+    width: 100%;
+    ;
     text-align: center;
 }
-.login_panel_socialbox ul{
+
+.login_panel_socialbox ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-.login_panel_socialbox li a{
+.login_panel_socialbox li a {
     display: flex;
     flex-direction: column;
 }
-.login_panel_socialbox img{
+
+.login_panel_socialbox img {
     width: 54px;
     border-radius: 100%;
 }
-.modal_footer{
+.modal_input_body{
+    display: none;
+    padding: 20px;
+    color: #767676;
+}
+
+.modal_input_body>div{
+    margin-bottom: 20px;
+}
+
+.modal_input_body h1{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modal_input_body h2{
+    color: #aaa9a9;
+    bottom: 0;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.inputobx input, select{ 
+    margin-top: 11px;
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    font-size: 15px;
+    color: #333;
+}
+.certification{
+display: flex;
+margin-top: 11px;
+justify-content: space-between;
+}
+.certification .left{
+    width: 68%;
+ }
+.certification .left input{
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    font-size: 15px;
+    color: #333;
+}
+
+.certification .right {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 10px;
+    background-color: rgba(236, 236, 236, 0.788);
+    font-size: 13px;
+    font-weight: 900;
+    opacity: 0.5;
+}
+.certification_number input{
+    margin-top: 11px;
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e1e2e3;
+    background-color: rgba(236, 236, 236, 0.788);
+    font-size: 15px;
+    color: #333;
+}
+.inputobx input:focus{ 
+    outline: 1px solid #002fdb;
+}
+
+.agreement{
+margin-top: 30px;
+}
+.agreement>div{
+color: #939393;
+font-size: 15px;
+height: 20px;
+line-height: 20px;
+margin-bottom: 10px;
+}
+.agreement .checkbox input{
+   margin-right: 10px; 
+}
+
+.agreement>div a{
+    font-size: 12px;
+   position: absolute;
+   right: 20px;
+ }
+.sign{
+    text-align: center;
+    background-color: #f2f4f7;
+    border-color: none;
+    color: #cacaca;
+    cursor: not-allowed;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+}
+.modal_footer {
     margin-top: 26px;
     text-align: center;
     font-size: 12px;
     line-height: 18px;
     color: #999;
+}
+
+.job_detail {
+    display: flex;
+    padding: 20px 0 80px;
+    max-width: 1060px;
+}
+
+.job_detail_contents {
+    width: calc(100% - 360px);
+    vertical-align: top;
+}
+
+.job_detail_aside {
+    top:70px;
+    position: fixed;
+    right: calc((100% - 1060px)/2);
+    width: 340px;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.job_detail_aside_body {
+    width: 90%;
+}
+
+.job_detail_aside_body .title {
+    display: grid;
+    margin-top: 10px;
+}
+
+.job_detail_aside_body .share {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #e1e2e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job_detail_aside_body .title h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333;
+}
+
+.job_detail_aside_body li {
+    width: 50%;
+    float: left;
+}
+
+.job_detail_aside_body h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.job_detail_aside_bookmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid #36f;
+    font-size: 15px;
+    font-weight: 700;
+    color: #36f;
+    margin-top: 20px;
+}
+
+.job_detail_aside_apply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #36f;
+    border: 1px solid #36f;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.job_detail_aside_like {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 30px;
+    border-radius: 25px;
+    border: 1px solid gainsboro;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+}
+
+.job_detail_aside_like img {
+    margin-right: 7px;
+    height: 17px;
+    width: 17px;
+}
+
+.job_detail_aside_body li p {
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.gallery {
+    position: relative;
+    max-width: 1000px;
+    padding: 0 10;
+}
+
+.gallery_scroller {
+    /* snap mandatory on horizontal axis  */
+    scroll-snap-type: x mandatory;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: center;
+
+    height: 500px;
+
+    /* Enable Safari touch scrolling physics which is needed for scroll snap */
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.gallery_scroller div {
+    /* snap align center  */
+    scroll-snap-align: center;
+    margin: 10px;
+    position: relative;
+}
+
+.gallery_scroller img {
+    width: 700px;
+    height: 490px;
+
+}
+
+
+.gallery div.note {
+    position: absolute;
+
+    /* vertically align center */
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    position: absolute;
+
+    font-size: 4em;
+    color: white;
+}
+
+
+.gallery .btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 30px;
+    width: 30px;
+
+    border-radius: 2px;
+    
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+}
+
+.gallery .btn.next {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+    right: 10px;
+}
+
+.gallery .btn.prev {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+    left: 10px;
+}
+
+
+.job_detail_contents_title {
+    width: 100%;
+    margin: 40px 0 30px;
+}
+
+.job_detail_contents_title h1 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.job_detail_contents_title .sub_title {
+    display: flex;
+}
+
+.job_detail_contents_title .sub_title p {
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 10px;
+
+}
+
+
+.job_detail_contents_title .sub_title button {
+    border: 1px solid #00aead;
+    color: #00aead;
+    background-color: #fff;
+    border-radius: 2px;
+    font-size: 11px;
+    height: 20px;
+
+}
+
+.job_detail_divider {
+    border: 1px solid #e1e2e3;
+    width: 0px;
+    height: 12px;
+    ;
+    margin: 3px 20px;
+}
+
+.job_detail_location {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.sub_tag {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sub_tag li a {
+    margin-right: 6px;
+    margin-bottom: 10px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #333;
+    background-color: #f3f5f8;
+    border-radius: 25px;
+}
+
+.job_detail_description {
+    display: grid;
+    margin-top: 60px;
+    padding-right: 20px;
+}
+
+.job_detail_description p {
+    overflow: visible;
+    display: block;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.job_detail_description h5 {
+    overflow: visible;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 20px 0 0 0;
+    font-weight: 600;
+}
+
+.job_detail_description .skill {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.job_detail_description .skill li {
+    background-color: #e4f4ec;
+    border-radius: 20px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.job_divider {
+    margin: 40px 0px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.job_place {
+    margin-top: 20px;
+}
+
+.job_place>div {
+    margin-bottom: 20px;
+}
+
+.job_place .header {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    width: 80px;
+    color: #999;
+}
+
+.job_place .body {
+    color: #333;
+    width: calc(100% - 80px);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#job_map {
+    width: 100%;
+    height: 400px;
+}
+
+.job_logo {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    border: 1px solid #e1e2e3;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.job_logo .left {
+    display: flex;
+}
+
+.job_logo .left h1 {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.job_logo .left h6 {
+    color: #999;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.job_logo .left img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.job_logo .right {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    border: 1px solid #e1e2e3;
+    color: #002fdb;
+    height: 40px;
+    padding: 0 27px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.job_warnning {
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    border-radius: 5px;
+    background-color: rgb(240, 239, 239);
+}
+
+.job_warnning_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.job_warnning_description h5 {
+    margin: 0 20px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #333;
+}
+
+.job_warnning img {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+}
+
+.company_list_title {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: normal;
 }
