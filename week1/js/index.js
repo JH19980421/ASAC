@@ -1,5 +1,6 @@
 const menuBar = document.querySelector('.menu');
 const containerTop = document.querySelector('.container-top');
+const menuExpand = document.querySelector('.menu-expand');
 
 const menuExpandDiv = document.createElement('div');
 menuExpandDiv.className = 'menu-expand';
@@ -32,4 +33,4 @@ menuBar.addEventListener('mouseover', () => {
 });
 menuBar.addEventListener('mouseout', () => {
     containerTop.removeChild(menuExpandDiv);
-})
+});
