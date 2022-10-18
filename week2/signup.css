@@ -1,0 +1,97 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+.modal_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px ;
+    height: 523px;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    transform: translateX(-50%) translateY(10%);
+}
+
+.modal_title {
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.close {
+    margin: 5px 0 0;
+    width: 20px;
+    height: 20px;
+    float: right;
+    align-items: center;
+}
+
+.introduce {
+    margin: 60px 0 20px;
+    font-size: 22px;
+    line-height: 1.666666667em;
+    font-weight: 600;
+}
+
+.introduce_sub {
+    font-size: 14px;
+    line-height: 1.666666667em;
+    color: #767676;
+}
+
+.emailText {
+    margin: 40px 0 0;
+    float: left;
+    font-size: 12px;
+    color: #767676;
+
+}
+
+.emailBox {
+    border-radius: 5px;
+    border-color: blue;
+    margin: 10px 0 0;
+    width: inherit;
+    padding: 15px 0 15px;
+    
+}
+
+.choice {
+    margin: 10px 0 0;
+    font-size: 12px;
+    line-height: 2em;
+    color: #767676;
+}
+
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+}
+
+.signup_btn {
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 15px 0 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: blue;
+    width: inherit;
+}
