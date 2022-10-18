@@ -1,13 +1,8 @@
-body {
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-}
-
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 
 header {
+    z-index: 2;
     position: fixed;
     display: flex;
     font-size: 14px;
@@ -22,7 +17,15 @@ header {
 
 .header_left {
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.close {
+    margin: 5px 0 0;
+    width: 20px;
+    height: 20px;
+    float: right;
+    align-items: center;
 }
 
 .header_center {

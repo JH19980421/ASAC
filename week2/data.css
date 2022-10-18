@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
+
 }
 
 .nameText {
@@ -97,17 +98,9 @@
     background-color: #f2f4f7 !important;
 }
 
-.close {
-    margin: 5px 0 0;
-    width: 20px;
-    height: 20px;
-    float: right;
-    align-items: center;
-}
-
 .checkpwd {
     margin: 5px 0 0;
-    float: left;
+    text-align: left;
     font-size: 12px;
     color: gray;
 }

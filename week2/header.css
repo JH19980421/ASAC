@@ -14,7 +14,7 @@ header {
 }
 
 img.menu {
-    margin-left: 100px;
+    float: right;
     width: 15px;
     height: 15px;
 }
@@ -22,6 +22,7 @@ img.menu {
 img.logo {
     width: 75px;
     margin-left: 15px;
+    float: left;
 }
 
 .header_right {
