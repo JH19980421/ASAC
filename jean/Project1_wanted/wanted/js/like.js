@@ -10,10 +10,10 @@ region.addEventListener("click",function(){
 
     if(!click_flag) {
         number = parseInt(number) + 1;  
-        img.src="../img/like2.png"
+        img.src="img/like2.png"
      }else {   
         number = parseInt(number) - 1;
-        img.src="../img/like.png"
+        img.src="img/like.png"
      
      }
      like.innerText=number;

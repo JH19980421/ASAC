@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>채용정보 원티드</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.webp" />
     <link rel="stylesheet" href="./css/style.css">
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=91c1cm3iyy"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=91c1cm3iyy"></script>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                 <h1></h1>
                 <button class="close-area"><svg width="24" height="24" viewBox="0 0 24 24" color="#999">
                         <path fill="currentColor"
-                            d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z">
+                               d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z">
                         </path>
                     </svg></button>
             </div>
@@ -256,7 +256,7 @@
                         <div><span class="header">근무지역</span><span class="body">서울특별시 강남구 역삼로 160</span></div>
                     </div>
     
-                    <div id="job_map"></div>
+                    <div id="map"></div>
     
 
                     <div class="job_logo">
@@ -411,7 +411,7 @@
             zoom: 10
         };
         
-        var map = new naver.maps.Map('job_map', mapOptions);
+        var map = new naver.maps.Map('map', mapOptions);
         </script>
 
     <script src="./js/modal.js"></script>
