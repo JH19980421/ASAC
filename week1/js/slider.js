@@ -9,6 +9,7 @@ const slideItemMargin = 13; //슬라이드 아이템 마진 값
 
 const slideCount = slideList.childElementCount;
 const slideLastIndex = slideList.childElementCount - 1;
+
 let currentSlide = 0;
 
 
@@ -90,5 +91,6 @@ slideNextButton.addEventListener('click', () => {
 const render = () => {
     pasteFirstAndLastElement();
     autoSlide();
+    currentSlide = 0;
 }
 render();

@@ -70,6 +70,8 @@ img.sns {
 }
 
 .menu-expand {
+    display: none;
+
     width: 300px;
     height: 94%;
 
@@ -94,6 +96,9 @@ img.sns {
 
     font-size: 15px;
     font-weight: bold;
+}
+.menu-expand:hover {
+    display: block !important;
 }
 
 .category {
@@ -380,6 +385,7 @@ img.sns {
     height: 37px;
 
     cursor: pointer;
+    box-shadow: 1px 1px 5px 10.5px white;
 }
 /* .etc-container button:first-child {
     border-radius: 100%;
