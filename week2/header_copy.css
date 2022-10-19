@@ -28,6 +28,14 @@ header {
     align-items: center;
 }
 
+.close2 {
+    margin: 5px 0 0;
+    width: 20px;
+    height: 20px;
+    float: right;
+    align-items: center;
+}
+
 .header_center {
     display: flex;
     justify-content: space-between;

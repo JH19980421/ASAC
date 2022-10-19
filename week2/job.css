@@ -18,14 +18,19 @@ aside {
 }
 
 .JobDetail {
+    display: flex;
     width: 90%;
     max-width: 1060px;
     margin: 0 auto;
     padding: 20px 0 80px;
+    height: auto;
 }
 
 .JobDetail_Wrapper {
+    width: calc(100% - 360px);
+    display: inline-block;
     position: relative;
+    height: inherit;
 }
 
 .JobImage {
@@ -42,13 +47,17 @@ aside {
 
 .JobImageShow {
     scroll-snap-align: start;
-    width: calc(100% - 360px);
     flex-shrink: 0;
 }
 
+.JobImageShow img {
+    width: 700px;
+    object-fit: cover;
+}
+
+
 .JobContent {
     display: inline-block;
-    width: calc(100% - 360px);
     vertical-align: top;
 }
 
@@ -88,12 +97,15 @@ aside {
 }
 
 .JobProcess_container {
-    display: block;
-    top: 100px;
-    right: 5%;
+    margin-left: 10px;
+    display: block; 
     width: 340px;
-    position: fixed;
     right: calc((100% - 1060px)/2);
+}
+
+.BeforeApplication_container {
+    position: sticky;
+    top: 79px;
 }
 
 .asideBox {
@@ -233,6 +245,8 @@ aside {
 }
 
 .JobWorkPlace {
+    display: inline-block;
+    width: calc(100% - 360px);
     margin: 0;
     padding: 30px 0 15px;
 }

@@ -5,7 +5,7 @@
 
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-body {
+.Mainbody {
     margin: 0;
     font-size: 14px;
     line-height: 1.42857143;
