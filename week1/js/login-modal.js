@@ -78,3 +78,12 @@ agreementAll.addEventListener('click', () => {
         });
     }
 });
+
+agreementItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        if(isAllChecked && !item.checked) {
+            isAllChecked = 0;
+            agreementAll.checked = false;
+        }
+    });
+});

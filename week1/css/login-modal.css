@@ -226,6 +226,8 @@ button {
 .agreement input {
     width: 15px;
     height: 15px;
+
+    margin-right: 10px;
 }
 
 #agreement-divider {
@@ -253,6 +255,8 @@ button {
 .agreement-item-check input {
     width: 15px;
     height: 15px;
+
+    margin-right: 10px;
 }
 .agreement-item-check p {
     margin: 0;
