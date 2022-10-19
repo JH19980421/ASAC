@@ -573,6 +573,8 @@ footer {
     border-radius: 30px;
 
     padding: 7px 19px;
+
+    cursor: pointer;
 }
 .likes img {
     width: 15px;
@@ -615,4 +617,36 @@ footer {
     z-index: 4;
 
     background-color: rgba(105, 105, 105, 0.7);
+}
+
+.menu-expand {
+    display: none;
+
+    width: 300px;
+    height: 94%;
+
+    position: fixed;
+    left: 14.5%;
+    top: 6%;
+    z-index: 2;
+
+    background-color: white;
+    
+    border-radius: 5px;
+
+    text-align: left;
+
+    overflow: hidden;
+}
+.menu-expand ul {
+    list-style: none;
+
+    padding: 0 10px;
+    line-height: 270%;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+.menu-expand:hover {
+    display: block !important;
 }
