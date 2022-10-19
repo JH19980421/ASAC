@@ -1,15 +1,5 @@
 const floatingContainer = document.querySelector('.floating');
 
-
-// const currentLoaction = 
-
-
-floatingContainer.style.cursor = 'pointer';
-
-// floatingContainer.addEventListener('click', () => {
-//     console.log('scroll', window.scrollY);
-// });
-
     
 window.onscroll = () => {
     if(window.scrollY > 2260) {
