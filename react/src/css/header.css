@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -17,6 +22,12 @@ header {
     padding: 4px 225px;
 }
 
+.header__right {
+    display: contents;
+
+    text-align: right;
+}
+
 img.menu {
     width: 18px;
     height: 19px;
@@ -27,4 +38,57 @@ img.logo {
     width: 75px;
     margin-left: 15px;
 }
+img.search {
+    width: 16px;
+    margin-right: 20px;
+    margin-top: 2px;
+}
 
+.login {
+    cursor: pointer;
+    max-lines: 1;
+}
+
+.header__organization {
+    border: 1px solid lightgray;
+    border-radius: 20px;
+
+    padding: 5px 10px;
+    
+    color: gray;
+}
+
+.badge--new {
+    position: absolute;
+    top: 12px;
+
+    font-style: normal;
+    color: blue;
+
+    transform: translateX(-12%) scale(0.6);
+}
+
+.category {
+    display: flex;
+    flex-grow: 1;
+    list-style-type: none;
+
+    text-align: center;
+
+    margin-left: 10px;
+}
+
+.category li {
+    float: left;
+    width: max-content;
+
+    margin-left: 30px;
+
+    cursor: pointer;
+}
+
+.divider__vertical {
+    height: 12px;
+
+    margin: 0 20px;
+}

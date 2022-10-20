@@ -1,39 +1,41 @@
+import '../css/normalize.css';
+import '../css/common.css';
 import '../css/header.css';
 
 function Header() {
     return (
         <header>
-            <img class="menu" src="./assets/images/menu.png" alt="menu"/>
+            <img className="menu" src="/images/menu.png" alt="menu"/>
             <a href="./index.html">
-                <img class="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted"/>
+                <img className="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted"/>
             </a>
             
-            <ul class="category">
+            <ul className="category">
                 <li><a href="./recruiting.html">채용</a></li>
                 <li><a href="./loading.html">로딩창</a></li>
                 <li><a href="#">직군별 연봉</a></li>
                 <li><a href="#">이력서</a></li>
                 <li>
                     <a href="#">커뮤니티</a>
-                    <em class="new-badge">New</em>
+                    <em className="badge--new">New</em>
                 </li>
                 <li><a href="#">프리랜서</a></li>
                 <li>
                     <a href="#">AI 합격예측</a>
-                    <em class="new-badge">Beta</em>
+                    <em className="badge--new">Beta</em>
                 </li>
             </ul>
 
-            <div class="header-right">
+            <div className="header__right">
                 <a href="#">
-                    <img class="search" src="./assets/images/search.png" alt="search"/>
+                    <img className="search" src="/images/search.png" alt="search"/>
                 </a>
-                <div class="login">
+                <div className="login">
                     회원가입/로그인
                 </div>
-                <p class="divider-column"></p>
+                <p className="divider__vertical"></p>
         
-                <div class="organization">기업 서비스</div>            
+                <div className="header__organization">기업 서비스</div>            
             </div>
         </header>
     );

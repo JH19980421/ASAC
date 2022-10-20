@@ -1,0 +1,14 @@
+* {
+    font-family: "Pretendard";
+}
+
+.divider__vertical {
+    border: 0.5px solid #e1e2e3;
+
+    width: 0px;
+    height: 2vh;
+}
+
+.divider__horizontal {
+    border: 0.5px solid #e1e2e3;
+}
