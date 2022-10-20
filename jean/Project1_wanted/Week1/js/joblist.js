@@ -1,11 +1,12 @@
 
 const joblist =document.querySelectorAll('.joblist');
+const image=joblist[0].querySelector("img");
+console.log(joblist);
 const dropdown_joblist=joblist[0].querySelector('.dropdown_joblist');
 const list=dropdown_joblist.children;
 const message=document.querySelector('.message');
 const sub_joblist=joblist[1].querySelector('#sub_joblist');
 
-console.log(sub_joblist);
 function selectList(event) {
     message.style.display='none';
     sub_joblist.innerHTML=event.currentTarget.innerText + " 전체";
@@ -21,10 +22,15 @@ for (let i = 0; i < list.length; i++) {
 let click_check=false;
 joblist[0].addEventListener('click', function () {
     var str
-    if (!click_check)
+
+    if (!click_check){
+        image.style.transform = "rotate(180deg)";
         str = "block";
-    else
+    }
+    else{
+        image.style.transform = "rotate(0deg)";
         str = "none";
+    }
 
     dropdown_joblist.style.display = str;
     click_check = !click_check

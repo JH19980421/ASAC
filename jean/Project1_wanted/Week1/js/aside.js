@@ -14,11 +14,10 @@ function fixed(){
 }
 
 window.onload = () => {
-
     window.addEventListener("scroll", function () {     
         const scroll = window.pageYOffset +aside.clientHeight;
 
-        if(scroll>main_height){
+        if(scroll>main_height - 500){
             fixed();
         }
         else{

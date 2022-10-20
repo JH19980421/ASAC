@@ -16,7 +16,7 @@ const Socialink = (props) => {
 
     return (
         imgs.map(img => 
-            <a href={img.href} class="" aria-label="" target="_blank" rel="noopener noreferrer">
+            <a href={img.href} key={img.alt} className="" aria-label="" target="_blank" rel="noopener noreferrer">
                 <img src={img.src} alt={img.alt}/></a> 
         )
     )

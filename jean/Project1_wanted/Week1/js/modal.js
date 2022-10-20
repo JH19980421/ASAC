@@ -9,8 +9,9 @@ const input = modal.querySelector(".login_email_button")
 const header_title =document.querySelector('.modal-header h1');
 const header_img =document.querySelector('.modal-header img');
 const email = body.querySelector(".email_inputobx input")
-const email_error = body.querySelector(".email_error")
-
+const email_error = document.querySelector(".email_error")
+console.log(body);
+    
 
 function modalOn() {
     header_title.innerHTML=""
@@ -20,6 +21,7 @@ function modalOn() {
     body.style.display = 'block'; 
     intput_body.style.display ='none';
     email.style.border  = "1px solid #999999";
+
     email_error.style.display='none';
 }
 
@@ -46,8 +48,6 @@ closeBtn.addEventListener("click", e => {
 function FailEmail()
 {
     email.style.border  = "1px solid red";
-
-    console.log(email.style.border)
     email_error.style.display='block';
 }
 function CheckEmail()
@@ -68,6 +68,9 @@ function CheckEmail()
 input.addEventListener("click", e => {
     if(!CheckEmail())
         return;
+
+        intput_body.querySelector('.email_box input').value
+        =modal.querySelector('.email_inputobx input').value;
 
     header_title.innerHTML="회원가입"
     header_img.style.display="none"

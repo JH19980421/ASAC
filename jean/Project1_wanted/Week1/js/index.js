@@ -38,6 +38,7 @@ slides.style.width = newWidth + 'px';
 balance=(window.innerWidth-slideWidth )/2 - slideMargin  ;
 current=  -(slideWidth +slideMargin) * 1 ;
 slides.style.left = current+balance + 'px';
+info.style.left=balance+50+ 'px';
 //
 setTimeout(function () {
     slides.classList.add('delay');
@@ -112,7 +113,8 @@ if(currentIdx == 0 || currentIdx == -1){
 window.onresize = function(event){
 balance=(window.innerWidth-slideWidth )/2  - slideMargin ;
 slides.style.left =   current + balance + 'px';
-
+info.style.left=balance+50+ 'px';
+console.log();
 }
 
 

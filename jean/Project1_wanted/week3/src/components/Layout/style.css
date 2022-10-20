@@ -11,8 +11,8 @@
  */
 
  html {
-    white-space: pre-line;
     overflow: scroll;
+    overflow-x:hidden;
     line-height: 1.15;
     /* 1 */
     -webkit-text-size-adjust: 100%;
@@ -501,11 +501,12 @@ header .mainbar {
   }
   
   .dropdown-content{
-    
+    border: 1px solid gainsboro;
     display : none;
     position : absolute;
+    margin-top: 0px;
     z-index : 1;
-   height: calc(100vh - 50px);
+   height: calc(100vh - 300px);
     width: 220px;
     background-color: #fff;
     overflow-y: auto;
@@ -513,6 +514,7 @@ header .mainbar {
   }
   
   .dropdown-content a{
+    padding-left: 20px;
     display : block;
     font-size: 14px;
     font-weight: 700;
@@ -522,7 +524,6 @@ header .mainbar {
     
   }
   .dropdown-content a:first-child{
-    margin-top: 20px;
   }
   .dropdown:hover .dropdown-content {
     display: block;
@@ -593,11 +594,19 @@ header .mainbar .right li {
     padding-top: 40px;
     margin: auto;
 }
-
+.message h2{
+    color: #aaa;
+    font-weight: 400;
+}
 .category .joblist {
     display: flex;
+    cursor: pointer;
+    position: relative;
+    
 
 }
+
+
 
 .category .divider {
     border: 1px solid #e1e2e3;
@@ -611,7 +620,6 @@ header .mainbar .right li {
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: relative;
     border: 1px solid #e1e2e3;
     border-radius: 100%;
@@ -620,8 +628,34 @@ header .mainbar .right li {
     height: 26px;
     cursor: pointer;
     transition: .3s;
+    
 }
+.dropdown_joblist{
+    display : none;
+    position : absolute;
+    top:50px;
+    z-index : 11;
+   height: 500px;
+    width: 150px;
+    background-color: #fff;
+    border: 1px solid gray;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+    border-radius: 5px;
+  }
+  
+  .dropdown_joblist a{
+    text-align: center;
+    display : block;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: normal;
+  
+  }
 
+  
 
 .category .joblist p {
     margin-right: 16px;
@@ -629,6 +663,10 @@ header .mainbar .right li {
     line-height: 29px;
     font-weight: 700;
     color: #333;
+}
+
+.category .joblist img {
+    transition: all ease 0.3s;
 }
 
 .category .joblist:last-child p {
@@ -780,7 +818,7 @@ li {
     background-color: #fff;
     opacity: 1;
     text-align: left;
-    left: 450px;
+    left: 25%;
 
 }
 
@@ -835,6 +873,7 @@ li {
     position: absolute;
     left: 0;
     top: 0;
+    transition: 0.4s ease-out;
 }
 
 .slides.delay {
@@ -864,12 +903,12 @@ li {
 }
 
 .prev {
-    left: 320px;
+    left: 10%;
 }
 
 
 .next {
-    right: 320px;
+    right: 10%;
 }
 
 
@@ -903,72 +942,93 @@ li {
 
 .main .section .career .scroll_button {
     margin: 20px 0;
-    width: 100%;
+    width: 93%;
     display: flex;
     justify-content: space-between;
 
 }
 
-.main .section .career .scroll_button button {
+
+
+
+  
+   /* 토글 버튼 */
+ .toggleButton {
+    position: absolute;
     border: 1px solid lightgray;
     display: flex;
-    padding: 10px 20px;
-    font-weight: 600;
-    font-size: 15px;
-    color: #888;
+    align-items: center;
+    justify-content: center;
     height: 40px;
-    border-radius: 15px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 100%;
     background-color: white;
+  }
 
+.select_prev{
+    left :0;
+}
+
+.select_next{
+    right :0;
 }
 
 .main .section .career .scroll_button .left {
     display: flex;
+    position: relative;
     width: 100%;
     margin-right: 10px;
-    justify-content: space-between;
+    justify-content: center;
 
 }
-
-.toggleSwitch {
-    width: 60px;
-    height: 40px;
-    display: block;
-    position: relative;
-    border-radius: 30px;
-    background-color: #fff;
-    border: 1px solid rgb(243, 241, 241);
-    cursor: pointer;
-
-  }
-  
-   /* 토글 버튼 */
-  .toggleSwitch .toggleButton {
-    /* 버튼은 토글보다 작아야함  */
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 0;
-    border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    /* background-image: url("../img/right-arrow.png"); */
-  }
-
-  .toggleSwitch .toggleButton img{
-    width: 20px;
-    height: 20px;
-    right: 10px;
-    top:10px;
-position: absolute;
-
-  }
-
 
 .main .section .career .scroll_button .left .select{
-    display: flex;
-    gap: 10px;
-
+ display: flex;
+    overflow: hidden;
+    width: 97%; /* 슬라이드할 사진과 마진 총 넓이 */
 }
+.main .section .career .scroll_button .left .select .slide{
+    display: flex;
+    position: relative;
+    gap :10px;
+    width: 2500px;
+    transition: left 0.5s ease-out;  
+}
+.main .section .career .scroll_button .left .select .slide li{
+    cursor: pointer;
+    border: 1px solid lightgray;
+      flex-shrink: 0;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #888;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    background-color: white;
+}
+.main .section .career .scroll_button .left .select .slide li:hover{
+    color: blue;
+    border: 1px solid blue;
+}
+.main .section .career .scroll_button .left .select .slide li:first{
+    margin-left: 5px;
+}
+.main .section .career .scroll_button button { 
+border: 1px solid lightgray;
+    display: block;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #888;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+
 .main .section .career .scroll_button .left .arrow {
     padding: 10px 12px;
     border-radius: 100%;
@@ -1173,6 +1233,7 @@ p {
 }
 
 .main .section .subsection .list2 img {
+    object-fit: cover;
     width: 100%;
     height: 273px;
     border-radius: 4px;
@@ -1773,6 +1834,7 @@ footer {
     -moz-appearance: none;
     appearance: none;
     font-weight: 500;
+    margin-top: 0;
 
 }
 
@@ -2471,7 +2533,7 @@ margin-bottom: 10px;
     font-weight: 600;
 }
 
-#job_map {
+#map {
     width: 100%;
     height: 400px;
 }
@@ -2558,4 +2620,47 @@ margin-bottom: 10px;
     font-weight: 600;
     color: #333;
     line-height: normal;
+}
+
+.footer_banner{
+    display: flex;
+    position:fixed;
+    bottom: 0;
+    color: white;
+    background-color: #258bf7;
+    width: 100%;
+    height: 70px;
+}
+.footer_banner_section{
+    display: flex;
+    position: relative;
+    width: 1060px;
+    margin: auto;
+    justify-content: space-between;
+}
+.footer_banner_title{
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.footer_banner_section button{
+    width: 118px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #258bf7;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+}
+
+.loading{
+    width: 100%;
+    text-align: center;
+}
+
+.email_box input{
+    background-color: rgb(216, 214, 214);
 }

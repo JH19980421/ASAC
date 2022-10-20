@@ -1,4 +1,5 @@
 import Socialink from './Socialink';
+
 const Footer = () => {
 
 
@@ -6,10 +7,10 @@ const Footer = () => {
   
     return (
       <footer>
-      <div class="footertop">
-          <div class="muenulink">
+      <div className="footertop">
+          <div className="muenulink">
               <ul>
-                  <li> <img class="logo" src= {require('../../../images/logo2.webp')} /></li>
+                  <li> <img className="logo" src= {require('../../../images/logo2.webp')} alt ="logo"/></li>
                   <li><a href="/">기업소개</a></li>
                   <li><a href="/">이용약관</a></li>
                   <li><a href="/">개인정보</a></li>
@@ -17,24 +18,24 @@ const Footer = () => {
                   <li><a href="/">고객센터</a></li>
               </ul>
           </div>
-          <div class="sociallink">
+          <div className="sociallink">
             {Socialink()}
           </div>
         </div>
-      <div class="footerbottom">
-          <div class="adress">
+      <div className="footerbottom">
+          <div className="adress">
               <p>{text}</p>
           </div>
 
-          <div class="language">
-              <img src={require("https://static.wanted.co.kr/images/userweb/ico_KR.svg")} alt="country flag KR"/>
+          <div className="language">
+              <img src="https://static.wanted.co.kr/images/userweb/ico_KR.svg" alt="country flag KR"/>
               <select>
                   <option value="KR">한국 (한국어)</option>
                   <option value="JP">日本 (日本語)</option>
                   <option value="WW">Worldwide (English)</option>
                   <option value="SG">Singapore (English)</option>
               </select>
-              <i class="arrow"><img src={require ("../../../images/arrow.png")} class="arrow"/></i>
+              <i className="arrow"><img src={require ("../../../images/arrow.png")} className="arrow" alt="arrow"/></i>
           </div>
 
 
