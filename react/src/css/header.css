@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+
+    z-index: 1;
+
+    flex-grow: 1;
+
+    font-size: 14px;
+
+    padding: 4px 225px;
+}
+
+img.menu {
+    width: 18px;
+    height: 19px;
+
+    cursor: pointer;
+}
+img.logo {
+    width: 75px;
+    margin-left: 15px;
+}
+
