@@ -1,0 +1,33 @@
+.container__top {
+    text-align: center;
+
+    border-bottom: 1px solid lightgray;
+}
+
+.subtitle__container {
+    text-align: center;
+
+    margin-top: 40px;
+}
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-top: 40px;
+}
+
+.subtitle__container img {
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    margin-top: 19px;
+}
+.subtitle {
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}

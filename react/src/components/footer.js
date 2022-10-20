@@ -35,10 +35,10 @@ function Footer() {
                 </p>
 
                 <select className="footer__nation">
-                    <option value="1">🇰🇷 한국 (한국어)</option>
-                    <option value="1">🇯🇵 일본 (일본어)</option>
-                    <option value="1">🌐 Worldwide (English)</option>
-                    <option value="1">🇸🇬 Singapore (English)</option>
+                    <option value="kr">🇰🇷 한국 (한국어)</option>
+                    <option value="jp">🇯🇵 일본 (일본어)</option>
+                    <option value="world">🌐 Worldwide (English)</option>
+                    <option value="sg">🇸🇬 Singapore (English)</option>
                 </select>
             </div>
         </footer>
