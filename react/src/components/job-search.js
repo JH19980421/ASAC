@@ -2,36 +2,36 @@ import "../css/job-search.css";
 
 function JobSearch() {
     return (
-        <div class="job-search__container">
-            <a href="#" class="job-search__item">
-                <img class="job-search__image" src="/images/search.png" alt="search"/>
-                <p class="job-search__text">
+        <div className="job-search__container">
+            <a href="#" className="job-search__item">
+                <img className="job-search__image" src="/images/search.png" alt="search"/>
+                <p className="job-search__text">
                     채용공고
-                    <img class="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
+                    <img className="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
                 </p>
             </a>
-            <div class="divider__vertical grid"></div>
-            <a href="#" class="job-search__item">
-                <img class="job-search__image" src="/images/search.png" alt="search"/>
-                <p class="job-search__text">
+            <div className="divider__vertical grid"></div>
+            <a href="#" className="job-search__item">
+                <img className="job-search__image" src="/images/search.png" alt="search"/>
+                <p className="job-search__text">
                     내 프로필
-                    <img class="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
+                    <img className="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
                 </p>
             </a>
-            <div class="divider__vertical grid"></div>
-            <a href="#" class="job-search__item">
-                <img class="job-search__image" src="/images/search.png" alt="search"/>
-                <p class="job-search__text">
+            <div className="divider__vertical grid"></div>
+            <a href="#" className="job-search__item">
+                <img className="job-search__image" src="/images/search.png" alt="search"/>
+                <p className="job-search__text">
                     매치업
-                    <img class="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
+                    <img className="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
                 </p>
             </a>
-            <div class="divider__vertical grid"></div>
-            <a href="#" class="job-search__item">
-                <img class="job-search__image" src="/images/search.png" alt="search"/>
-                <p class="job-search__text">
+            <div className="divider__vertical grid"></div>
+            <a href="#" className="job-search__item">
+                <img className="job-search__image" src="/images/search.png" alt="search"/>
+                <p className="job-search__text">
                     직군별 연봉
-                    <img class="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
+                    <img className="job-search__chevron" src="/images/chevron-right.png" alt="right"/>
                 </p>
             </a>
         </div>

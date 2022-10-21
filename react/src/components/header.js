@@ -1,17 +1,20 @@
+import { Link } from "react-router-dom";
+
 import '../css/normalize.css';
 import '../css/common.css';
 import '../css/header.css';
+import Recruiting from "../pages/recruiting";
 
 function Header() {
     return (
         <header>
             <img className="menu" src="/images/menu.png" alt="menu"/>
-            <a href="./index.html">
+            <Link to="..">
                 <img className="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted"/>
-            </a>
-            
+            </Link>
+
             <ul className="category">
-                <li><a href="./recruiting.html">채용</a></li>
+                <li><Link to="/recruting">채용</Link></li>
                 <li><a href="./loading.html">로딩창</a></li>
                 <li><a href="#">직군별 연봉</a></li>
                 <li><a href="#">이력서</a></li>

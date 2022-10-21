@@ -1,4 +1,7 @@
 import React from "react";
+
+import '../css/main.css';
+
 import Article from "../components/article";
 import Event from "../components/event";
 import Footer from "../components/footer";
@@ -11,9 +14,9 @@ import MarketingButton from "../components/marketing-button";
 import SlideBanner from "../components/slide-banner";
 import Subtitle from "../components/subtitle";
 
-import '../css/main.css'
 
 function Main() {
+
     return (
         <div>
             <Header/>
