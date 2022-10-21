@@ -31,3 +31,38 @@
     letter-spacing: -0.5px;
     margin-bottom: 4px;
 }
+
+.container {
+    text-align: center;
+
+    margin: 4px 225px;
+
+    border-bottom: 1px solid lightgray;
+}
+.container.no-border {
+    border: none;
+}
+
+.see-more {
+    align-items: center;
+
+    border: 1px solid #e1e2e3;
+    border-radius: 30px;
+    padding: 15px 90px;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    margin-bottom: 50px;
+    
+    cursor: pointer;
+}
+.see-more img {
+    width: 13px;
+    margin-left: 3px;
+}
+
+.event {
+    margin: 0 225px;
+}

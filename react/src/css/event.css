@@ -1,0 +1,39 @@
+.container__event {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+
+    margin-bottom: 90px;
+}
+.event__card img {
+    width: 100%;
+    height: 290px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.event__badge-container {
+    display: flex;
+    align-items: center;
+}
+.event__badge {
+    width: fit-content;
+    padding: 3px 7px;
+    margin: 7px 7px 7px 0;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: orange;
+
+    border: 1px solid orange;
+    border-radius: 3px;
+}
+.event__title {
+    text-align: left;
+    margin-top: 11px;
+
+    font-size: 15px;
+    font-weight: bold;
+}

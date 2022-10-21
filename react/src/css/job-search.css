@@ -1,0 +1,34 @@
+.job-search__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+
+    margin: 40px 225px 70px 225px;
+
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+}
+.job-search__image {
+    width: 30px;
+    height: 30px;
+
+    padding: 5px;
+    margin-top: 20px;
+}
+.job-search__text {
+    font-size: 18px;
+    font-weight: bold;
+}
+.job-search__chevron {
+    width: 15px;
+    height: 15px;
+
+    margin-left: 3px;
+
+    transform: translateY(10%);
+}
+
+.divider__vertical.grid {
+    height: 120px;
+}
