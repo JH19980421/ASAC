@@ -10,9 +10,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
     overflow: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
     line-height: 1.15;
     /* 1 */
     -webkit-text-size-adjust: 100%;
@@ -217,9 +217,9 @@ select {
    */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
     -webkit-appearance: button;
 }
 
@@ -228,9 +228,9 @@ button,
    */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
@@ -240,9 +240,9 @@ button::-moz-focus-inner,
    */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -297,8 +297,8 @@ textarea {
    * 2. Remove the padding in IE 10.
    */
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
     box-sizing: border-box;
     /* 1 */
     padding: 0;
@@ -309,8 +309,8 @@ textarea {
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -319,7 +319,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 
-[type="search"] {
+[type='search'] {
     -webkit-appearance: textfield;
     /* 1 */
     outline-offset: -2px;
@@ -330,7 +330,7 @@ textarea {
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -384,8 +384,6 @@ template {
     display: none;
 }
 
-
-
 .filter {
     z-index: 10;
     margin: auto;
@@ -411,7 +409,6 @@ template {
     justify-content: space-between;
 
     border-bottom: 1px solid gainsboro;
-
 }
 
 h1 {
@@ -444,7 +441,6 @@ a {
 }
 
 ul {
-
     list-style: none;
     padding: 0px;
     margin: 0;
@@ -461,14 +457,13 @@ img {
 }
 
 body {
-
     padding-top: 50px;
     margin: 0;
-    font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+    font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+        Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
 }
 
 header {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -479,55 +474,49 @@ header {
     height: 50px;
     align-items: center;
     z-index: 99;
-
-
 }
 
 header .mainbar {
-    width: 87.72%;  
-    
+    width: 87.72%;
+
     max-width: 1060px;
-    display: flex;  
+    display: flex;
     align-items: center;
     margin: auto;
     justify-content: space-between;
-
-
 }
 
-.dropdown{
-    position : relative;
-    display : inline-block;
-  }
-  
-  .dropdown-content{
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
     border: 1px solid gainsboro;
-    display : none;
-    position : absolute;
+    display: none;
+    position: absolute;
     margin-top: 0px;
-    z-index : 1;
-   height: calc(100vh - 300px);
+    z-index: 1;
+    height: calc(100vh - 300px);
     width: 220px;
     background-color: #fff;
     overflow-y: auto;
+}
 
-  }
-  
-  .dropdown-content a{
+.dropdown-content a {
     padding-left: 20px;
-    display : block;
+    display: block;
     font-size: 14px;
     font-weight: 700;
     font-style: normal;
     line-height: 40px;
     letter-spacing: normal;
-    
-  }
-  .dropdown-content a:first-child{
-  }
-  .dropdown:hover .dropdown-content {
+}
+.dropdown-content a:first-child {
+}
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
 header .mainbar .left {
     display: flex;
@@ -543,7 +532,6 @@ header .mainbar img.logo {
     height: 17px;
 }
 
-
 header .mainbar .center {
     display: flex;
     justify-content: space-evenly;
@@ -553,7 +541,6 @@ header .mainbar .center a {
     padding: 12px;
 }
 
-
 header .mainbar .right {
     display: flex;
 }
@@ -562,11 +549,9 @@ header .mainbar .right a {
     cursor: pointer;
 }
 
-
 header .mainbar .right li {
     margin-left: 10px;
 }
-
 
 #vborder {
     width: 2px;
@@ -586,7 +571,6 @@ header .mainbar .right li {
     font-weight: 400;
 }
 
-
 .category {
     display: flex;
     width: 1060px;
@@ -594,7 +578,7 @@ header .mainbar .right li {
     padding-top: 40px;
     margin: auto;
 }
-.message h2{
+.message h2 {
     color: #aaa;
     font-weight: 400;
 }
@@ -602,19 +586,13 @@ header .mainbar .right li {
     display: flex;
     cursor: pointer;
     position: relative;
-    
-
 }
-
-
 
 .category .divider {
     border: 1px solid #e1e2e3;
     width: 0px;
     margin: 0 25px;
 }
-
-
 
 .category .joblist button {
     display: flex;
@@ -627,35 +605,31 @@ header .mainbar .right li {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    transition: .3s;
-    
+    transition: 0.3s;
 }
-.dropdown_joblist{
-    display : none;
-    position : absolute;
-    top:50px;
-    z-index : 11;
-   height: 500px;
+.dropdown_joblist {
+    display: none;
+    position: absolute;
+    top: 50px;
+    z-index: 11;
+    height: 500px;
     width: 150px;
     background-color: #fff;
     border: 1px solid gray;
     overflow-y: auto;
     box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
     border-radius: 5px;
-  }
-  
-  .dropdown_joblist a{
+}
+
+.dropdown_joblist a {
     text-align: center;
-    display : block;
+    display: block;
     font-size: 14px;
     font-weight: 700;
     font-style: normal;
     line-height: 40px;
     letter-spacing: normal;
-  
-  }
-
-  
+}
 
 .category .joblist p {
     margin-right: 16px;
@@ -671,10 +645,7 @@ header .mainbar .right li {
 
 .category .joblist:last-child p {
     font-weight: 400;
-
 }
-
-
 
 .filter .filterlist .left {
     display: flex;
@@ -689,9 +660,7 @@ header .mainbar .right li {
     border-radius: 5px;
     border: 1px solid #ececec;
     background-color: #fff;
-
 }
-
 
 .filter .filterlist button p:first-child {
     margin-right: 15px;
@@ -711,8 +680,6 @@ header .mainbar .right li {
     display: flex;
 }
 
-
-
 .filter .keywords {
     display: flex;
     margin: 30px 0;
@@ -722,7 +689,6 @@ header .mainbar .right li {
 
     width: 1060px;
     height: 40px;
-
 }
 
 .filter .keywords .keywordslides {
@@ -763,7 +729,6 @@ header .mainbar .right li {
     background-color: #fff;
     border: 1px solid gainsboro;
     cursor: pointer;
-
 }
 
 .filter .keywords .keywordsbutton img {
@@ -779,16 +744,12 @@ header .mainbar .right li {
     right: 0;
 }
 
-
-
 /* body */
 .main {
-
     display: block;
     margin: 0 auto;
     text-align: center;
     padding-top: 25px;
-
 }
 
 .main .section {
@@ -819,7 +780,6 @@ li {
     opacity: 1;
     text-align: left;
     left: 25%;
-
 }
 
 .banner_info h2 {
@@ -830,7 +790,7 @@ li {
     margin-top: 20px;
     font-weight: 700;
     color: #333;
-    width: "auto";
+    width: 'auto';
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -867,13 +827,10 @@ li {
     font-size: 11px;
 }
 
-
-
 .slides {
     position: absolute;
-    left: 0;
+    left: -1080px;
     top: 0;
-    transition: 0.4s ease-out;
 }
 
 .slides.delay {
@@ -906,15 +863,9 @@ li {
     left: 10%;
 }
 
-
 .next {
     right: 10%;
 }
-
-
-
-
-
 
 .main .section .career {
     margin-bottom: 60px;
@@ -924,7 +875,6 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .main .section .career .title h2 {
@@ -939,21 +889,15 @@ li {
     background-color: rgba(0, 0, 0, 0);
 }
 
-
 .main .section .career .scroll_button {
     margin: 20px 0;
     width: 93%;
     display: flex;
     justify-content: space-between;
-
 }
 
-
-
-
-  
-   /* 토글 버튼 */
- .toggleButton {
+/* 토글 버튼 */
+.toggleButton {
     position: absolute;
     border: 1px solid lightgray;
     display: flex;
@@ -964,14 +908,14 @@ li {
     line-height: 40px;
     border-radius: 100%;
     background-color: white;
-  }
-
-.select_prev{
-    left :0;
 }
 
-.select_next{
-    right :0;
+.select_prev {
+    left: 0;
+}
+
+.select_next {
+    right: 0;
 }
 
 .main .section .career .scroll_button .left {
@@ -980,25 +924,24 @@ li {
     width: 100%;
     margin-right: 10px;
     justify-content: center;
-
 }
 
-.main .section .career .scroll_button .left .select{
- display: flex;
+.main .section .career .scroll_button .left .select {
+    display: flex;
     overflow: hidden;
     width: 97%; /* 슬라이드할 사진과 마진 총 넓이 */
 }
-.main .section .career .scroll_button .left .select .slide{
+.main .section .career .scroll_button .left .select .slide {
     display: flex;
     position: relative;
-    gap :10px;
+    gap: 10px;
     width: 2500px;
-    transition: left 0.5s ease-out;  
+    transition: left 0.5s ease-out;
 }
-.main .section .career .scroll_button .left .select .slide li{
+.main .section .career .scroll_button .left .select .slide li {
     cursor: pointer;
     border: 1px solid lightgray;
-      flex-shrink: 0;
+    flex-shrink: 0;
     padding: 0 20px;
     font-weight: 600;
     font-size: 15px;
@@ -1008,15 +951,15 @@ li {
     border-radius: 15px;
     background-color: white;
 }
-.main .section .career .scroll_button .left .select .slide li:hover{
+.main .section .career .scroll_button .left .select .slide li:hover {
     color: blue;
     border: 1px solid blue;
 }
-.main .section .career .scroll_button .left .select .slide li:first{
+.main .section .career .scroll_button .left .select .slide li:first {
     margin-left: 5px;
 }
-.main .section .career .scroll_button button { 
-border: 1px solid lightgray;
+.main .section .career .scroll_button button {
+    border: 1px solid lightgray;
     display: block;
     padding: 0 20px;
     font-weight: 600;
@@ -1028,18 +971,13 @@ border: 1px solid lightgray;
     background-color: white;
 }
 
-
 .main .section .career .scroll_button .left .arrow {
     padding: 10px 12px;
     border-radius: 100%;
-
 }
-
 
 .main .section .career .scroll_button .right {
     display: flex;
-
-
 }
 
 .main .section .career .list {
@@ -1054,7 +992,6 @@ border: 1px solid lightgray;
     flex-direction: column;
     width: calc(25% - 20px);
     margin: 0 10px 50px;
-
 }
 
 .main .section .career .list h1,
@@ -1067,7 +1004,6 @@ p {
     overflow: hidden;
     /* 생략부호 표시 */
     text-overflow: ellipsis;
-
 }
 
 .main .section .career .list img {
@@ -1115,7 +1051,6 @@ p {
     display: block;
     max-width: 1060px;
     padding-top: 60px;
-
 }
 
 .main .section .subsection .titleline {
@@ -1125,7 +1060,7 @@ p {
 }
 
 .main .section .subsection .titleline .title {
-    margin: auto
+    margin: auto;
 }
 
 .main .section .subsection .titleline .title h1 {
@@ -1142,7 +1077,6 @@ p {
     vertical-align: middle;
     color: #767676 !important;
 }
-
 
 .main .section .subsection .titleline button {
     display: flex;
@@ -1171,7 +1105,6 @@ p {
     width: calc(25% - 20px);
     margin: 30px 10px 50px;
 }
-
 
 .main .section .subsection .list img {
     width: 100%;
@@ -1206,7 +1139,6 @@ p {
     font-weight: 500;
     color: #333;
 }
-
 
 .main .section .subsection .list2 {
     display: flex;
@@ -1258,7 +1190,6 @@ p {
 .main .section .subsection .list2 .logocontain {
     display: flex;
     margin-top: 8px;
-
 }
 
 .main .section .subsection .list2 .logocontain img {
@@ -1268,12 +1199,8 @@ p {
     margin-top: 8px;
     height: 32px;
 
-    border: 1px solid rgba(0, 0, 0, .05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
-
-
-
-
 
 .main .section .subsection .list2 .card {
     display: flex;
@@ -1281,8 +1208,6 @@ p {
     justify-content: space-between;
     margin-top: 17px;
 }
-
-
 
 .main .section .subsection .list2 .card .left {
     display: flex;
@@ -1307,13 +1232,11 @@ p {
     justify-content: space-between;
 }
 
-
 .main .section .subsection .list2 .card .right {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
-
 
 .main .section .subsection .list2 .card .right button {
     height: 42px;
@@ -1327,9 +1250,6 @@ p {
     font-weight: 700;
 }
 
-
-
-
 .main .section .linebanner .textbox {
     width: 1060px;
     background-image: linear-gradient(90deg, #01a9fe -12%, #2f5fef 37%, #046afe 72%, #00d2dd 110%);
@@ -1341,11 +1261,7 @@ p {
     font-size: 17px;
     font-weight: 700;
     border-radius: 38.5px;
-
-
 }
-
-
 
 .main .section .event {
     padding: 50px 0;
@@ -1356,7 +1272,6 @@ p {
     justify-content: center;
     background-color: #f7f7f7;
     padding: 60px 0;
-
 }
 
 .main .subscribe .sub {
@@ -1376,7 +1291,6 @@ p {
     font-weight: 700;
 }
 
-
 .main .subscribe .sub h1 {
     color: #333;
     font-weight: 700;
@@ -1392,7 +1306,6 @@ p {
 .main .subscribe .sub .left {
     width: 45%;
     text-align: left;
-
 }
 
 .main .subscribe .sub .right {
@@ -1415,7 +1328,6 @@ p {
     font-size: 22px;
     font-weight: 700;
     color: #333;
-
 }
 
 .main .section .info .gridcontain {
@@ -1424,7 +1336,6 @@ p {
     border-radius: 4px;
     color: #333;
 }
-
 
 .main .section .info .gridcontain .grid {
     padding: 18px 0 0;
@@ -1453,7 +1364,6 @@ p {
     background-color: #ececec;
 }
 
-
 .main .position {
     display: block;
     justify-content: center;
@@ -1470,7 +1380,6 @@ p {
     vertical-align: middle;
 }
 
-
 .main .position button {
     width: 260px;
     margin-top: 25px;
@@ -1482,7 +1391,6 @@ p {
     border-radius: 25px;
     font-weight: 700;
 }
-
 
 .main .position h1 {
     color: #111;
@@ -1498,14 +1406,13 @@ p {
     line-height: 19.2px;
 }
 
-
 .main .mycareer {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 155px;
     margin-bottom: 20px;
-    background: linear-gradient(90deg, #ddebff -.28%, #b7d8ff);
+    background: linear-gradient(90deg, #ddebff -0.28%, #b7d8ff);
 }
 
 .main .mycareer img {
@@ -1517,7 +1424,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .main .mycareer .sub .title {
@@ -1538,9 +1444,7 @@ p {
     height: 36px;
     font-size: 14px;
     border: none;
-
 }
-
 
 .main .mycareer .sub .title h1 {
     font-size: 24px;
@@ -1550,7 +1454,6 @@ p {
 }
 
 .main .section .profile {
-
     display: flex;
     align-items: center;
 
@@ -1558,7 +1461,6 @@ p {
     font-weight: 500;
     justify-content: center;
     border-left: none;
-
 }
 
 .main .section .profile li:first-child {
@@ -1586,15 +1488,12 @@ p {
     display: block;
     width: 1060px;
     margin: auto;
-
 }
 
 .job_main .bookmark {
     display: flex;
     margin: 30px 0;
-
 }
-
 
 .job_main .bookmark p {
     color: #36f;
@@ -1606,13 +1505,14 @@ p {
     letter-spacing: normal;
 }
 
-.job_main .hiring {}
+.job_main .hiring {
+}
 
 .job_main .hiring h1 {
     font-size: 22px;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: -.3px;
+    letter-spacing: -0.3px;
     color: #333;
     margin: 20px 0 14px;
 }
@@ -1621,7 +1521,6 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 5px;
-
 }
 
 .job_main .hiring .hiring_list .item {
@@ -1629,7 +1528,6 @@ p {
     border: 1px solid lightgray;
     border-radius: 2%;
     position: relative;
-
 }
 
 .job_main .hiring .hiring_list .item #logo {
@@ -1647,7 +1545,6 @@ p {
 .job_main .hiring .hiring_list .item img {
     width: 100%;
     border-radius: 2% 2% 0 0;
-
 }
 
 .job_main .hiring .hiring_list .item .detail {
@@ -1655,7 +1552,6 @@ p {
     padding: 34px 16px 0;
     height: 80px;
     position: relative;
-
 }
 
 .job_main .hiring .hiring_list .item .detail h1 {
@@ -1664,10 +1560,7 @@ p {
     font-size: 16px;
     font-weight: 600;
     color: #333;
-
-
 }
-
 
 .job_main .company_list {
     display: flex;
@@ -1693,12 +1586,8 @@ p {
     object-fit: cover;
 }
 
-
-
-
 .job_main .company_list .item .detail {
     padding: 14px 0;
-
 }
 
 .job_main .company_list .item .detail button {
@@ -1713,7 +1602,6 @@ p {
     line-height: 19px;
     margin-top: 4px;
     padding: 0 5px;
-
 }
 
 .job_main .company_list .item .detail h1 {
@@ -1727,7 +1615,6 @@ p {
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
-
 }
 
 .job_main .company_list .item .detail h3 {
@@ -1750,8 +1637,6 @@ p {
     overflow: hidden;
 }
 
-
-
 footer {
     padding: 18px 0 65px;
     display: block;
@@ -1760,7 +1645,6 @@ footer {
 }
 
 .footertop {
-
     margin: 0 auto 18px;
     max-width: 1060px;
     width: 90%;
@@ -1768,13 +1652,12 @@ footer {
     justify-content: space-between;
 }
 
-
-.footertop .muenulink {}
+.footertop .muenulink {
+}
 
 .footertop .muenulink li {
     margin-right: 30px;
 }
-
 
 .footertop .muenulink img.logo {
     vertical-align: middle;
@@ -1835,7 +1718,6 @@ footer {
     appearance: none;
     font-weight: 500;
     margin-top: 0;
-
 }
 
 .footerbottom .language img {
@@ -1855,15 +1737,11 @@ p {
     font-weight: 500;
     line-height: 1.6666666667em;
     color: #767676;
-
 }
 
-
-
 #modal.modal-overlay {
-
-    display: none;
-    background-color: rgba(0, 0, 0, .5);
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
     right: 0;
@@ -1910,18 +1788,14 @@ p {
     position: relative;
     text-align: center;
     word-wrap: break-word;
-
 }
 
-#modal .modal-header h1{
-   
+#modal .modal-header h1 {
     position: relative;
     color: #333;
     font-size: 16px;
     font-weight: 600;
-
 }
-
 
 #modal .modal-header img {
     height: 16px;
@@ -1934,7 +1808,6 @@ p {
     padding: 15px;
     border: 0;
     background: none;
-
 }
 
 .close-area {
@@ -1942,8 +1815,7 @@ p {
 }
 
 #modal .modal-body {
-
-    padding: 20px
+    padding: 20px;
 }
 
 #modal .modal-body .title {
@@ -1960,7 +1832,6 @@ p {
     color: #333;
 }
 
-
 #modal .modal-body .title h2 {
     margin-top: 16px;
     line-height: 1.5;
@@ -1968,7 +1839,6 @@ p {
     font-weight: 400;
     color: #666;
 }
-
 
 #modal .modal-body .login {
     position: relative;
@@ -2003,13 +1873,12 @@ p {
     font-size: 14px;
     color: #000;
 }
-.email_error{
+.email_error {
     display: none;
     color: #fe415c;
     bottom: 0;
     margin-top: 6px;
     font-size: 12px;
-
 }
 .login_email_button {
     display: flex;
@@ -2028,7 +1897,7 @@ p {
 
 .login_panel_divider::after {
     display: block;
-    content: "or";
+    content: 'or';
     color: #969696;
     font-size: 14px;
     font-weight: 500;
@@ -2047,7 +1916,6 @@ p {
 
 .login_panel_socialbox {
     width: 100%;
-    ;
     text-align: center;
 }
 
@@ -2065,29 +1933,30 @@ p {
     width: 54px;
     border-radius: 100%;
 }
-.modal_input_body{
+.modal_input_body {
     display: none;
     padding: 20px;
     color: #767676;
 }
 
-.modal_input_body>div{
+.modal_input_body > div {
     margin-bottom: 20px;
 }
 
-.modal_input_body h1{
+.modal_input_body h1 {
     font-size: 14px;
     font-weight: 400;
 }
 
-.modal_input_body h2{
+.modal_input_body h2 {
     color: #aaa9a9;
     bottom: 0;
     margin-top: 6px;
     font-size: 12px;
     font-weight: 500;
 }
-.inputobx input, select{ 
+.inputobx input,
+select {
     margin-top: 11px;
     width: 100%;
     height: 50px;
@@ -2099,15 +1968,15 @@ p {
     font-size: 15px;
     color: #333;
 }
-.certification{
-display: flex;
-margin-top: 11px;
-justify-content: space-between;
+.certification {
+    display: flex;
+    margin-top: 11px;
+    justify-content: space-between;
 }
-.certification .left{
+.certification .left {
     width: 68%;
- }
-.certification .left input{
+}
+.certification .left input {
     width: 100%;
     height: 50px;
     padding: 10px 20px;
@@ -2132,7 +2001,7 @@ justify-content: space-between;
     font-weight: 900;
     opacity: 0.5;
 }
-.certification_number input{
+.certification_number input {
     margin-top: 11px;
     width: 100%;
     height: 50px;
@@ -2144,30 +2013,30 @@ justify-content: space-between;
     font-size: 15px;
     color: #333;
 }
-.inputobx input:focus{ 
+.inputobx input:focus {
     outline: 1px solid #002fdb;
 }
 
-.agreement{
-margin-top: 30px;
+.agreement {
+    margin-top: 30px;
 }
-.agreement>div{
-color: #939393;
-font-size: 15px;
-height: 20px;
-line-height: 20px;
-margin-bottom: 10px;
+.agreement > div {
+    color: #939393;
+    font-size: 15px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
-.agreement .checkbox input{
-   margin-right: 10px; 
+.agreement .checkbox input {
+    margin-right: 10px;
 }
 
-.agreement>div a{
+.agreement > div a {
     font-size: 12px;
-   position: absolute;
-   right: 20px;
- }
-.sign{
+    position: absolute;
+    right: 20px;
+}
+.sign {
     text-align: center;
     background-color: #f2f4f7;
     border-color: none;
@@ -2197,9 +2066,9 @@ margin-bottom: 10px;
 }
 
 .job_detail_aside {
-    top:70px;
+    top: 70px;
     position: fixed;
-    right: calc((100% - 1060px)/2);
+    right: calc((100% - 1060px) / 2);
     width: 340px;
     border: 1px solid #e1e2e3;
     background-color: #fff;
@@ -2208,7 +2077,6 @@ margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .job_detail_aside_body {
@@ -2298,7 +2166,6 @@ margin-bottom: 10px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 25px;
-
 }
 
 .job_detail_aside_like img {
@@ -2335,7 +2202,6 @@ margin-bottom: 10px;
     -webkit-overflow-scrolling: touch;
 }
 
-
 .gallery_scroller div {
     /* snap align center  */
     scroll-snap-align: center;
@@ -2346,9 +2212,7 @@ margin-bottom: 10px;
 .gallery_scroller img {
     width: 700px;
     height: 490px;
-
 }
-
 
 .gallery div.note {
     position: absolute;
@@ -2367,7 +2231,6 @@ margin-bottom: 10px;
     color: white;
 }
 
-
 .gallery .btn {
     position: absolute;
 
@@ -2378,7 +2241,7 @@ margin-bottom: 10px;
     width: 30px;
 
     border-radius: 2px;
-    
+
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
@@ -2394,7 +2257,6 @@ margin-bottom: 10px;
     background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
     left: 10px;
 }
-
 
 .job_detail_contents_title {
     width: 100%;
@@ -2419,9 +2281,7 @@ margin-bottom: 10px;
     font-size: 13px;
     font-weight: 600;
     margin-right: 10px;
-
 }
-
 
 .job_detail_contents_title .sub_title button {
     border: 1px solid #00aead;
@@ -2430,14 +2290,12 @@ margin-bottom: 10px;
     border-radius: 2px;
     font-size: 11px;
     height: 20px;
-
 }
 
 .job_detail_divider {
     border: 1px solid #e1e2e3;
     width: 0px;
     height: 12px;
-    ;
     margin: 3px 20px;
 }
 
@@ -2513,7 +2371,7 @@ margin-bottom: 10px;
     margin-top: 20px;
 }
 
-.job_place>div {
+.job_place > div {
     margin-bottom: 20px;
 }
 
@@ -2581,7 +2439,6 @@ margin-bottom: 10px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: 700;
-
 }
 
 .job_warnning {
@@ -2622,28 +2479,28 @@ margin-bottom: 10px;
     line-height: normal;
 }
 
-.footer_banner{
+.footer_banner {
     display: flex;
-    position:fixed;
+    position: fixed;
     bottom: 0;
     color: white;
     background-color: #258bf7;
     width: 100%;
     height: 70px;
 }
-.footer_banner_section{
+.footer_banner_section {
     display: flex;
     position: relative;
     width: 1060px;
     margin: auto;
     justify-content: space-between;
 }
-.footer_banner_title{
+.footer_banner_title {
     font-size: 20px;
     height: 40px;
     line-height: 40px;
 }
-.footer_banner_section button{
+.footer_banner_section button {
     width: 118px;
     height: 40px;
     line-height: 40px;
@@ -2656,11 +2513,11 @@ margin-bottom: 10px;
     border: none;
 }
 
-.loading{
+.loading {
     width: 100%;
     text-align: center;
 }
 
-.email_box input{
+.email_box input {
     background-color: rgb(216, 214, 214);
 }

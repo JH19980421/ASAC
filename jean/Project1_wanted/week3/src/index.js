@@ -6,11 +6,9 @@ import './components/Layout/style.css';
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
-      <Layout />
+        <Layout />
     </BrowserRouter>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
