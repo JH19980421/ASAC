@@ -6,12 +6,12 @@ function Event() {
     return (
         <div className="container__event">
             {
-                eventItems.map((item) => (
+                eventItems.map((item, idx) => (
                     <div className="event__card">
                         <img src={item.imageUrl} alt="event"/>
                         <div className="event__badge-container">
                             {
-                                item.badges.map((it) => (
+                                item.badges.map((it, idx) => (
                                     <div className="event__badge">{it.badge} {it.id}</div>
                                 ))
                             }

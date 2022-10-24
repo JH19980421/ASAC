@@ -11,7 +11,7 @@ function Keywords() {
             </div>
             <div className="keywords__content">
                 {
-                    keywordItems.map((item) => (
+                    keywordItems.map((item, idx) => (
                         <button>{item.keyword}</button>
                     ))
                 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 import '../../css/normalize.css';
 import '../../css/common.css';
@@ -7,13 +7,59 @@ import '../../css/main/slide-banner.css';
 const slideItem = require('../../slide-items.json');
 
 
-function SlideBanner() {    
+function SlideBanner() {
+    const slideCount = slideItem.length-1;
+    const [currentSlide, setCurrentSlide] = useState(0);
+    
+    const slideList = useRef();
+    
+    useEffect(() => {
+        slideItem.push(slideItem[0]);
+    }, [])
+    
+    useEffect(() => {
+        setTransition('transform 0.7s ease-out');
+        setTranslate(currentSlide);
+    }, [currentSlide]);
+
+
+    /** Animation */
+    const setTransition = (val) => {
+        slideList.current.style.transition = val;
+    }
+
+    /** Translate */
+    const setTranslate = (idx) => {
+        slideList.current.style.transform = `translate(-${(idx)*1086}px, 0)`;
+    }
+    const resetTranslate = () => {
+        slideList.current.style.transform = `translate(-${1086-13}px, 0)`;
+    }
+
+
+    const slidePrevButton = () => {
+        if(currentSlide < 0) {
+            setCurrentSlide(slideCount-1);
+        } else {
+            setCurrentSlide(currentSlide-1);
+        }
+    }
+
+    const slideNextButton = () => {
+        if(currentSlide > slideCount-2) {
+            setCurrentSlide(0);
+        } else {
+            setCurrentSlide(currentSlide+1);            
+        }
+    }
+
+
 
     return (
         <div className='slide__container'>
-            <ul className='slide'>
+            <ul className='slide' ref={slideList}>
                 {
-                    slideItem.map((item) => (
+                    slideItem.map((item, idx) => (
                         <li className="slide__item" key={item.id}> 
                             <img className="slide__item--image" src={item.imageUrl} alt="banner"/>
                             <div className="slide__item--description">
@@ -30,9 +76,11 @@ function SlideBanner() {
             <div className='slide__buttons'>
                 <button 
                     className='slide__buttons--prev-button'
+                    onClick={slidePrevButton}
                 >&lt;</button>
                 <button 
                     className='slide__buttons--next-button'
+                    onClick={slideNextButton}
                 >&gt;</button>
             </div>
         </div>

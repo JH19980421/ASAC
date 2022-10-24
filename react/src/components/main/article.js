@@ -9,7 +9,7 @@ function Article() {
     return (
         <div className="article__container">
             {
-                articleItems.map((item) => (
+                articleItems.map((item, idx) => (
                     tagString = '',
                     <div className="article__card">
                         <img src={item.imageUrl} alt="article"/>
