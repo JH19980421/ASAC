@@ -16,7 +16,6 @@ import Subtitle from "../components/main/subtitle";
 
 
 function Main() {
-    
 
     return (
         <div>

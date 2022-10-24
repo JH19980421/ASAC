@@ -1,23 +1,26 @@
 import "../../css/main/event.css";
 
+const eventItems = require("../../event.json");
+
 function Event() {
     return (
         <div className="container__event">
-            <div className="event__card">
-                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2422%2Ffeb067d4.jpg&w=1200&q=100" alt="event"/>
-                <div className="event__badge-container">
-                    <div className="event__badge">아티클</div>
-                </div>
-                <p className="event__title">기업의 성공을 리드하는 번개장터 마케터의 데이터</p>
-            </div>
-            <div className="event__card">
-                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2422%2Ffeb067d4.jpg&w=1200&q=100" alt="event"/>
-                <div className="event__badge-container">
-                    <div className="event__badge">아티클</div>
-                    <div className="event__badge">아티클</div>
-                </div>
-                <p className="event__title">기업의 성공을 리드하는 번개장터 마케터의 데이터</p>
-            </div>
+            {
+                eventItems.map((item) => (
+                    <div className="event__card">
+                        <img src={item.imageUrl} alt="event"/>
+                        <div className="event__badge-container">
+                            {
+                                item.badges.map((it) => (
+                                    <div className="event__badge">{it.badge} {it.id}</div>
+                                ))
+                            }
+                        </div>
+                        <p className="event__title">{item.title}</p>
+                    </div>
+                ))
+            }
+            
         </div>
     );
 }

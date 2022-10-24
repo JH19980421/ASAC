@@ -1,0 +1,28 @@
+[
+    {
+        "id": 0,
+        "imageUrl": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2422%2Ffeb067d4.jpg&w=1200&q=100",
+        "badges": [
+            {
+                "id": 0,
+                "badge": "아티클"
+            }
+        ],
+        "title": "기업의 성공을 리드하는 번개장터 마케터의 데이터"
+    },
+    {
+        "id": 1,
+        "imageUrl": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2422%2Ffeb067d4.jpg&w=1200&q=100",
+        "badges": [
+            {
+                "id": 0,
+                "badge": "아티클"
+            },
+            {
+                "id": 1,
+                "badge": "아티클"
+            }
+        ],
+        "title": "기업의 성공을 리드하는 번개장터 마케터의 데이터"
+    }
+]
