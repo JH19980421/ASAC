@@ -1,0 +1,164 @@
+.sticky-top {
+    background-color: white;
+
+    position: sticky;
+    top: 45px;
+
+    z-index: 2;
+
+    border-bottom: 1px solid lightgray;
+}
+
+.filter-container {
+    margin: 0 225px;
+    padding-bottom: 25px;
+    padding-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid lightgray;
+}
+
+.filter-container p{
+    padding: 3px 2px;
+}
+
+
+.filter-expand {
+    width: 10px;
+    height: 13px;
+
+    padding-right: 7px;
+}
+
+.filter-left {
+    display: flex;
+}
+.filter-left div {
+    display: flex;
+    align-items: center;
+
+    margin-right: 10px;
+    padding: 0 7px;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;    
+}
+.filter-left p {
+    margin: 5px 5px;
+}
+
+.filter-right div {
+    display: flex;
+    align-items: center;
+
+    margin-right: 10px;
+    padding: 0 7px;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.filter-right p {
+    margin: 5px 5px;
+}
+
+.keywords-container {
+    display: flex;
+    align-items: center;
+
+    margin: 10px 225px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.keywords {
+    display: flex;
+    margin: 15px 0;
+
+    transform: translateX(-40px);
+}
+
+.keywords button {
+    border: none;
+    border-radius: 40px;
+
+    background-color: lightgray;
+    color: dimgray;
+
+    padding: 7px 13px;
+    margin-right: 5px;
+
+    font-size: 12px;
+
+    width: max-content;
+
+    cursor: pointer;
+}
+#money {
+    background-color: rgb(242, 251, 245);
+}
+#home {
+    background-color: rgb(243, 249, 254);
+}
+
+.etc-container {
+    position: absolute;
+    right: 0;
+
+    background-color: white;
+
+    box-shadow: 0 1px 10px 8px white !important;
+}
+.etc-container button {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    background-color: white;
+    color: dimgray;
+
+    width: 37px;
+    height: 37px;
+
+    cursor: pointer;
+}
+.etc-container img {
+    width: 16px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+#right {
+    border-radius: 100%;
+
+    margin-right: 5px;
+}
+
+.etc-container-left {
+    visibility: hidden;
+
+    background-color: white;
+
+    border-radius: 0 20px 20px 0;
+
+    box-shadow: 0 1px 10px 8px white !important;
+}
+.etc-container-left button {
+    border: 1px solid lightgray;
+    border-radius: 100%;
+
+    background-color: white;
+    color: dimgray;
+
+    width: 37px;
+    height: 37px;
+    
+    margin-right: 5px;
+
+    cursor: pointer;
+}
+.etc-container-left img {
+    width: 16px;
+    padding-top: 2px;
+}

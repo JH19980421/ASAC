@@ -1,0 +1,45 @@
+.recruiting-top {
+    margin: 0 225px;
+}
+
+.header-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+}
+.header-card-item {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.header-card-item img {
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 5px 5px 0 0;
+}
+.header-card-item #logo {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border: 1px solid lightgray;
+
+    transform: translateY(-23px);
+    margin-left: 10px;
+}
+.header-card-item p {
+    margin-left: 12px;
+}
+
+.header-card-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.header-card-position {
+    color: lightgray;
+    font-size: 13px;
+
+    padding-top: 5px;
+    margin-bottom: 45px;
+}

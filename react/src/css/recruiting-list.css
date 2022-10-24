@@ -1,0 +1,43 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+
+    margin: 50px 225px;
+}
+
+.card-title {
+    font-size: 19px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.card-badge {
+    width: fit-content;
+    padding: 1px 5px;
+    margin: 5px 0;
+
+    border: 1px solid #00aead;
+    color: #00aead;
+    border-radius: 2px;
+}
+
+.card-item img {
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+.card-item #bookmark-outline {
+    float: right;
+    height: 30px;
+    width: 40px;
+
+    transform: translateY(120%);
+}
+
+.card-region {
+    margin: 10px 0;
+    color: #aaa;
+}
