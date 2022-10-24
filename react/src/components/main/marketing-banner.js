@@ -1,4 +1,4 @@
-import "../css/marketing-banner.css";
+import "../../css/main/marketing-banner.css";
 
 function MarketingBanner() {
     return (

@@ -1,4 +1,4 @@
-import "../css/marketing-button.css";
+import "../../css/main/marketing-button.css";
 
 function MarketingButton() {
     return (
@@ -6,7 +6,7 @@ function MarketingButton() {
             <button className="marketing-button">
                 무제한으로 즐기는 700여편의 커리어 콘텐츠
                 <span className="plus">&nbsp;wanted&nbsp;+</span>
-                <img className="marketing-chevron" src="/images/chevron-right.png" alt="right"/>
+                <img className="marketing-chevron" src={ require('../../assets/images/chevron-right.png') } alt="right"/>
             </button>
         </div>
     );

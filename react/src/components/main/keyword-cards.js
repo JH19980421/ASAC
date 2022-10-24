@@ -1,4 +1,4 @@
-import "../css/keyword-cards.css";
+import "../../css/main/keyword-cards.css";
 
 function KeywordCards() {
 

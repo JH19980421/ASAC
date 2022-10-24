@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
-import './fonts/font.css';
+import './assets/fonts/font.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

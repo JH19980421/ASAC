@@ -6,7 +6,7 @@ function Footer() {
     return (
         <footer>
             <div className="footer__top">
-                <img className="logo--full" src="/images/logo-full.png" alt="logo"/>
+                <img className="logo--full" src={ require('../assets/images/logo-full.png') } alt="logo"/>
 
                 <ul className="footer category">
                     <li><a href="#">기업소개</a></li>
@@ -16,14 +16,14 @@ function Footer() {
                 </ul>
 
                 <div className="sns__container">
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
-                    <img className="sns" src="/images/instagram.png" alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
+                    <img className="sns" src={ require('../assets/images/instagram.png') } alt="instagram"/>
                 </div>
             </div>
 

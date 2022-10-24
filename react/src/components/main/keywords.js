@@ -1,11 +1,11 @@
-import '../css/keyword.css';
+import '../../css/main/keyword.css';
 
 function Keywords() {
     return (
         <div className="keywords__container">
             <div className="keywords__button--left">
                 <button>
-                    <img src="/images/chevron-left.png" alt="left"/>
+                    <img src={ require('../../assets/images/chevron-left.png') } alt="left"/>
                 </button>
             </div>
             <div className="keywords__content">
@@ -29,8 +29,8 @@ function Keywords() {
                 <button>콘텐츠 제작</button>
             </div>
             <div className="keywords__button--right">
-                <button id="right"><img src="/images/chevron-right.png" alt="right"/></button>
-                <button><img id="more" src="/images/more.png" alt="more"/></button>
+                <button id="right"><img src={ require('../../assets/images/chevron-right.png') } alt="right"/></button>
+                <button><img id="more" src={ require('../../assets/images/more.png') } alt="more"/></button>
             </div>
         </div>
     )

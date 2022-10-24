@@ -1,4 +1,4 @@
-import "../css/event.css";
+import "../../css/main/event.css";
 
 function Event() {
     return (

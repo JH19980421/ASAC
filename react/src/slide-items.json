@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "imageUrl": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100",
+        "title": "기업이 원하는 프론트 개발자 되기1",
+        "subtitle": "프리온보딩 프론트엔드 코스1"
+    },
+    {
+        "id": 1,
+        "imageUrl": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100",
+        "title": "기업이 원하는 프론트 개발자 되기2",
+        "subtitle": "프리온보딩 프론트엔드 코스2"
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100",
+        "title": "기업이 원하는 프론트 개발자 되기3",
+        "subtitle": "프리온보딩 프론트엔드 코스3"
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100",
+        "title": "기업이 원하는 프론트 개발자 되기4",
+        "subtitle": "프리온보딩 프론트엔드 코스4"
+    }
+]

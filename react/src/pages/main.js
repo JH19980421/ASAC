@@ -1,21 +1,22 @@
 import React from "react";
 
-import '../css/main.css';
+import '../css/main/main.css';
 
-import Article from "../components/article";
-import Event from "../components/event";
+import Article from "../components/main/article";
+import Event from "../components/main/event";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import JobSearch from "../components/job-search";
-import KeywordCards from "../components/keyword-cards";
-import Keywords from "../components/keywords";
-import MarketingBanner from "../components/marketing-banner";
-import MarketingButton from "../components/marketing-button";
-import SlideBanner from "../components/slide-banner";
-import Subtitle from "../components/subtitle";
+import JobSearch from "../components/main/job-search";
+import KeywordCards from "../components/main/keyword-cards";
+import Keywords from "../components/main/keywords";
+import MarketingBanner from "../components/main/marketing-banner";
+import MarketingButton from "../components/main/marketing-button";
+import SlideBanner from "../components/main/slide-banner";
+import Subtitle from "../components/main/subtitle";
 
 
 function Main() {
+    
 
     return (
         <div>
@@ -26,14 +27,14 @@ function Main() {
                 
                 <div id="top" className="subtitle__container">
                     <p className="subtitle">나에게 필요한 커리어 인사이트</p>
-                    <img src="/images/question-mark.png" alt="question-mark"/>
+                    <img src={ require('../assets/images/question-mark.png') } alt="question-mark"/>
                 </div>
                 <Keywords/>
                 <div className="container">
                     <KeywordCards/>
                     <button className="see-more">
                         더 많은 콘텐츠 보기
-                        <img src="/images/arrow-down.png" alt="down"/>
+                        <img src={ require('../assets/images/arrow-down.png') } alt="down"/>
                     </button>
                 </div>
 
