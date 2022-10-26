@@ -1,4 +1,4 @@
-import "../../css/main/job-search.css";
+import "../../css/main/job-search-main.css";
 
 function JobSearch() {
     return (

@@ -1,6 +1,6 @@
-import RecruitingList from "../components/recruiting-list";
-import RecruitingHeader from "../components/recruiting-filter";
-import RecruitingTop from "../components/recruiting-top";
+import RecruitingList from "../components/recruiting/recruiting-list";
+import RecruitingHeader from "../components/recruiting/recruiting-filter";
+import RecruitingTop from "../components/recruiting/recruiting-top";
 
 import "../css/recruiting.css";
 import Header from "../components/header";

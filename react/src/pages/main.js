@@ -6,7 +6,7 @@ import Article from "../components/main/article";
 import Event from "../components/main/event";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import JobSearch from "../components/main/job-search";
+import JobSearchMain from "../components/main/job-search-main";
 import KeywordCards from "../components/main/keyword-cards";
 import Keywords from "../components/main/keywords";
 import MarketingBanner from "../components/main/marketing-banner";
@@ -72,7 +72,7 @@ function Main() {
 
                 </div>
 
-                <JobSearch/>
+                <JobSearchMain/>
 
             </div>
 

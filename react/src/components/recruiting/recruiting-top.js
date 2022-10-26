@@ -1,6 +1,6 @@
-import "../css/recruiting-top.css";
+import "../../css/recruiting-top.css";
 
-const recruitingTopItems = require('../recruiting-top.json');
+const recruitingTopItems = require('../../recruiting-top.json');
 
 function RecruitingTop() {
     return (
