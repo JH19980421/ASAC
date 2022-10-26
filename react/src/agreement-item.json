@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "content": "개인정보 수집 및 이용 동의(필수)",
+        "required": "Y"
+    },
+    {
+        "id": 1,
+        "content": "이벤트 소식 등 알림 정보 받기",
+        "required": "N"
+    },
+    {
+        "id": 2,
+        "content": "마지막 체크 항목",
+        "required": "N"
+    }
+]
