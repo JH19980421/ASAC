@@ -1,12 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 
+import like from '../../../images/like.png';
+import like2 from '../../../images/like2.png';
+
 const Jobdetail = props => {
     const [height, setHeight] = useState(0);
     const [top, setTop] = useState(70);
     const [position, setPosition] = useState('fixed');
     const [flag, setflag] = useState(false);
+    const [like, setLike] = useState(0);
     const ref = useRef(null);
 
+    function clickLike() {
+        setLike(prev => prev + 1);
+    }
     const handleFollow = () => {
         if (window.pageYOffset > height - 500) {
             if (!flag) {
@@ -29,19 +36,19 @@ const Jobdetail = props => {
         const watch = () => {
             window.addEventListener('scroll', handleFollow);
         };
-        watch(); 
+        watch();
         return () => {
-            window.removeEventListener('scroll', handleFollow); 
+            window.removeEventListener('scroll', handleFollow);
         };
     });
 
     return (
         <>
-            <div class="job_main">
-                <div class="job_detail" ref={ref}>
-                    <div class="job_detail_contents">
-                        <div id="paginated_gallery" class="gallery">
-                            <div class="gallery_scroller">
+            <div className="job_main">
+                <div className="job_detail" ref={ref}>
+                    <div className="job_detail_contents">
+                        <div id="paginated_gallery" className="gallery">
+                            <div className="gallery_scroller">
                                 <div>
                                     <img src={require('../../../images/detail1.webp')} alt="" />
                                 </div>
@@ -59,43 +66,43 @@ const Jobdetail = props => {
                                 </div>
                             </div>
 
-                            <span class="btn prev"> </span>
-                            <span class="btn next"> </span>
+                            <span className="btn prev"> </span>
+                            <span className="btn next"> </span>
                         </div>
 
-                        <div class="job_detail_contents_title">
+                        <div className="job_detail_contents_title">
                             <h1> 프로덕트 매니저 </h1>
-                            <div class="sub_title">
+                            <div className="sub_title">
                                 <p>파워테스크 </p>
                                 <button> 응답률 매우 높음</button>
-                                <div class="job_detail_divider"></div>
-                                <span class="job_detail_location"> 서울.한국</span>
+                                <div className="job_detail_divider"></div>
+                                <span className="job_detail_location"> 서울.한국</span>
                             </div>
 
-                            <div class="sub_tag">
+                            <div className="sub_tag">
                                 <ul>
                                     <li>
-                                        <a href="#">#퇴사율5%이하</a>
+                                        <a href="!#">#퇴사율5%이하</a>
                                     </li>
                                     <li>
-                                        <a href="#">#50명이하</a>
+                                        <a href="!#">#50명이하</a>
                                     </li>
                                     <li>
-                                        <a href="#">#50명이하</a>
+                                        <a href="!#">#50명이하</a>
                                     </li>
                                     <li>
-                                        <a href="#">#설립3년이하</a>
+                                        <a href="!#">#설립3년이하</a>
                                     </li>
                                     <li>
-                                        <a href="#">#연봉상위11~20%</a>
+                                        <a href="!#">#연봉상위11~20%</a>
                                     </li>
                                     <li>
-                                        <a href="#">#IT, 컨텐츠</a>
+                                        <a href="!#">#IT, 컨텐츠</a>
                                     </li>
                                 </ul>
                             </div>
 
-                            <div class="job_detail_description">
+                            <div className="job_detail_description">
                                 <p>
                                     안녕하세요, 세계에서 가장 혁신적인 데이터 자동화 플랫폼, 아웃코드를 만들고 있습니다. <br /> <br />
                                     아웃코드팀은 기존에 코딩지식이 없으면 하기 어려웠던 데이터 작업을 누구나 할 수 있도록 하는 ‘아웃코드’를 통해서
@@ -146,7 +153,7 @@ const Jobdetail = props => {
                                     <br />- 사무실은 강남구 역삼로 160, 8층입니다.
                                 </p>
                                 <h5> 기술스택 ・ 툴 </h5>
-                                <div class="skill">
+                                <div className="skill">
                                     <ul>
                                         <li> JIRA</li>
                                         <li> SQL</li>
@@ -154,63 +161,62 @@ const Jobdetail = props => {
                                 </div>
                             </div>
 
-                            <hr class="job_divider" />
+                            <hr className="job_divider" />
 
-                            <div class="job_place">
+                            <div className="job_place">
                                 <div>
-                                    <span class="header">마감일</span>
-                                    <span class="body">2022.11.11</span>
+                                    <span className="header">마감일</span>
+                                    <span className="body">2022.11.11</span>
                                 </div>
                                 <div>
-                                    <span class="header">근무지역</span>
-                                    <span class="body">서울특별시 강남구 역삼로 160</span>
+                                    <span className="header">근무지역</span>
+                                    <span className="body">서울특별시 강남구 역삼로 160</span>
                                 </div>
                             </div>
 
                             <div id="map"></div>
 
-                            <div class="job_logo">
-                                <a href="#">
-                                    <div class="left">
+                            <div className="job_logo">
+                                <a href="!#">
+                                    <div className="left">
                                         <div>
                                             <img src="https://static.wanted.co.kr/images/wdes/0_5.bab24796.png" alt="" />
                                         </div>
 
                                         <div>
-                                            {' '}
                                             <h1>파워테스크</h1>
                                             <h6>IT, 컨텐츠</h6>
                                         </div>
                                     </div>
                                 </a>
-                                <div class="right">팔로우</div>
+                                <div className="right">팔로우</div>
                             </div>
 
-                            <div class="job_warnning">
-                                <svg class="" width="24" height="24" viewBox="0 0 24 24">
-                                    <g fill="currentColor" fill-rule="evenodd">
+                            <div className="job_warnning">
+                                <svg className="" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fillRule="currentColor">
                                         <path
-                                            fill-rule="nonzero"
+                                            fillRule="nonzero"
                                             d="M15.266 20.658A9.249 9.249 0 0112 21.25a9.25 9.25 0 010-18.5 9.21 9.21 0 016.54 2.71A9.217 9.217 0 0121.25 12a9.213 9.213 0 01-2.71 6.54.75.75 0 101.061 1.062A10.713 10.713 0 0022.75 12c0-2.89-1.146-5.599-3.149-7.601A10.717 10.717 0 0012 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75c1.31 0 2.591-.235 3.794-.688a.75.75 0 10-.528-1.404z"
                                         ></path>
                                         <path d="M13 16a1 1 0 11-2 0 1 1 0 012 0"></path>
-                                        <path fill-rule="nonzero" d="M11.25 7v5a.75.75 0 101.5 0V7a.75.75 0 10-1.5 0z"></path>
+                                        <path fillRule="nonzero" d="M11.25 7v5a.75.75 0 101.5 0V7a.75.75 0 10-1.5 0z"></path>
                                     </g>
                                 </svg>
-                                <div class="job_warnning_description">
+                                <div className="job_warnning_description">
                                     <h5>
                                         본 채용정보는 원티드랩의 동의없이 무단전재, 재배포, 재가공할 수 없으며, 구직활동 이외의 <br />
                                         용도로 사용할 수 없습니다.
                                     </h5>
-                                    <img src={require('../../../images/arrow.png')} />
+                                    <img src={require('../../../images/arrow.png')} alt="" />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="job_detail_aside" style={{ top: top, position: position }}>
-                        <div class="job_detail_aside_body">
-                            <div class="title">
+                    <div className="job_detail_aside" style={{ top: top, position: position }}>
+                        <div className="job_detail_aside_body">
+                            <div className="title">
                                 <h3>채용보상금</h3>
                                 <ul>
                                     <li>
@@ -222,270 +228,230 @@ const Jobdetail = props => {
                                         <p>500,000원</p>
                                     </li>
                                 </ul>
-                                <div class="share">
-                                    {/* <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 19 19"><defs><path id="shareIcon" d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"></path></defs><g fill="none" fill-rule="evenodd"><use fill="#36F" xlink:href="#shareIcon"></use></g></svg> */}
+                                <div className="share">
+                                    {/* <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 19 19"><defs><path id="shareIcon" d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"></path></defs><g fillRule="none" fillRule="evenodd"><use fillRule="#36F" xlink:href="#shareIcon"></use></g></svg> */}
                                 </div>
                             </div>
-                            <div class="job_detail_aside_bookmark">
-                                {/* <svg width="13" height="17" viewBox="0 0 13 17" style="color: rgb(51, 102, 255);"><defs><path id="bookmarkIconLine" d="M1.481 1.481h9.382v10.727c0 .409.331.74.74.74.41 0 .741-.331.741-.74V.74c0-.41-.331-.741-.74-.741H.74C.33 0 0 .332 0 .74v14.814c0 .568.614.925 1.108.643l5.18-2.873 5.104 2.873c.355.203.807.08 1.01-.276.203-.355.08-.808-.275-1.01l-5.471-3.083c-.228-.13-.507-.13-.735 0l-4.44 2.45V1.48z"></path></defs><g fill="none" fill-rule="evenodd"><use fill="currentColor" xlink:href="#bookmarkIconLine"></use></g></svg> */}
+                            <div className="job_detail_aside_bookmark">
+                                {/* <svg width="13" height="17" viewBox="0 0 13 17" style="color: rgb(51, 102, 255);"><defs><path id="bookmarkIconLine" d="M1.481 1.481h9.382v10.727c0 .409.331.74.74.74.41 0 .741-.331.741-.74V.74c0-.41-.331-.741-.74-.741H.74C.33 0 0 .332 0 .74v14.814c0 .568.614.925 1.108.643l5.18-2.873 5.104 2.873c.355.203.807.08 1.01-.276.203-.355.08-.808-.275-1.01l-5.471-3.083c-.228-.13-.507-.13-.735 0l-4.44 2.45V1.48z"></path></defs><g fillRule="none" fillRule="evenodd"><use fillRule="currentColor" xlink:href="#bookmarkIconLine"></use></g></svg> */}
                                 북마크하기
                             </div>
-                            <div class="job_detail_aside_apply">지원하기</div>
-                            <div class="job_detail_aside_like">
-                                <img src={require('../../../images/like.png')} />
-                                <div id="like_number"> 0</div>
+                            <div className="job_detail_aside_apply">지원하기</div>
+                            <div className="job_detail_aside_like">
+                                <img src={require('../../../images/like.png')} alt="" />
+                                <div id="like_number" onClick={clickLike}>
+                                    {like}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5 class="company_list_title">이 포지션을 찾고 계셨나요?</h5>
+                <h5 className="company_list_title">이 포지션을 찾고 계셨나요?</h5>
 
-                <div class="company_list">
-                    <div class="item">
-                        {' '}
+                <div className="company_list">
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F23530%2F87vxxhkryzsrpt1x__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        {' '}
+                    <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30060%2F2kv1lzaldpg8usv1__400_400.jpg&w=400&q=75"
                             alt=""
-                        />{' '}
-                        <div class="detail">
-                            {' '}
-                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>{' '}
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>{' '}
-                        </div>{' '}
+                        />
+                        <div className="detail">
+                            <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
+                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer_banner">
-                <div class="footer_banner_section">
-                    <div class="footer_banner_title">[ 서비스기획자 ] 3년차 3,500만원이면 잘 받는 건가요?</div>
+            <div className="footer_banner">
+                <div className="footer_banner_section">
+                    <div className="footer_banner_title">[ 서비스기획자 ] 3년차 3,500만원이면 잘 받는 건가요?</div>
                     <button>더알아보기</button>
                 </div>
             </div>

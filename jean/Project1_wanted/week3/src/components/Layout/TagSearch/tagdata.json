@@ -1,0 +1,71 @@
+{
+    "tags": [
+        {
+            "name": "업계연봉수준",
+            "tags": [
+                {
+                    "tag": "#연봉업계평균이상",
+                    "id": 1
+                },
+                {
+                    "tag": "#연봉상위1%",
+                    "id": 2
+                },
+                {
+                    "tag": "#연봉상위2~5%",
+                    "id": 3
+                },
+                {
+                    "tag": "#연봉상위6~10%",
+                    "id": 4
+                },
+                {
+                    "tag": "#연봉상위11~20%",
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "name": "인원성장률",
+            "tags": [
+                {
+                    "tag": "#인원성장",
+                    "id": 6
+                },
+                {
+                    "tag": "#인원급성장",
+                    "id": 7
+                }
+            ]
+        }
+    ],
+
+    "list": [
+        {
+            "name": "피제이팩토리",
+            "url": "https://static.wanted.co.kr/images/wdes/0_5_a579e59c-d3a0-4db4-82f3-d908f47c1e82.jpg",
+            "tags": ["#인원성장", "#연봉상위1%", "#간식", "#인원급성장", "#연봉상위6~10%"]
+        },
+
+        {
+            "name": "비유피홀딩스",
+            "url": "https://static.wanted.co.kr/images/wdes/0_5_e33debd9-a446-4bf7-8af5-6ca6777a1895.jpg",
+            "tags": ["#인원성장", "#인원급성장", "#간식", "#음료", "#연봉상위2~5%"]
+        },
+        {
+            "name": "코쿤게임즈",
+            "url": "https://static.wanted.co.kr/images/wdes/598_5_logo_cocoon.jpg",
+            "tags": ["#인원성장", "#안마의자", "#간식", "#음료", "#리프레시휴가"]
+        },
+        {
+            "name": "스케인글로브",
+            "url": "https://static.wanted.co.kr/images/wdes/851_5_logo_globe.jpg",
+            "tags": ["#검강검진", "#안마의자", "#간식", "#음료", "#리프레시휴가"]
+        },
+        {
+            "name": "더제이",
+            "url": "https://static.wanted.co.kr/images/wdes/769_5_logo_j.jpg",
+            "tags": ["#자기계발", "#교육비", "#동호회", "#건강검진", "#와인"]
+        }
+    ]
+}

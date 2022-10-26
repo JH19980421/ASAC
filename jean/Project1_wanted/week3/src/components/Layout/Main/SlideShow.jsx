@@ -19,7 +19,6 @@ const SlideShow = props => {
             moveSlide(prev => (prev >= 7 ? 2 : prev + 1));
         }, 5000);
         clearInterval(timer);
-        
     }, []);
 
     useEffect(() => {
@@ -55,7 +54,7 @@ const SlideShow = props => {
 
     return (
         <div id="slideShow">
-            <ul class="slides" style={{ left: slidePx + balance + 'px', width: slidesWidth + 'px', transition: transition + 's ease-out ' }}>
+            <ul className="slides" style={{ left: slidePx + balance + 'px', width: slidesWidth + 'px', transition: transition + 's ease-out ' }}>
                 <li>
                     <img src={require('../../../images/banner4.png')} alt="" />
                 </li>
@@ -85,21 +84,21 @@ const SlideShow = props => {
                     <img src={require('../../../images/banner2.png')} alt="" />
                 </li>
             </ul>
-            <p class="controller">
-                <span class="prev" onClick={prevClick}>
+            <p className="controller">
+                <span className="prev" onClick={prevClick}>
                     <img src={require('../../../images/left-arrow.png')} alt="" />
                 </span>
-                <span class="next" onClick={nextClick}>
+                <span className="next" onClick={nextClick}>
                     <img src={require('../../../images/right-arrow.png')} alt="" />
                 </span>
             </p>
-            <div class="banner_info" style={{ opacity: opacity, left: balance + 100 + 'px' }}>
+            <div className="banner_info" style={{ opacity: opacity, left: balance + 100 + 'px' }}>
                 <h2>[FREE] GDSC Job Fair Live</h2>
                 <h3>국내 최고 스타트업 채용소식을 볼 수 있는 기회!</h3>
-                <hr class="banner_divider" />
+                <hr className="banner_divider" />
                 <a href="!#">
                     바로가기
-                    <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18">
+                    <svg className="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18">
                         <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
                     </svg>
                 </a>
