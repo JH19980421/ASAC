@@ -1,8 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-
-import like from '../../../images/like.png';
-import like2 from '../../../images/like2.png';
-
+import Map from './Map';
 const Jobdetail = props => {
     const [height, setHeight] = useState(0);
     const [top, setTop] = useState(70);
@@ -174,7 +171,7 @@ const Jobdetail = props => {
                                 </div>
                             </div>
 
-                            <div id="map"></div>
+                            <Map />
 
                             <div className="job_logo">
                                 <a href="!#">

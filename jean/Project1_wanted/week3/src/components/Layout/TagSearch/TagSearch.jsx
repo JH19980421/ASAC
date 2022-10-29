@@ -5,34 +5,78 @@ import TagCategory from './TagCategory';
 import TagCompany from './TagCompany';
 import dum from './tagdata.json';
 
+import SubTitle from './tagdata.json';
+
 const TagSearch = () => {
     const [show, setShow] = useState(false);
     function onTag() {
         setShow(!show);
     }
 
-    const [showColor, setShowColor] = useState([]);
+    const [data, setData] = useState(dum.list);
+    const [showColor] = useState([]);
     const [tagList, setTagList] = useState([]);
-    const [DATA, setFilter] = useState();
+
+    useEffect(() => {
+        tagList.length == 0
+            ? setData(dum.list)
+            : setData(
+                  data.filter(function (list) {
+                      var res = false;
+                      list.tags.filter(function (tag) {
+                          tagList.map(T => {
+                              if (tag === T.content) {
+                                  res = true;
+                                  return res;
+                              }
+                              if (res) return res;
+                          });
+                      });
+                      return res;
+                  })
+              );
+        console.log(data);
+    }, [tagList]);
+
+    // const findByTags = T => {
+    //     var res = false;
+    //     tagList.map(tag => {
+    //         for (let e of T) {
+    //             if (e == tag.content) {
+    //                 res = true;
+    //                 return;
+    //             }
+    //         }
+    //     });
+    //     return res;
+    // };
+    // const findByList = L => {
+    //     var array = [];
+
+    //     for (let e of L) {
+    //         if (findByTags(e.tags)) {
+    //             array = [...array, e];
+    //         }
+    //     }
+    //     return array;
+    // };
 
     function onAddTag(e) {
         const innerText = e.target.innerText;
         const id = e.target.id;
 
         let res = false;
-        let length = tagList.length;
-
         tagList.map(element => {
             if (element.id === id) {
-                onRemove(e);
-                length--;
+                showColor[e.target.id] = false;
+                setTagList(tagList.filter(tagList => tagList.id !== id));
                 res = true;
                 return 0;
             }
         });
 
         if (res) return;
-        else if (length > 3) {
+        else if (tagList.length > 3) {
             alert('최대갯수초과');
             return;
         }
@@ -40,19 +84,6 @@ const TagSearch = () => {
         const temp = { id: id, content: innerText };
         showColor[id] = true;
         setTagList(tagList => [...tagList, temp]);
-
-        // DATA.filter(dum.list.map(L => L.tags.map(T => tagList.map(tag => tag === T))));
-        console.log(dum.list);
-        dum.list.filter(function (e) {
-            return e.code === '1234' && e.addr === '부산시 동구 수영동';
-        });
-
-        // console.log(DATA);
-    }
-    function onRemove(e) {
-        const value = e.target.id;
-        showColor[e.target.id] = false;
-        setTagList(tagList.filter(tagList => tagList.id !== value));
     }
 
     return (
@@ -66,7 +97,7 @@ const TagSearch = () => {
                                 className={styles.closeButton}
                                 id={element.id}
                                 alt={element.content}
-                                onClick={onRemove}
+                                onClick={onAddTag}
                                 src={require('../../../images/close.png')}
                             />
                         </h2>
@@ -101,7 +132,7 @@ const TagSearch = () => {
                 </div>
             )}
 
-            {/* <TagCompany company={filter.list} /> */}
+            <TagCompany company={data} />
         </>
     );
 };

@@ -50,7 +50,7 @@
         {
             "name": "비유피홀딩스",
             "url": "https://static.wanted.co.kr/images/wdes/0_5_e33debd9-a446-4bf7-8af5-6ca6777a1895.jpg",
-            "tags": ["#인원성장", "#인원급성장", "#간식", "#음료", "#연봉상위2~5%"]
+            "tags": ["#인원성장", "#인원급성장", "#간식", "#음료", "#연봉상위2~5%", "#연봉상위1%"]
         },
         {
             "name": "코쿤게임즈",
@@ -66,6 +66,26 @@
             "name": "더제이",
             "url": "https://static.wanted.co.kr/images/wdes/769_5_logo_j.jpg",
             "tags": ["#자기계발", "#교육비", "#동호회", "#건강검진", "#와인"]
+        },
+        {
+            "name": "SKT",
+            "url": "https://static.wanted.co.kr/images/wdes/598_5_logo_cocoon.jpg",
+            "tags": ["#연봉상위11~20%", "#안마의자", "#간식", "#음료", "#리프레시휴가"]
+        },
+        {
+            "name": "KT",
+            "url": "https://static.wanted.co.kr/images/wdes/851_5_logo_globe.jpg",
+            "tags": ["#검강검진", "#안마의자", "#간식", "#음료", "#인원급성장"]
+        },
+        {
+            "name": "LGU",
+            "url": "https://static.wanted.co.kr/images/wdes/769_5_logo_j.jpg",
+            "tags": ["#자기계발", "#교육비", "#동호회", "#건강검진", "#와인"]
+        },
+        {
+            "name": "Apple",
+            "url": "https://static.wanted.co.kr/images/wdes/769_5_logo_j.jpg",
+            "tags": ["#자기계발", "#교육비", "#동호회", "#퇴사율5퍼이하", "#와인"]
         }
     ]
 }

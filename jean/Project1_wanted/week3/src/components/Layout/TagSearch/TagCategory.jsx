@@ -10,7 +10,7 @@ const TagCategory = props => {
     return (
         <>
             {tags.map(A => (
-                <li className={styles.tagCategory} id="1234">
+                <li className={styles.tagCategory}>
                     <div className={styles.tagCategoryTittle}>{A.name}</div>
 
                     <div className={styles.tagCategoryButton}>
