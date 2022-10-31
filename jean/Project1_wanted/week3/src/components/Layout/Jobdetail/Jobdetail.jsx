@@ -1,15 +1,35 @@
 import { useState, useEffect, useRef } from 'react';
 import Map from './Map';
+import CompanyList from './CompanyList';
+import likeGray from '../../../images/like.png';
+import likeRed from '../../../images/like2.png';
+
+import user1 from '../../../images/user (1).png';
+import user2 from '../../../images/user (2).png';
+import user3 from '../../../images/user (3).png';
+import user4 from '../../../images/user (4).png';
+
 const Jobdetail = props => {
     const [height, setHeight] = useState(0);
     const [top, setTop] = useState(70);
     const [position, setPosition] = useState('fixed');
     const [flag, setflag] = useState(false);
-    const [like, setLike] = useState(0);
+    const [likeflag, setLikeflag] = useState(false);
+    const [likeimg, setLikeimg] = useState(likeGray);
+    const [like, setLike] = useState(2);
     const ref = useRef(null);
 
+    const user = [user1, user2, user3, user4];
     function clickLike() {
-        setLike(prev => prev + 1);
+        if (likeflag) {
+            setLikeimg(likeGray);
+            setLike(prev => prev - 1);
+        } else {
+            setLike(prev => prev + 1);
+            setLikeimg(likeRed);
+        }
+
+        setLikeflag(!likeflag);
     }
     const handleFollow = () => {
         if (window.pageYOffset > height - 500) {
@@ -38,6 +58,14 @@ const Jobdetail = props => {
             window.removeEventListener('scroll', handleFollow);
         };
     });
+    function List_UI() {
+        var arr = [];
+        for (var i = 0; i < like; i++) {
+            arr.push(<img src={user[i]} alt="" />);
+        }
+        console.log(arr);
+        return arr;
+    }
 
     return (
         <>
@@ -226,19 +254,51 @@ const Jobdetail = props => {
                                     </li>
                                 </ul>
                                 <div className="share">
-                                    {/* <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 19 19"><defs><path id="shareIcon" d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"></path></defs><g fillRule="none" fillRule="evenodd"><use fillRule="#36F" xlink:href="#shareIcon"></use></g></svg> */}
+                                    <svg
+                                        xmlns="https://www.w3.org/2000/svg"
+                                        xmlnsXlink="https://www.w3.org/1999/xlink"
+                                        width={20}
+                                        height={20}
+                                        viewBox="0 0 19 19"
+                                        {...props}
+                                    >
+                                        <defs>
+                                            <path
+                                                id="shareIcon"
+                                                d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"
+                                            />
+                                        </defs>
+                                        <g fillRule="evenodd">
+                                            <use fillRule="#36F" xlinkHref="#shareIcon" />
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                             <div className="job_detail_aside_bookmark">
-                                {/* <svg width="13" height="17" viewBox="0 0 13 17" style="color: rgb(51, 102, 255);"><defs><path id="bookmarkIconLine" d="M1.481 1.481h9.382v10.727c0 .409.331.74.74.74.41 0 .741-.331.741-.74V.74c0-.41-.331-.741-.74-.741H.74C.33 0 0 .332 0 .74v14.814c0 .568.614.925 1.108.643l5.18-2.873 5.104 2.873c.355.203.807.08 1.01-.276.203-.355.08-.808-.275-1.01l-5.471-3.083c-.228-.13-.507-.13-.735 0l-4.44 2.45V1.48z"></path></defs><g fillRule="none" fillRule="evenodd"><use fillRule="currentColor" xlink:href="#bookmarkIconLine"></use></g></svg> */}
+                                <svg
+                                    width="16px"
+                                    height="16px"
+                                    viewBox="-2.561 0 16 16"
+                                    id="_09_-_Bookmark"
+                                    data-name="09 - Bookmark"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    {...props}
+                                >
+                                    <path
+                                        id="_09_-_Bookmark-2"
+                                        data-name="09 - Bookmark"
+                                        d="M14.12 2.17a1.627 1.627 0 0 0 -1.627 -1.627H4.867a1.627 1.627 0 0 0 -1.627 1.627V14.915A1.627 1.627 0 0 0 5.75 16.282L8.68 14.389l2.929 1.893a1.627 1.627 0 0 0 2.511 -1.367V2.17Zm-1.085 0V14.915a0.542 0.542 0 0 1 -0.837 0.455l-3.225 -2.083a0.542 0.542 0 0 0 -0.589 0l-3.225 2.083a0.542 0.542 0 0 1 -0.837 -0.455V2.17a0.542 0.542 0 0 1 0.542 -0.542H12.493A0.542 0.542 0 0 1 13.035 2.17Z"
+                                        transform="translate(-5.971 -1)"
+                                        fillRule="evenodd"
+                                    />
+                                </svg>
                                 북마크하기
                             </div>
                             <div className="job_detail_aside_apply">지원하기</div>
-                            <div className="job_detail_aside_like">
-                                <img src={require('../../../images/like.png')} alt="" />
-                                <div id="like_number" onClick={clickLike}>
-                                    {like}
-                                </div>
+                            <div className="job_detail_aside_like" onClick={clickLike}>
+                                <img src={likeimg} alt="" />
+                                <div id="like_number">{like}</div>
+                                <div className="sub"> {List_UI()} </div>
                             </div>
                         </div>
                     </div>
@@ -246,14 +306,19 @@ const Jobdetail = props => {
 
                 <h5 className="company_list_title">이 포지션을 찾고 계셨나요?</h5>
 
-                <div className="company_list">
+                <CompanyList />
+                {/* <div className="company_list">
                     <div className="item">
                         <img
                             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F21749%2Fymimve1pltmzbgpg__400_400.jpg&w=400&q=75"
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>
+                                채용보상금
+                                {toString(1000000)}원
+                            </p>
                         </div>
                     </div>
                     <div className="item">
@@ -262,7 +327,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -272,7 +338,7 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -281,7 +347,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -290,7 +357,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -300,7 +368,7 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -309,7 +377,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -318,7 +387,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -328,7 +398,7 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -337,7 +407,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -346,7 +417,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -356,7 +428,7 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -365,7 +437,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -374,7 +447,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -384,7 +458,7 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -393,7 +467,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -402,7 +477,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -412,7 +488,7 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -421,7 +497,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -430,7 +507,8 @@ const Jobdetail = props => {
                             alt=""
                         />
                         <div className="detail">
-                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h1>ML 엔지니어</h1> <h2>올빅뎃</h2> <button>응답률 매우 높음</button> <h3>서울・한국</h3>{' '}
+                            <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
                     <div className="item">
@@ -440,10 +518,10 @@ const Jobdetail = props => {
                         />
                         <div className="detail">
                             <h1>[전문연구요원 가능] 의료영상 분석을 위한 인공지능 연구원</h1> <h2>메디인테크</h2> <button>응답률 매우 높음</button>
-                            <h3>서울・한국</h3> <p>채용보상금 1,000,000원</p>
+                            <h3>서울・한국</h3> <p>채용보상금 {toString(1000000)}원</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="footer_banner">

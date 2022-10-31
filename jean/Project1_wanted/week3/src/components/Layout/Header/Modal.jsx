@@ -42,7 +42,7 @@ const Modal = ({ setmodalOpen }) => {
     });
 
     const { name, email } = inputs; // 비구조화 할당을 통해 값 추출
-
+    const [emailerror, setEmailerror] = useState(false);
     const appChange = e => {
         const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
         setInputs({
@@ -50,7 +50,21 @@ const Modal = ({ setmodalOpen }) => {
             [name]: value, // name 키를 가진 값을 value 로 설정
         });
     };
+    const emailcheck = e => {
+        const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
 
+        var reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+        if (!reg_email.test(value)) {
+            setEmailerror(false);
+        } else if (!emailerror) {
+            setEmailerror(true);
+        }
+
+        setInputs({
+            ...inputs, // 기존의 input 객체를 복사한 뒤
+            [name]: value, // name 키를 가진 값을 value 로 설정
+        });
+    };
     return (
         <div id="modal" className="modal-overlay">
             <div className="modal-window">
@@ -86,13 +100,29 @@ const Modal = ({ setmodalOpen }) => {
                                 이메일
                             </label>
                             <div className="email_inputobx">
-                                <input type="email" placeholder="이메일을 입력해 주세요." name="email" value={email} onChange={appChange} />
+                                <input
+                                    type="email"
+                                    placeholder="이메일을 입력해 주세요."
+                                    name="email"
+                                    value={email}
+                                    onChange={emailcheck}
+                                    style={emailerror ? { border: '1px solid #999999' } : { border: '1px solid red' }}
+                                />
                             </div>
-                            <div className="email_error">올바른 이메일 형식을 입력해주세요.</div>
+                            <div className="email_error" style={emailerror ? { display: 'none' } : { display: 'block' }}>
+                                올바른 이메일 형식을 입력해주세요.
+                            </div>
                         </div>
 
                         <div className="login_panel">
-                            <button type="button" className="login_email_button" onClick={toNext}>
+                            <button
+                                type="button"
+                                className="login_email_button"
+                                onClick={toNext}
+                                style={emailerror ? { backgroundColor: 'blue' } : { backgroundColor: 'gray' }}
+                                // disabled={emailerror ? false : true}
+                                disabled={!emailerror}
+                            >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
                                         <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>

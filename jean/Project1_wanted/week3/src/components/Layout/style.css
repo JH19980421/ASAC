@@ -550,7 +550,12 @@ header .mainbar .right a {
 }
 
 header .mainbar .right li {
+    cursor: pointer;
     margin-left: 10px;
+    font-size: 13px;
+    color: #666;
+    height: 30px;
+    line-height: 30px;
 }
 
 #vborder {
@@ -1877,6 +1882,9 @@ p {
     font-size: 14px;
     color: #000;
 }
+.email_inputobx input:focus {
+    outline: none;
+}
 .email_error {
     display: none;
     color: #fe415c;
@@ -2172,6 +2180,14 @@ select {
     margin-bottom: 25px;
 }
 
+.job_detail_aside_like .sub {
+    position: absolute;
+    left: 100px;
+}
+.job_detail_aside_like .sub img {
+    width: 25px;
+    height: 25px;
+}
 .job_detail_aside_like img {
     margin-right: 7px;
     height: 17px;

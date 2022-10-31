@@ -1,7 +1,14 @@
-import SerachSVG from './Search';
+import SerachSVG from './SerachSVG';
+import Search from './Search';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = ({ setmodalOpen }) => {
+    const [search, setSearch] = useState(false);
+
+    const clickSearch = () => {
+        setSearch(true);
+    };
     const handleClickButton = () => {
         setmodalOpen(true);
     };
@@ -125,15 +132,11 @@ const Header = ({ setmodalOpen }) => {
                 <div className="right">
                     <ul>
                         {/* /<li><Link to="/"><svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"> <defs> <path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"> </path> </defs> <g fill="none" fillRule="evenodd"> <use fill="#333" fillRule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use> </g> </svg></Link></li> */}
-                        <li>
-                            <Link to="TagSearch" id="btn-modal">
-                                {SerachSVG()}
-                            </Link>
+                        <li id="btn-modal" onClick={clickSearch}>
+                            {SerachSVG()}
                         </li>
-                        <li>
-                            <a href="!#" id="btn-modal" onClick={handleClickButton}>
-                                회원가입/로그인
-                            </a>
+                        <li id="btn-modal" onClick={handleClickButton}>
+                            회원가입/로그인
                         </li>
                         <li id="vborder"></li>
                         <li>
@@ -144,6 +147,7 @@ const Header = ({ setmodalOpen }) => {
                     </ul>
                 </div>
             </div>
+            {search ? <Search setSearch={setSearch} /> : ''}
         </header>
     );
 };

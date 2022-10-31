@@ -4,10 +4,13 @@ import { useState, useEffect } from 'react';
 import TagCategory from './TagCategory';
 import TagCompany from './TagCompany';
 import dum from './tagdata.json';
-
-import SubTitle from './tagdata.json';
+import { useLocation } from 'react-router';
 
 const TagSearch = () => {
+    const [loading, setLoading] = useState(true);
+
+    const location = useLocation();
+
     const [show, setShow] = useState(false);
     function onTag() {
         setShow(!show);
@@ -18,10 +21,25 @@ const TagSearch = () => {
     const [tagList, setTagList] = useState([]);
 
     useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
+    useEffect(() => {
+        if (location.state != null) {
+            console.log(location);
+            const temp = { id: location.state[1], content: location.state[0] };
+            onAddTag(temp);
+            window.history.replaceState({}, document.title);
+        }
+    }, [location.key]);
+
+    useEffect(() => {
         tagList.length == 0
             ? setData(dum.list)
             : setData(
-                  data.filter(function (list) {
+                  dum.list.filter(function (list) {
                       var res = false;
                       list.tags.filter(function (tag) {
                           tagList.map(T => {
@@ -35,7 +53,7 @@ const TagSearch = () => {
                       return res;
                   })
               );
-        console.log(data);
+        // console.log(data);
     }, [tagList]);
 
     // const findByTags = T => {
@@ -62,8 +80,15 @@ const TagSearch = () => {
     // };
 
     function onAddTag(e) {
-        const innerText = e.target.innerText;
-        const id = e.target.id;
+        var innerText;
+        var id;
+        if (e.type === 'click') {
+            innerText = e.target.innerText;
+            id = e.target.id;
+        } else {
+            innerText = e.content;
+            id = e.id;
+        }
 
         let res = false;
         tagList.map(element => {
@@ -110,17 +135,17 @@ const TagSearch = () => {
                 </div>
                 <div className={styles.tagClass}>
                     <h1>추천</h1>
-                    <button className={` ${styles.button} ${showColor[2] ? styles.color : ''}`} id="2" onClick={onAddTag}>
+                    <button className={` ${styles.button} ${showColor[2] ? styles.color : ''}`} id="5" onClick={onAddTag}>
                         #연봉상위1%
                     </button>
-                    <button className={` ${styles.button} ${showColor[11] ? styles.color : ''}`} id="11" onClick={onAddTag}>
-                        #퇴사율5퍼이하
+                    <button className={` ${styles.button} ${showColor[11] ? styles.color : ''}`} id="9" onClick={onAddTag}>
+                        #퇴사율5%이하
                     </button>
                     <button className={` ${styles.button} ${showColor[5] ? styles.color : ''}`} id="5" onClick={onAddTag}>
                         #연봉상위11~20%
                     </button>
-                    <button className={` ${styles.button} ${showColor[12] ? styles.color : ''}`} id="12" onClick={onAddTag}>
-                        #301~1,000명
+                    <button className={` ${styles.button} ${showColor[12] ? styles.color : ''}`} id="16" onClick={onAddTag}>
+                        #주35시간
                     </button>
                 </div>
             </div>
@@ -132,7 +157,8 @@ const TagSearch = () => {
                 </div>
             )}
 
-            <TagCompany company={data} />
+            {/* {loading ? <div className={styles.loading}></div> : <TagCompany props={(data, loading)} />} */}
+            <TagCompany company={data} loading={loading} />
         </>
     );
 };

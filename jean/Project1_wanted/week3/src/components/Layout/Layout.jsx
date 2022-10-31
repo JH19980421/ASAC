@@ -14,11 +14,10 @@ const Layout = props => {
         <>
             <Header setmodalOpen={setmodalOpen} />
             {modalOpen && <Modal setmodalOpen={setmodalOpen} />}
-
             <Routes>
                 <Route path="TagSearch" element={<TagSearch />} />
                 <Route path="Job" element={<Job />} />
-                <Route path="Jobdetail" element={<Jobdetail />} />
+                <Route path="Jobdetail/:id" element={<Jobdetail />} />
                 <Route path="/" element={<Mainpage />} />
             </Routes>
         </>
