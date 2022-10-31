@@ -7,12 +7,12 @@ function Event() {
         <div className="container__event">
             {
                 eventItems.map((item, idx) => (
-                    <div className="event__card">
+                    <div className="event__card" key={item.id}>
                         <img src={item.imageUrl} alt="event"/>
                         <div className="event__badge-container">
                             {
                                 item.badges.map((it, idx) => (
-                                    <div className="event__badge">{it.badge} {it.id}</div>
+                                    <div className="event__badge" key={it.id}>{it.badge} {it.id}</div>
                                 ))
                             }
                         </div>

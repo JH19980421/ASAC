@@ -1,4 +1,4 @@
-import "../../css/recruiting-filter.css";
+import "../../css/recruiting/recruiting-filter.css";
 
 function RecruitingFilter() {
 

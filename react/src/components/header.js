@@ -6,19 +6,28 @@ import '../css/header.css';
 
 import LoginModal from "../components/modals/login-modal";
 import { useState } from "react";
+import SearchBar from "./search-bar";
 
 
 function Header() {
     const [openLoginModal, setOpenLoginModal] = useState(false);
+    const [showSearchBar, setShowSearchBar] = useState(false);
 
     const onClickJoinLogin = () => {
         openLoginModal = setOpenLoginModal(!openLoginModal);
     }
 
+    const onClickSearchButton = () => {
+        setShowSearchBar(!showSearchBar);
+    }
+
     return (
-        <>
+        <div>
             {
                 openLoginModal? <LoginModal openModal={setOpenLoginModal}/>: null
+            }
+            {
+                showSearchBar? <SearchBar showSearchBar={setShowSearchBar}/>: null
             }
             <header>
                 <img className="menu" src={ require('../assets/images/menu.png') } alt="menu"/>
@@ -43,9 +52,12 @@ function Header() {
                 </ul>
 
                 <div className="header__right">
-                    <Link to="/">
-                        <img className="search" src={ require('../assets/images/search.png') } alt="search"/>
-                    </Link>
+                    <img 
+                        className="search" 
+                        src={ require('../assets/images/search.png') } 
+                        alt="search"
+                        onClick={onClickSearchButton}
+                        />
                     <div 
                         className="login"
                         onClick={onClickJoinLogin}
@@ -57,7 +69,7 @@ function Header() {
                     <div className="header__organization">기업 서비스</div>            
                 </div>
             </header>
-        </>
+        </div>
     );
 }
 

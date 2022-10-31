@@ -7,7 +7,7 @@ function KeywordCards() {
         <div className="keywords__card-detail">
             {
                 keywordCard.map((item, idx) => (
-                    <div className="keywords__card">
+                    <div className="keywords__card" key={item.id}>
                         <img src={item.imageUrl} alt="image"/>
                         <p className="keywords__card--title">{item.title} {item.id}</p>
                         <p className="keywords__card--content">

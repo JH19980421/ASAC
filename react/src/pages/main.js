@@ -13,12 +13,13 @@ import MarketingBanner from "../components/main/marketing-banner";
 import MarketingButton from "../components/main/marketing-button";
 import SlideBanner from "../components/main/slide-banner";
 import Subtitle from "../components/main/subtitle";
+import SearchBar from "../components/search-bar";
 
 
 function Main() {
 
     return (
-        <div>
+        <>
             <Header/>
 
             <div className="container__top">
@@ -77,7 +78,7 @@ function Main() {
             </div>
 
             <Footer/>
-        </div>
+        </>
     )
 
 }

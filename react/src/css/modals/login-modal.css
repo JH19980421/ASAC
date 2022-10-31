@@ -14,8 +14,6 @@ button {
 }
 
 .login-modal {
-    display: block;
-
     position: fixed;
     left: 37.5%;
     top: 10%;
@@ -102,6 +100,11 @@ button {
 
     padding: 15px;
 }
+.email-continue:disabled {
+    background-color: #aaa;
+
+    cursor: auto;
+}
 
 .sns-login-container {
     display: grid;
@@ -132,7 +135,7 @@ button {
 
 .login-modal-join {
     display: none;
-
+    
     position: fixed;
     left: 37.5%;
     top: 10%;
@@ -304,4 +307,18 @@ button {
     z-index: 4;
 
     background-color: rgba(105, 105, 105, 0.7);
+}
+
+.email-alert {
+    padding: 0;
+    margin: 0px;
+    margin-left: -10px;
+    text-align: left;
+    color: red;
+    transform: scale(0.9);
+}
+
+.email-input-alert {
+    border: 1px solid red;
+    outline: red;
 }

@@ -2,10 +2,13 @@ import RecruitingList from "../components/recruiting/recruiting-list";
 import RecruitingHeader from "../components/recruiting/recruiting-filter";
 import RecruitingTop from "../components/recruiting/recruiting-top";
 
-import "../css/recruiting.css";
+import "../css/recruiting/recruiting.css";
 import Header from "../components/header";
+import { useLocation } from "react-router-dom";
 
 function Recruiting() {
+    const { state } = useLocation();
+
     return (
         <div>
             <Header/>
@@ -33,7 +36,7 @@ function Recruiting() {
 
             <RecruitingTop/>
 
-            <RecruitingList/>
+            <RecruitingList searchInput={state}/>
             
         </div>
     );

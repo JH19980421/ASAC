@@ -1,4 +1,6 @@
 .job-detail-container {
+    position: relative;
+    
     text-align: left;
 
     margin: 20px 225px 0 225px;

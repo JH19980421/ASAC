@@ -80,7 +80,7 @@ function Keywords() {
             <div className="keywords__content">
                 {
                     keywordItems.map((item, idx) => (
-                        <button>{item.keyword}</button>
+                        <button key={item.id}>{item.keyword}</button>
                     ))
                 }
             </div>

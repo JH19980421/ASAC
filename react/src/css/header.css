@@ -42,6 +42,8 @@ img.search {
     width: 16px;
     margin-right: 20px;
     margin-top: 2px;
+
+    cursor: pointer;
 }
 
 .login {

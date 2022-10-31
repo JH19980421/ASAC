@@ -11,7 +11,7 @@ function Article() {
             {
                 articleItems.map((item, idx) => (
                     tagString = '',
-                    <div className="article__card">
+                    <div className="article__card" key={item.id}>
                         <img src={item.imageUrl} alt="article"/>
                         <p className="article__card--title">{item.title}</p>
                         <p className="article__card--tag">

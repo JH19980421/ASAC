@@ -466,7 +466,7 @@ footer {
 .floating {
     position: fixed;
     right: 15%;
-    top: 9%;
+    top: 73px;
 
     width: 300px;
     height: 300px;

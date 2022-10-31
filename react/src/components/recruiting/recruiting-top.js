@@ -1,4 +1,4 @@
-import "../../css/recruiting-top.css";
+import "../../css/recruiting/recruiting-top.css";
 
 const recruitingTopItems = require('../../recruiting-top.json');
 
@@ -10,7 +10,7 @@ function RecruitingTop() {
             <div className="header-card">
                 {
                     recruitingTopItems.map((item) => (
-                        <div className="header-card-item">
+                        <div className="header-card-item" key={item.id}>
                             <img src={item.imageUrl} alt="card"/>
                             <img id="logo" src={item.logoImageUrl} alt="logo"/>
                             <p className="header-card-title">{item.title}</p>

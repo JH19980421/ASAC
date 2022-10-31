@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "../../css/modals/login-modal.css";
 
 import * as Validation from "../../utils/validation";
@@ -7,7 +7,11 @@ const agreementItems = require("../../agreement-item.json");
 
 function LoginModal(props) {
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [checkedItems, setCheckedItems] = useState(new Set());
     const [isAllChecked, setIsAllChecked] = useState(0);
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const [isPasswordValid, setIsPasswordValid] = useState(true);
 
     const hider = useRef();
     const loginModal = useRef();
@@ -15,34 +19,48 @@ function LoginModal(props) {
 
     useEffect(() => {
         initLoginModal();
+        setIsEmailValid(true);
+        setIsPasswordValid(true)
         // console.log('temp', agreementItems.find((item) => item.id == 1));
     }, []);
 
-    useEffect(() => {
-        /** todo: 모두 체크, 모두 해제 버튼 구현 */
-    }, [isAllChecked])
+    useMemo(() => {
+        if(!Validation.emailValidation(email)) {
+            setIsEmailValid(false)
+        } else {
+            setIsEmailValid(true)
+        }
+
+        return isEmailValid;
+    }, [email]);
+
+    useMemo(() => {
+        if(!Validation.passwordValidation(password)) {
+            setIsPasswordValid(false)
+        } else {
+            setIsPasswordValid(true)
+        }
+
+        return isPasswordValid;
+    }, [password]);
+
 
     
     const initLoginModal = () => {
         hider.current.style.display = "block";
         hider.current.style.zIndex = 4;
 
-        loginModal.current.style.display = "block";
         loginModal.current.style.zIndex = 5;
     }
 
 
     const closeModals = () => {
-        hider.current.style.display = "none";
-        loginModal.current.style.display = "none";
-        joinModal.current.style.display = "none";
-
         props.openModal(false);
     }
 
     const gotoJoinModal = (email) => {
         if(!Validation.emailValidation(email)) {
-            alert('이메일을 제대로 입력하세여');
+            alert('이메일을 입력해주세요.');
             return;
         }
 
@@ -55,16 +73,33 @@ function LoginModal(props) {
         closeModals();
     }
 
-
-    const onClickAgreementAll = () => {
-        isAllChecked? setIsAllChecked(0): setIsAllChecked(1);
+    const onClickAllCheck = () => {
+        if(!isAllChecked) {
+            setIsAllChecked(1);
+            agreementItems.forEach((it) => {
+                checkedItems.add(it.id);
+            })
+            setCheckedItems(checkedItems);
+        } else {
+            setIsAllChecked(0);
+            checkedItems.clear();
+            setCheckedItems(checkedItems);
+        }
     }
-    
+
+    const onClickCheck = (id, target) => {
+        if(target.checked) {
+            checkedItems.add(id);
+        } else {
+            checkedItems.delete(id);
+        }
+        setCheckedItems(checkedItems);
+    }
 
     return (
         <>
             <div 
-                class="hider" 
+                className="hider" 
                 ref={hider}
                 onClick={closeModals}
             ></div>
@@ -88,15 +123,21 @@ function LoginModal(props) {
 
                 <p className="email-label">이메일</p>
                 <input 
-                    className="email-input" 
+                    className={isEmailValid? 'email-input': 'email-input-alert'}
                     type="text" 
                     placeholder="이메일을 입력해주세요"
                     onChange={(e) => setEmail(e.target.value)}
                 />
+                {
+                    !isEmailValid
+                    ? <p className="email-alert">올바른 이메일을 입력해주세요</p>
+                    : null
+                }
 
                 <button 
                     className="email-continue"
                     onClick={() => gotoJoinModal(email)}
+                    disabled={!isEmailValid}
                 >이메일로 계속하기</button>
                 <p>or</p>
                 <p>다음 계정으로 계속하기</p>
@@ -161,7 +202,17 @@ function LoginModal(props) {
                 </div>
                 <div>
                     <p className="email-label">비밀번호</p>
-                    <input className="email-input" type="text" placeholder="비밀번호를 입력해 주세요."/>
+                    <input 
+                        className={isPasswordValid? 'email-input': 'email-input-alert'} 
+                        type="text" 
+                        placeholder="비밀번호를 입력해 주세요."
+                        onChange={(e) => setPassword(e.target.value)}
+                        />
+                    {
+                        !isPasswordValid
+                        ? <p className="email-alert">올바르지 않은 비밀번호입니다.</p>
+                        : null
+                    }
                     <p className="check-password">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상 입력해 주세요.</p>
                 </div>
                 <div>
@@ -172,7 +223,7 @@ function LoginModal(props) {
                 <div className="agreement">
                     <input 
                         type="checkbox"
-                        onClick={onClickAgreementAll}
+                        onClick={onClickAllCheck}
                     />
                     <p>전체 동의</p>
                 </div>
@@ -184,9 +235,13 @@ function LoginModal(props) {
 
                 {
                     agreementItems.map((item) => (
-                        <div className="agreement-item">
+                        <div className="agreement-item" key={item.id}>
                             <div className="agreement-item-check">
-                                <input type="checkbox"/>
+                                <input 
+                                    type="checkbox"
+                                    onChange={(e) => onClickCheck(item.id, e.target)}
+                                    checked={checkedItems.has(item.id)? true: false}
+                                />
                                 <p>{item.content}</p>
                             </div>
                             <p>자세히</p>
@@ -197,7 +252,10 @@ function LoginModal(props) {
                 <div className="empty-space__medium"></div>
 
                 <div className="join-submit-container">
-                    <button className="join-submit" onClick={completeJoin}>회원가입하기</button>
+                    <button 
+                        className="join-submit" 
+                        onClick={completeJoin}
+                    >회원가입하기</button>
                 </div>
             </div>
         </>
