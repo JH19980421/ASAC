@@ -1,0 +1,59 @@
+{
+	"db": [
+		{
+			"id": 0,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201228%2F6%2F15591052.jpg&w=500&q=75",
+			"pName": "패널토론 Leader Session - 조해리, 한명수, 김윤혁",
+			"pDescribe": "실제 리더들은 어떻게 리더쉽을 바라보고 있을까요? 패널토론 영상을 통해 확인하세요."
+		},
+
+		{
+			"id": 1,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F2nJ4%2Fimage%2FI60FY1myx1fGxSOr7wUU8Ta0WN0.jpg&w=500&q=75",
+			"pName": "나의 커리어는 어디로 가는가",
+			"pDescribe": "커리어를 이대로 쌓아가도 괜찮을지 고민하는 직장인의 실제 사연을 통해 '직장생활의 리얼리티...'"
+		},
+
+		{
+			"id": 2,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F1oxf%2Fimage%2F4-89Y6iFJ2Vgydr-xAxenGcccW8.jpg&w=500&q=75",
+			"pName": "주니어를 위해서 시니어가 해야할 일, 그리고 주니어에게",
+			"pDescribe": "강의를 시작하는 것, 브런치에 글을 쓰는 것, 그리고 계속해서 무언가를 공유하려고 하는 것은..."
+		},
+
+		{
+			"id": 3,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220704%2F2%2F15684025.jpg&w=500&q=75",
+			"pName": "Talk : 면접을부탁해 - 개발직군",
+			"pDescribe": "개발 직군 면접 시, 자기주도적 면접 분위기를 형성하는데 있어 중요한 팁과 면접관의 기억에 남는..."
+		},
+
+		{
+			"id": 4,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201228%2F6%2F15591052.jpg&w=500&q=75",
+			"pName": "패널토론 Leader Session - 조해리, 한명수, 김윤혁",
+			"pDescribe": "실제 리더들은 어떻게 리더쉽을 바라보고 있을까요? 패널토론 영상을 통해 확인하세요."
+		},
+
+		{
+			"id": 5,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F2nJ4%2Fimage%2FDoX04BEBuwgH-WDgiUVLHqlAE3Q.jpg&w=500&q=75",
+			"pName": "합격자소서, 100% 믿지 말라고?",
+			"pDescribe": "각종 취업카페나 채용포털사이트에서 합격 자소서라고 올라오고 도는 사례들이 많이 있습니다."
+		},
+
+		{
+			"id": 6,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210308%2F4%2F64766774.jpg&w=500&q=75",
+			"pName": "이력서가 무엇인지 살펴보기 - 백승엽",
+			"pDescribe": "이력서는 무엇일까요? 기계처럼 반복적으로 작성하고 제출하지만 과연 이렇게 써도 되는 것일까..."
+		},
+
+		{
+			"id": 7,
+			"imgSrc": "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F4Oxh%2Fimage%2F1If6N5c1rECa-C9AfSr6tHCI00k.png&w=500&q=75",
+			"pName": "회사가 찾는 인재는 누구일까요?",
+			"pDescribe": "이전글 나를 알아본 후 직무, 회사 그리고 산업까지 알아봤습니다. 이제는 합격을 위해 기업을 분석..."
+		}
+	]
+}

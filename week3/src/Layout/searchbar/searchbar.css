@@ -1,0 +1,115 @@
+.SearchBarBackground {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 999;
+}
+
+.SearchBar {
+	left: 0;
+	top: 0;
+	width: 100%;
+	position: absolute;
+	background: #fff;
+	z-index: 1000;
+}
+
+.SearchBar_Container {
+	width: 100%;
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 30px 0 140px;
+	position: relative;
+	background-color: #fff;
+}
+
+.SearchBar_Container > form {
+	position: relative;
+}
+
+.SearchBar_Container > form > input {
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	margin: 0;
+	padding: 0 36px 0 60px;
+	border: 1px solid rgba(0, 0, 255, 0.671);
+	border-radius: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.Result_Container {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 80px;
+	background-color: #fff;
+}
+
+.Result_Container > div {
+	position: relative;
+	margin: 0 auto;
+	padding: 50px 0 0;
+	max-width: 1060px;
+}
+
+.RecentSearchResults {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+	color: #333;
+	margin: 0;
+}
+
+.RecentSearchResultsRightSideButton {
+	float: right;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #767676 !important;
+}
+
+.RecentSearchResultslistClass {
+	padding: 20px 0 50px;
+}
+
+.tagListItem {
+	float: left;
+	width: auto;
+	position: relative;
+	display: block;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 35px;
+	color: #333;
+}
+
+.Tag_className {
+	background: #f0f8f8;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: 400;
+	color: #333;
+	border: #f3f5f8;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 0 26px;
+	background-color: #f3f5f8;
+	border-radius: 25px;
+}
+
+.closeSearch {
+	top: 80px;
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,79 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+footer {
+    background-color: white;
+    margin: 70px 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_top {
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+}
+
+.footer_center {
+    display: flex;
+    flex-grow: 1;
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer_center > li {
+    list-style: none;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.icon_wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    line-height: 2.6;
+}
+
+.icon_wrap > a {
+    display: block;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.footer_bottom {
+    display: flex;
+    align-items: center;
+    margin: 0 30px
+}
+
+.address {
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6666666667em;
+    padding: 0 10px 15px;
+    color: #767676;
+}
+
+.address > p {
+    position: relative;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.language {
+    position: relative;
+    float: left;
+    height: 36px;
+    width: 250px;
+    border: none;
+    background: #f8f8f8;
+    font-size: 14px;
+    padding: 0 15px;
+}

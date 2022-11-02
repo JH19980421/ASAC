@@ -1,0 +1,28 @@
+.area_keywords {
+	width: 250px;
+	margin-bottom: 50px;
+}
+
+.area_keywordsLink {
+	width: 250px;
+	margin-bottom: 50px;
+}
+
+.keywords_img {
+	width: 250px;
+	height: 160px;
+	border-radius: 4px;
+}
+
+.list_describe {
+	font-size: 13px;
+	font-weight: 600;
+	color: gray;
+	text-align: left;
+}
+
+.list_name {
+	font-size: 14px;
+	text-align: left;
+	font-weight: bold;
+}

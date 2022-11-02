@@ -1,0 +1,129 @@
+.SearchInput {
+	position: relative;
+	width: 100%;
+	height: 160px;
+	background: #fff;
+	border-bottom: 1px solid #e1e2e3;
+	z-index: 1;
+}
+
+.SearchInput_SearchKeywordText {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	font-size: 48px;
+	line-height: 2;
+	color: #333;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	cursor: pointer;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.SearchDetail {
+	margin: 60px auto 80px;
+	width: 87.72%;
+	position: relative;
+	max-width: 1060px;
+}
+
+.Search_sectionContainer {
+	padding-bottom: 60px;
+}
+
+.Search_searchLabel {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 36px;
+	margin-bottom: 18px;
+	color: #333;
+}
+
+.Search_searchLabel > span {
+	margin-left: 10px;
+	font-weight: 400;
+}
+
+.CompanyList {
+	margin: -10px;
+	position: relative;
+}
+
+.slick {
+	margin-bottom: 30px;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	user-select: none;
+	touch-action: pan-y;
+}
+
+.slick-_list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.slick_track {
+	width: 1080px;
+	opacity: 1;
+	transform: translate3d(0px, 0px, 0px);
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+}
+
+.slick_slide {
+	display: block;
+	outline: none;
+	width: 1080px;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+
+.CompanyItem_className {
+	width: calc(50% - 20px);
+	margin: 10px;
+	float: left;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 21px 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.CompanyItem_logoGroup {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: calc(100% - 110px);
+}
+
+.CompanyItem_logoClassName {
+	background-image: url(https://static.wanted.co.kr/images/wdes/0_5.e5146fee.jpg);
+	width: 58px;
+	height: 58px;
+	margin-right: 20px;
+	background-size: 100%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
