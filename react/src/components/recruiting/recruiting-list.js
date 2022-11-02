@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../css/recruiting/recruiting-list.css";
 
+import * as Formatting from "../../utils/formatting";
+
 const recruitingList = require('../../recruiting-list.json');
 let recruitingListForDisplay = [];
 
-function RecruitingList(props) {
-    const { searchInput } = props;
+
+function RecruitingList() {
 
     // useEffect(() => {
     //     console.log('input', searchInput);
@@ -35,7 +37,7 @@ function RecruitingList(props) {
                             <p>{item.company}</p>
                             <div className="card-badge">{item.badge}</div>
                             <p className="card-region">{item.region}</p>
-                            <p>채용보상금 {item.reward}원</p>
+                            <p>채용보상금 {Formatting.priceFormatting(item.reward)}원</p>
                         </div>
                     </Link>
                 ))

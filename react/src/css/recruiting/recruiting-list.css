@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 15px;
 
-    margin: 50px 225px;
+    /* margin: 50px 225px; */
 }
 
 .card-title {

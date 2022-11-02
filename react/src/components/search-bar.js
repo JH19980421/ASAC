@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
 function SearchBar(props) {
-    const nav = useNavigate();
+    const navigate = useNavigate();
 
     const searchBar = useRef();
 
@@ -19,7 +19,7 @@ function SearchBar(props) {
     const onPressEnter = (e) => {
         if(e.keyCode === 13) {
             props.showSearchBar(false);
-            nav("/recruting", { state: e.target.value });
+            navigate(`/search?query=${e.target.value}`);
         }
     }
 

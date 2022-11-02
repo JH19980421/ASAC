@@ -6,6 +6,7 @@ import JobDetail from "./pages/job-detail";
 
 import Main from './pages/main';
 import Recruiting from "./pages/recruiting";
+import Search from "./pages/search";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/" element={<Main />} />
 			<Route path="/recruting" element={<Recruiting />} />
 			<Route path="/job-detail/:companyId" element={<JobDetail />} />
+			<Route path="/search" element={<Search />} />
 		</Routes>
 	);
 }

@@ -1,4 +1,5 @@
 import "../../css/job-detail/floating.css";
+import * as Formatting from "../../utils/formatting";
 
 function Floating() {
     return (
@@ -10,11 +11,11 @@ function Floating() {
             <div className="bonus-container">
                 <div className="share-bonus">
                     <p>추천인</p>
-                    <p>500,000원</p>
+                    <p>{Formatting.priceFormatting(500000)}원</p>
                 </div>
                 <div className="share-bonus">
                     <p>추천인</p>
-                    <p>500,000원</p>
+                    <p>{Formatting.priceFormatting(500000)}원</p>
                 </div>  
             </div>
             

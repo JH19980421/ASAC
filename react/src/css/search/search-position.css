@@ -1,0 +1,27 @@
+.search-position__container {
+    margin: 0 225px;
+}
+
+.filter-container--search {
+    padding-bottom: 25px;
+    padding-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid lightgray;
+}
+.filter-container--search p{
+    padding: 3px 2px;
+}
+
+.keywords-container--search {
+    display: flex;
+    align-items: center;
+
+    margin: 10px 0;
+
+    position: relative;
+    overflow: hidden;
+}

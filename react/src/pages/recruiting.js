@@ -36,7 +36,9 @@ function Recruiting() {
 
             <RecruitingTop/>
 
-            <RecruitingList searchInput={state}/>
+            <div className="recruiting-list">
+                <RecruitingList/>
+            </div>
             
         </div>
     );
