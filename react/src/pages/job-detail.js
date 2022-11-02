@@ -104,7 +104,9 @@ function JobDetail() {
             </div>
 
             <p className="card-container-title">이 포지션을 찾고 계셨나요?</p>
-            <RecrutingList />
+            <div className="recruiting-list">
+                <RecrutingList />
+            </div>
         </>
     )
 }
