@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react";
 import "../../css/job-detail/floating.css";
 import * as Formatting from "../../utils/formatting";
 
 function Floating() {
+    const [isLikeClicked, setIsLikeClicked] = useState(0);
+    const [likeCount, setLikeCount] = useState(9);
+
+    useEffect(() => {
+        if(!isLikeClicked) {
+            setLikeCount(likeCount-1);
+        } else {
+            setLikeCount(likeCount+1);
+        }
+    }, [isLikeClicked]);
+
+    const onClickLike = () => {
+        setIsLikeClicked(!isLikeClicked);
+    }
+
     return (
         <div className="floating">
             <div className="share-img-container">
@@ -25,9 +41,9 @@ function Floating() {
             <button id="submit" className="floating-button">지원하기</button>
 
             <div className="floating-bottom">
-                <div className="likes">
-                    <img src={ require('../../assets/images/heart.png') } alt="heart"/>
-                    <p className="likes-count">9</p>
+                <div className="likes" onClick={onClickLike}>
+                    <img src={ !isLikeClicked? require('../../assets/images/heart.png') : require('../../assets/images/heart-filled.png')} alt="heart"/>
+                    <p className="likes-count">{likeCount}</p>
                 </div>
                 <ul className="profile-container">
                     <li className="profile-item"><img src="https://lh3.googleusercontent.com/a/ALm5wu2bYv18aK6_ahAXODnanhRHwCfEqvoUbqKJCBKA=s96-c" alt="profile"/></li>

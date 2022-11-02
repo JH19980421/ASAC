@@ -24,7 +24,7 @@ function SearchBar(props) {
     }
 
     return (
-        <div className="searchbar__container">
+        <div className="searchbar__container" onClick={closeSearchBar}>
             <div className="searchbar__search">
                 <img src={ require('../../src/assets/images/search.png') } alt="search" />
                 <input
