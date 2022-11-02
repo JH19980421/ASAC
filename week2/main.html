@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원티드 - 나다운 일의 시작</title>
+    <link rel="shortcut icon" href="https://static.wanted.co.kr/favicon/favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header_copy.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="data.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+</head>
+
+<body class="Mainbody">
+    <header>
+        <div class="header_left">
+            <img class="menu" src="./source/menu.png" alt="menu" />
+            <a href="https://www.wanted.co.kr/">
+                <img class="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted" />
+            </a>
+        </div>
+
+        <ul class="header_center">
+            <li><a href="https://www.wanted.co.kr/jobsfeed">채용</a></li>
+            <li><a href="https://www.wanted.co.kr/events">이벤트</a></li>
+            <li><a href="https://www.wanted.co.kr/salary">직군별 연봉</a></li>
+            <li><a href="https://www.wanted.co.kr/cv/intro">이력서</a></li>
+            <li><a href="https://www.wanted.co.kr/community">커뮤니티</a></li>
+            <li><a href="https://www.wanted.co.kr/gigs/experts">프리랜서</a></li>
+            <li><a href="https://www.wanted.co.kr/aiscore/resume">AI 합격예측</a></li>
+        </ul>
+
+        <div class="header_right">
+            <img class="search" src="./source/search.png" alt="search" />
+            <div class="login">
+                <button class="btn_signup">회원가입/로그인</button>
+                <div class="modal">
+                    <div class="modal_body">
+                        <span class="modal_title">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wanted
+                            <img class="close" src="./source/close.png" alt="close">
+                        </span>
+                        <div class="introduce">
+                            직장인을 위한
+                            <br>
+                            커리어 플랫폼, 원티드!
+                        </div>
+                        <div class="introduce_sub">
+                            커리어 성장과 행복을 위한 여정
+                            <br>
+                            지금 원티드에서 시작하세요.
+                        </div>
+                        <div class="emailText">이메일</div>
+                        <input type="email" class="emailBox" placeholder="이메일을 입력해주세요.">
+                        <div class="signup">
+                            <button class="signup_btn">
+                                <div>이메일로 계속하기</div>
+                                <div class="NameModal">
+                                    <div class="Name_body">
+                                        <span class="Name_title">
+                                            회원가입
+                                            <img class="close2" src="./source/close.png" alt="close">
+                                        </span>
+                                        <div class="nameText">이름</div>
+                                        <input type="text" class="nameBox" placeholder="이름을 입력해주세요.">
+                                        <div class="nameText">휴대폰 번호</div>
+                                        <select class="number">
+                                            <option value="">대한민국 +82</option>
+                                        </select>
+                                        <div class="inputNumber">
+                                            <input type="text" class="numberBox" placeholder="(예시) 01011111111">
+                                            <div class="numberBtn">인증번호</div>
+                                        </div>
+                                        <input type="text" class="certif" placeholder="인증번호를 입력해주세요." disabled>
+                                        <div class="nameText">비밀번호</div>
+                                        <input type="text" class="nameBox" placeholder="비밀번호를 입력해주세요.">
+                                        <div class="nameText">비밀번호</div>
+                                        <input type="text" class="nameBox" placeholder="비밀번호를 다시 입력해주세요.">
+                                        <div class="checkpwd">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상 입력해주세요.</div>
+                                        <div class="check">
+                                            <div id="bot" class="checkAll">
+                                                <input type="checkbox">
+                                                <div>전체 동의</div>
+                                            </div>
+                                            <div class="checkAll">
+                                                <input type="checkbox">
+                                                <div>개인정보 수집 및 이용 동의(필수)</div>
+                                            </div>
+                                            <div class="checkAll">
+                                                <input type="checkbox">
+                                                <div>이벤트 소식 등 알림 정보 받기</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="choice">
+                            or
+                            <br>
+                            다음 계정으로 계속하기
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="col"></p>
+            <div class="service">
+                <a href="https://www.wanted.co.kr/dashboard/welcome">기업 서비스</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1843%2F6e4ca95f.jpg&w=1060&q=100"
+                alt="banner" />
+        </div>
+
+        <div class="subtitle_container">
+            <p class="subtitle">나에게 필요한 커리어 인사이트</p>
+        </div>
+
+        <div class="keybox">
+            <div class="keywords">
+                <button>회사생활</button>
+                <button>취업/이직</button>
+                <button>조직문화</button>
+                <button>인간관계</button>
+                <button>라이프스타일</button>
+                <button>리더십</button>
+                <button>IT/기술</button>
+                <button>커리어고민</button>
+                <button>콘텐츠 제작</button>
+            </div>
+            <div class="btn_work">
+                <button><img src="./source/right.png" alt="right" /></button>
+                <button><img src="./source/more.png" alt="more" /></button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="list_keywords">
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2Fdjzp%2Fimage%2F4cnWOGIoiUh5AUZIukf14mRrznI.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">파타고니아(Patagonia)의 채용브랜드</p>
+                    <p class="list_describe">
+                        "우리가 좋은 고용주야!"라고 백번 말해도 의미가 없어진 시대입니다.
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F1Wwt%2Fimage%2FWd8xM1-8gkZRFgzo3104XSaNTFo.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">나에게 맞는 자리는 어디일까</p>
+                    <p class="list_describe">
+                        이 책의 저자는 야마구치 슈입니다.
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2Fdjzp%2Fimage%2FqGoaMHi-B9zItX94tur8lr8FThY.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">타입폼(Typeform)의 채용브랜드</p>
+                    <p class="list_describe">
+                        "우리가 좋은 고용주야!"라고 백번 말해도 의미가 없어진 시대입니다.
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210907%2F8%2F73349991.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">임직원과 가까워지는 사내 소통의 기술 - 이선민</p>
+                    <p class="list_describe">
+                        코로나 시대에 더 중요해진 사내 소통, 어떻게 하고 계신가요?
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F1Wwt%2Fimage%2FWdUc4-6HlgFeYsvKiAmQkIBecJU.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">혁신은 사회에서 어떤 대접을 받는 가</p>
+                    <p class="list_describe">
+                        이번 주는 북 리뷰가 아니라 영화 리뷰입니다.
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F1Wwt%2Fimage%2FaFrtvb8xW5XKbzhoYJVya7WFfF4.jfif&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">읽다 보면 왠지 저자가 부러워지는 책</p>
+                    <p class="list_describe">
+                        이 책의 저자는 줄리 주오입니다.
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210907%2F8%2F87249750.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">패널토론 : 코로나 19시대, 조직문화의 방향성 - 송창용, 이선민, 문지현, 이지원</p>
+                    <p class="list_describe">
+                        코로나 19 상황을 기점으로 조직문화에 어떠한 변화들이 있었을까요?
+                    </p>
+                </div>
+                <div class="area_keywords">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20211124%2F7%2F27374484.jpg&w=500&q=75"
+                        alt="image" />
+                    <p class="list_name">XYZ가 함께 행복하게 일하는 법</p>
+                    <p class="list_describe">
+                        XYZ 각 세대를 대표하는 75년생 X, 85년생 Y, 95년생 Z가 뭉쳤다.
+                    </p>
+                </div>
+            </div>
+            <button class="more_view">
+                더 많은 콘텐츠 보기
+                <img src="./source/under.png" alt="under" />
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="subtitle_container">
+                <p class="subtitle">3분만에 읽는 Wanted+ 아티클</p>
+            </div>
+            <div class="list">
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2441%2F0b7c94dc.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="list_name">소셜을 석권한 '티빙' 오리지널 컨텐츠 마케팅</p>
+                    <p class="list_tag">#마케팅/광고 #브랜딩 #컨텐츠 제작</p>
+                </div>
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2439%2F2da70321.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="list_name">회사에서도 SNS처럼 만나면 되잖아!</p>
+                    <p class="list_tag">#경영/전략 #HR #조직문화</p>
+                </div>
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2437%2F30d52ee0.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="list_name">스타트업에서는 어떤 방식으로 시니어를 채용해야 할까?</p>
+                    <p class="list_tag">#HR #조직문화 #경영/전략</p>
+                </div>
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2440%2F22cd7b04.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="list_name">냉정하지만, 프리랜서는 종이로 평가할 수 밖에 없어요 </p>
+                    <p class="list_tag">#프리랜서 #커리어고민</p>
+                </div>
+            </div>
+        </div>
+        <div id="border_none" class="container">
+            <div class="subtitle_container">
+                <p class="subtitle">직장인을 위한 Wanted+ VOD</p>
+            </div>
+            <div class="list">
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210609%2F7%2F01781563.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="author">노무법인미안 김동미</p>
+                    <p class="list_name">선택적 근로시간제의 모든 것 (주52시간제 정착 시리즈3)</p>
+                    <p class="list_describe">선택적 근로시간제의 모든 것 (주52시간제 정착 시리즈3) : Wanted HR Open Class</p>
+                </div>
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220722%2F0%2F84669821.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="author">리더의대화연구소 서수한</p>
+                    <p class="list_name">함께 일하고 싶은 리더가 되는 질문법</p>
+                    <p class="list_describe">일잘러의 무기는 테크닉일까, 마인드셋일까 : Live Talk #26</p>
+                </div>
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20200819%2F04%2F97576753.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="author">모빌스그룹 모춘, 모빌스그룹 대오</p>
+                    <p class="list_name">모춘&대오의 퇴사 후 무자본 창업기</p>
+                    <p class="list_describe">모춘&대오의 퇴사 후 무자본 창업기 : Career Talk #5</p>
+                </div>
+                <div class="list_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210413%2F2%2F39565343.jpg&w=800&q=75"
+                        alt="article" />
+                    <p class="author">전) 원티드랩 최보명</p>
+                    <p class="list_name">포트폴리오를 부탁해</p>
+                    <p class="list_describe">[무료] 포트폴리오를 부탁해 by 원티드</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="related">
+            <button class="related_btn">
+                직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요.
+            </button>
+        </div>
+
+        <div class="event">
+            <div class="subtitle_container">
+                <p class="subtitle">커리어 성장을 위한 맞춤 이벤트</p>
+            </div>
+            <div class="list_event">
+                <div class="event_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2414%2F93dc7b57.jpg&w=1200&q=100"
+                        alt="event" />
+                    <p class="list_name">스타트업 Lead를 위한 그룹코칭</p>
+                </div>
+                <div class="event_content">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2421%2F7065bb13.jpg&w=1200&q=100"
+                        alt="event" />
+                    <p class="list_name">10월 원티드살롱(평가보상편)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscription">
+            <div>
+                <p class="subscription_text"><span class="subscription_text">wanted+</span>구독해야 하는 이유</p>
+                <p class="subscription_detail">구독자의 서류 합격률이 비구독자보다 1.5배 높아요!</p>
+                <button class="subscription_button">첫 구독 0원 신청하기</button>
+            </div>
+            <img class="subscription_image"
+                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Ffirst-wantedplus-subscribe.png&w=800&q=90"
+                alt="subscription" />
+        </div>
+        <div class="subtitle_container">
+            <p class="subtitle">
+                채용 정보를 찾고 계셨나요?
+            </p>
+        </div>
+
+        <div class="working">
+            <a href="https://www.wanted.co.kr/wdlist?country=kr&job_sort=company.response_rate_order&years=-1&locations=all"
+                class="working_item">
+                <img class="working_image" src="./source/search.png" alt="search" />
+                <p class="working_text">
+                    채용공고
+                    <img class="working_under" src="./source/right.png" alt="right" />
+                </p>
+            </a>
+            <div class="col_big"></div>
+            <a href="https://www.wanted.co.kr/login?redirect_url=%2Fprofile" class="working_item">
+                <img class="working_image" src="./source/profile.png" alt="profile" />
+                <p class="working_text">
+                    내 프로필
+                    <img class="working_under" src="./source/right.png" alt="right" />
+                </p>
+            </a>
+            <div class="col_big"></div>
+            <a href="https://www.wanted.co.kr/matchup/intro" class="working_item">
+                <img class="working_image" src="./source/match.png" alt="matchup" />
+                <p class="working_text">
+                    매치업
+                    <img class="working_under" src="./source/right.png" alt="right" />
+                </p>
+            </a>
+            <div class="col_big"></div>
+            <a href="https://www.wanted.co.kr/salary" class="working_item">
+                <img class="working_image" src="./source/sal.png" alt="salary" />
+                <p class="working_text">
+                    직군별 연봉
+                    <img class="working_under" src="./source/right.png" alt="right" />
+                </p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_top">
+            <img class="logo_wanted" src="./source/wanted.png" alt="wanted" />
+            <ul class="footer_center">
+                <li><a href="#">기업소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+            <div class="icon_wrap">
+                <a href="https://www.instagram.com/wantedjobs.kr/">
+                    <img src="./source/instagram.png" alt="instagram">
+                </a>
+                <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
+                    <img src="./source/youtube.png" alt="youtube">
+                    <a href="https://facebook.com/wantedkr">
+                        <img src="./source/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://blog.naver.com/_XqCIxl">
+                        <img src="./source/blog.png" alt="blog">
+                    </a>
+                    <a href="https://pf.kakao.com/_XqCIxl">
+                        <img src="./source/kakao.png" alt="kakao">
+                    </a>
+                    <a href="https://post.naver.com/my.nhn?memberNo=18284175">
+                        <img src="./source/post.png" alt="post">
+                    </a>
+                    <a href="https://apps.apple.com/kr/app/id1074569961">
+                        <img src="./source/apple.png" alt="apple">
+                    </a>
+                    <a href="">
+                        <img src="./source/store.png" alt="store">
+                    </a>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p class="address">
+                (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300 롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147<br>
+                유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 | (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 |
+                02-539-7118<br>
+                © Wantedlab, Inc.
+            </p>
+            <select onchange="if(this.value) location.href=(this.value);" class="language">
+                <option value="https://www.wanted.co.kr/">한국 (한국어)</option>
+                <option value="https://jp.wanted.jobs/">日本 (日本国)</option>
+                <option value="https://www.wanted.jobs/">Worldwide (English)</option>
+                <option value="https://www.wanted.jobs/">Singapore (English)</option>
+            </select>
+        </div>
+    </footer>
+    <script src="signup.js"></script>
+</body>
+</html>

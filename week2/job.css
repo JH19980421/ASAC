@@ -1,0 +1,418 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {
+    z-index: 0;
+    margin: 0;
+    background-color: white;
+    font-family: Pretendard,Pretendard JP,Pretendard Std,
+    -apple-system,
+    system-ui,BlinkMacSystemFont,
+    Roboto,Segoe UI,
+    Helvetica,Arial,Apple SD Gothic Neo,
+    Nanum Gothic,Malgun Gothic,Apple Color Emoji,
+    Segoe UI Emoji,Segoe UI Symbol,sans-serif;
+}
+
+aside {
+    display: block;
+}
+
+.JobDetail {
+    display: flex;
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 20px 0 80px;
+    height: auto;
+}
+
+.JobDetail_Wrapper {
+    width: calc(100% - 360px);
+    display: inline-block;
+    position: relative;
+    height: inherit;
+}
+
+.JobImage {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 4px;
+    height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: contain;
+}
+
+.JobImageShow {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.JobImageShow img {
+    width: 700px;
+    object-fit: cover;
+}
+
+
+.JobContent {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.JobHeader {
+    margin: 40px 0 30px;
+}
+
+.JobHeader div {
+    display: flex;
+    align-items: center;
+}
+
+.JobHeader div h6 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+.TooltipBtn {
+    border: 1px solid #00aead;
+    color: #00aead;
+    border-radius: 2px;
+    background-color: #fff;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    height: 19px;
+    line-height: 19px;
+    padding: 0 5px;
+    margin-right: 10px;
+}
+.padding_body {
+    height: 60px;
+}
+
+.JobProcess_container {
+    margin-left: 10px;
+    display: block; 
+    width: 340px;
+    right: calc((100% - 1060px)/2);
+}
+
+.BeforeApplication_container {
+    position: sticky;
+    top: 79px;
+}
+
+.asideBox {
+    width: 340px;
+    top: 70px;
+    height: 340px;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    padding: 24px 20px;
+    border-radius: 3px;
+}
+
+.Reward_container {
+
+}
+
+.Reward_container > h3 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333;
+}
+
+.Reward_container > ul {
+    overflow: hidden;
+    margin: 24px 0;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.Reward_container > ul > li {
+    float: left;
+    margin-right: 50px;
+}
+
+.BookmarkBtn {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid #36f;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: #36f;
+    text-align: center;
+    background: none;
+    cursor: pointer;
+}
+
+.ApplyBtn {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #36f;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center;
+    border-color: #36f;
+    cursor: pointer;
+}
+
+.Reactions {
+    margin: 24px 0 0;
+    height: 30px;
+}
+
+.TagLink {
+    margin-top: 20px;
+}
+
+.TagLink > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.TagLink > ul > li {
+    display: inline-block;
+}
+
+.TagLink > ul > li > a {
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 10px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #333;
+    background-color: #f3f5f8;
+    border-radius: 25px;
+    text-decoration: inherit;
+    cursor: pointer;
+}
+
+.JobDescirption {
+    display: inline-block;
+    width: calc(100% - 360px);
+    vertical-align: top;
+    margin-bottom: 60px;
+    padding-right: 20px;
+    max-width: 1199px;
+    margin: 40px 0;
+
+}
+
+.JobDescirption > p {
+    color: #333;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.JobDescirption > h6 {
+    margin: 20px 0 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.JobWorkPlace {
+    display: inline-block;
+    width: calc(100% - 360px);
+    margin: 0;
+    padding: 30px 0 15px;
+}
+
+.WorkBox {
+    display: flex;
+    margin: 20px 0px;
+}
+.JobWorkPlace .header {
+    color: #999;
+    font-size: 15px;
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: text-top;
+    width: 70px;
+    max-width: 991px;
+}
+
+.JobWorkPlace .body {
+    width: calc(100% - 70px);
+    color: #333;
+    font-size: 15px;
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: text-top;
+    max-width: 991px;
+}
+
+.JobWorkPlace img {
+    width: 600px;
+    height: 300px;
+    
+}
+
+.CompanyInfo {
+    margin: 5px 0;
+    padding: 10px 0 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #f3f5f8;
+    border-radius: 5px
+}
+
+.CompanyBtn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    background: none;
+    text-transform: none;
+    overflow: visible;
+    cursor: pointer;
+    border: 0;
+}
+
+.CompanyLogo {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    flex-basis: 48px;
+    flex-shrink: 0;
+    background-position: 50%;
+    background-size: contain;
+    box-shadow: 0 0 1px 0 rgb(0 0 0 / 10%);
+    background-repeat: no-repeat;
+}
+
+.CompanyBtn h5 {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.CompanyBtn h6 {
+    color: #999;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.followBtn {
+    height: 35px;
+    font-size: 14px;
+    padding: 9px 20px 8px;
+    border: 1px solid #e1e2e3;
+    border-radius: 25px;
+    color: #36f;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.WarningHeader {
+    max-width: 600px;
+    margin: 10px 0 0;
+    border-radius: 5px;
+    background-color: #f3f5f8;
+}
+
+.WarningHeader h5 {
+    margin: 0 20px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #333;
+    text-align: center;
+    align-items: center;
+}
+
+.WorkTitle {
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: normal;
+}
+
+.workContainer {
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0 80px;
+    border-bottom: 1px solid black;
+}
+
+.list_keywords {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+}
+
+.area_keywords {
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.area_keywords img {
+    width: 227.6px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.list_describe {
+    font-size: 13px;
+    font-weight: 600;
+    color: gray;
+    text-align: left;
+}
+
+.list_name {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+}

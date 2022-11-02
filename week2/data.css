@@ -1,0 +1,132 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+.NameModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.Name_body {
+    display: block;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    width: 320px ;
+    height: 523px;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+}
+
+.Name_body::-webkit-scrollbar {
+    display: none;
+}
+
+.Name_title {
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+}
+
+.nameText {
+    margin: 40px 0 0;
+    float: left;
+    font-size: 12px;
+    color: gray;
+
+}
+
+.nameBox {
+    border-radius: 5px;
+    border-color: #e1e2e3;
+    margin: 10px 0 0;
+    width: inherit;
+    padding: 15px 0 15px;
+    
+}
+
+.number {
+    margin: 20px 0 0;
+    padding: 15px 0  15px;
+    border-color: #e1e2e3;
+    border-radius: 5px;
+    width: inherit;
+}
+
+.inputNumber {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numberBox {
+    flex-grow: 1.5;
+    margin: 20px 0 0;
+    padding: 15px 0 15px;
+    border-right: 15px;
+    border-radius: 5px;
+    border-color: #e1e2e3;
+}
+
+.numberBtn {
+    flex-grow: 1;
+    margin: 20px 0 0;
+    padding: 15px 0  15px;
+    border: 1px solid #e1e2e3;
+    border-radius: 5px;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+
+}
+
+.certif {
+    border-radius: 5px;
+    border-color: #e1e2e3;
+    margin: 20px 0 0;
+    width: inherit;
+    padding: 15px 0 15px;
+    background-color: #f2f4f7 !important;
+}
+
+.checkpwd {
+    margin: 5px 0 0;
+    text-align: left;
+    font-size: 12px;
+    color: gray;
+}
+.check {
+    margin: 60px 0 0;
+}
+
+#bot {
+   padding-bottom: 20px;
+   border-bottom: 1px solid #e1e2e3;
+   width: 100%;
+}
+.checkAll {
+   display: flex;
+   float: left;
+   align-items: center;
+   width: inherit;
+}
+
+.checkAll :first-child {
+    margin: 10px 15px 0 0;
+    float: left;
+}
+
+.checkAll :last-child {
+    margin: 10px 0 0;
+    color: gray;
+    float: left;
+}
