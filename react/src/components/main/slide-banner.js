@@ -15,7 +15,19 @@ function SlideBanner() {
     
     useEffect(() => {
         slideItem.push(slideItem[0]);
-    }, [])
+        slideItem.unshift(slideItem[slideCount])
+        setCurrentSlide(1);
+    }, []);
+
+    useEffect(() => {
+        const autoPlay = setInterval(() => {
+            setCurrentSlide(prev => (prev === slideCount+1? 1: prev+1));
+        }, 4000);
+
+        return () => {
+            clearInterval(autoPlay);
+        }
+    }, []);
     
     useEffect(() => {
         setTransition('transform 0.7s ease-out');
@@ -38,7 +50,7 @@ function SlideBanner() {
 
 
     const slidePrevButton = () => {
-        if(currentSlide < 0) {
+        if(currentSlide < 2) {
             setCurrentSlide(slideCount-1);
         } else {
             setCurrentSlide(currentSlide-1);
@@ -47,19 +59,18 @@ function SlideBanner() {
 
     const slideNextButton = () => {
         if(currentSlide > slideCount-2) {
-            setCurrentSlide(0);
+            setCurrentSlide(1);
         } else {
             setCurrentSlide(currentSlide+1);            
         }
     }
 
 
-
     return (
         <div className='slide__container'>
             <ul className='slide' ref={slideList}>
                 {
-                    slideItem.map((item, idx) => (
+                    slideItem.map((item) => (
                         <li className="slide__item" key={item.id}> 
                             <img className="slide__item--image" src={item.imageUrl} alt="banner"/>
                             <div className="slide__item--description">

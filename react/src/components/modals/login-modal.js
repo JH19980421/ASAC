@@ -8,10 +8,9 @@ const agreementItems = require("../../agreement-item.json");
 function LoginModal(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [checkedItems, setCheckedItems] = useState(new Set());
-    const [isAllChecked, setIsAllChecked] = useState(0);
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isPasswordValid, setIsPasswordValid] = useState(true);
+    const [activateButton, setActivateButton] = useState(false);
 
     const hider = useRef();
     const loginModal = useRef();
@@ -26,9 +25,11 @@ function LoginModal(props) {
 
     useMemo(() => {
         if(!Validation.emailValidation(email)) {
-            setIsEmailValid(false)
+            setIsEmailValid(false);
+            setActivateButton(false);
         } else {
-            setIsEmailValid(true)
+            setIsEmailValid(true);
+            setActivateButton(true);
         }
 
         return isEmailValid;
@@ -73,27 +74,30 @@ function LoginModal(props) {
         closeModals();
     }
 
-    const onClickAllCheck = () => {
-        if(!isAllChecked) {
-            setIsAllChecked(1);
-            agreementItems.forEach((it) => {
-                checkedItems.add(it.id);
-            })
-            setCheckedItems(checkedItems);
-        } else {
-            setIsAllChecked(0);
-            checkedItems.clear();
-            setCheckedItems(checkedItems);
+
+    const [checkedItems, setCheckedItems] = useState([]);
+    const [isAllChecked, setIsAllChecked] = useState(0);
+
+    const checkedItemHandlder = (id, checked) => {
+        if(checked) {
+            setCheckedItems(prev => [...prev, id]);
+        } else if(!checked && checkedItems.includes(id)) {
+            setCheckedItems(checkedItems.filter((el) => el !== id));
         }
+        // setCheckedItems(checkedItems);
     }
 
-    const onClickCheck = (id, target) => {
-        if(target.checked) {
-            checkedItems.add(id);
+    const onClickAllCheck = (checked) => {
+        setIsAllChecked(!isAllChecked);
+
+        if(checked) {
+            agreementItems.forEach((item) => {
+                checkedItems.push(item.id);
+                setCheckedItems(checkedItems);
+            });
         } else {
-            checkedItems.delete(id);
+            setCheckedItems([]);
         }
-        setCheckedItems(checkedItems);
     }
 
     return (
@@ -137,7 +141,7 @@ function LoginModal(props) {
                 <button 
                     className="email-continue"
                     onClick={() => gotoJoinModal(email)}
-                    disabled={!isEmailValid}
+                    disabled={!activateButton}
                 >이메일로 계속하기</button>
                 <p>or</p>
                 <p>다음 계정으로 계속하기</p>
@@ -204,7 +208,7 @@ function LoginModal(props) {
                     <p className="email-label">비밀번호</p>
                     <input 
                         className={isPasswordValid? 'email-input': 'email-input-alert'} 
-                        type="text" 
+                        type="password" 
                         placeholder="비밀번호를 입력해 주세요."
                         onChange={(e) => setPassword(e.target.value)}
                         />
@@ -223,7 +227,8 @@ function LoginModal(props) {
                 <div className="agreement">
                     <input 
                         type="checkbox"
-                        onClick={onClickAllCheck}
+                        onChange={(e) => onClickAllCheck(e.target.checked)}
+                        checked={checkedItems.length === agreementItems.length ? true : false}
                     />
                     <p>전체 동의</p>
                 </div>
@@ -239,8 +244,8 @@ function LoginModal(props) {
                             <div className="agreement-item-check">
                                 <input 
                                     type="checkbox"
-                                    onChange={(e) => onClickCheck(item.id, e.target)}
-                                    checked={checkedItems.has(item.id)? true: false}
+                                    onChange={(e) => checkedItemHandlder(item.id, e.target.checked)}
+                                    checked={checkedItems.includes(item.id) ? true : false}
                                 />
                                 <p>{item.content}</p>
                             </div>

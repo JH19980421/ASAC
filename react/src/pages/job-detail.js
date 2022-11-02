@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Header from "../components/header";
 import Floating from "../components/job-detail/floating";
 import RecrutingList from "../components/recruiting/recruiting-list";
@@ -8,6 +10,12 @@ import jobDetailImage from "../job-detail-image.json";
 import jobDetail from "../job-detail.json";
 
 function JobDetail() {
+    const params = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Header/>
@@ -23,7 +31,7 @@ function JobDetail() {
                     }
                 </div>
 
-                <p className="company-detail-title">웹 프론트엔드 개발자(React)</p>
+                <p className="company-detail-title">웹 프론트엔드 개발자(React) + {params.companyId}</p>
                 <div className="company-detail">
                     <div className="company-title-badge">응답률 평균 이상</div>
                     <div className="divider-vertical"></div>

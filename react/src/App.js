@@ -13,7 +13,7 @@ function App() {
 		<Routes>
 			<Route path="/" element={<Main />} />
 			<Route path="/recruting" element={<Recruiting />} />
-			<Route path="/job-detail" element={<JobDetail />} />
+			<Route path="/job-detail/:companyId" element={<JobDetail />} />
 		</Routes>
 	);
 }

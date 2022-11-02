@@ -8,26 +8,26 @@ let recruitingListForDisplay = [];
 function RecruitingList(props) {
     const { searchInput } = props;
 
-    useEffect(() => {
-        console.log('input', searchInput);
+    // useEffect(() => {
+    //     console.log('input', searchInput);
 
-        if(!searchInput) {
-            recruitingListForDisplay = recruitingList;
-        } else {
-            recruitingListForDisplay = recruitingList.filter(function (element) {
-                return element.title.includes(searchInput);
-            });
-        }
-        console.log('filtered', recruitingListForDisplay);
+    //     if(!searchInput) {
+    //         recruitingListForDisplay = recruitingList;
+    //     } else {
+    //         recruitingListForDisplay = recruitingList.filter(function (element) {
+    //             return element.title.includes(searchInput);
+    //         });
+    //     }
+    //     console.log('filtered', recruitingListForDisplay);
         
-    }, []);
+    // }, []);
 
 
     return (
         <div className="card-container">
             {
-                recruitingListForDisplay.map((item) => (
-                    <Link to={`/job-detail`}>
+                recruitingList.map((item) => (
+                    <Link to={`/job-detail/${item.id}`}>
                         <div className="card-item" key={item.id}>
                             <img id="bookmark-outline" src={ require('../../assets/images/bookmark-outline.png') } alt="bookmark"/>
                             <img src={item.imageUrl} alt="image"/>
