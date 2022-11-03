@@ -1,5 +1,7 @@
 .floating {
-    position: fixed;
+    position: sticky;
+
+    float: right;
     right: 15%;
     top: 73px;
 
