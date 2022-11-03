@@ -70,6 +70,8 @@
                 "id": 6,
                 "stack": "Next.js"
             }
-        ]
+        ],
+        "latitude": 37.5504271,
+        "longitude": 126.9725464
     }
 ]

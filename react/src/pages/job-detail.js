@@ -14,12 +14,14 @@ function JobDetail() {
     const mapRef = useRef(null);
 
     const initMap = useCallback(() => {
+        const location = { lat: jobDetail[0].latitude, lng: jobDetail[0].longitude };
+        
         const map = new window.google.maps.Map(mapRef.current, {
-            center: { lat: 37.5504271, lng: 126.9725464 },
+            center: location,
             zoom: 16,
         });
         const marker = new window.google.maps.Marker({
-            position: { lat: 37.5504271, lng: 126.9725464 },
+            position: location,
             map: map,
         });
     }, [mapRef]);
