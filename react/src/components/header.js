@@ -22,14 +22,14 @@ function Header() {
     }
 
     return (
-        <div>
-            {
-                openLoginModal? <LoginModal openModal={setOpenLoginModal}/>: null
-            }
-            {
-                showSearchBar? <SearchBar showSearchBar={setShowSearchBar}/>: null
-            }
+        // <div className="header__container">
             <header>
+                {
+                    openLoginModal? <LoginModal openModal={setOpenLoginModal}/>: null
+                }
+                {
+                    showSearchBar? <SearchBar showSearchBar={setShowSearchBar}/>: null
+                }
                 <img className="menu" src={ require('../assets/images/menu.png') } alt="menu"/>
                 <Link to="..">
                     <img className="logo" src="https://www.wantedlab.com/img/logo.png" alt="wanted"/>
@@ -69,7 +69,7 @@ function Header() {
                     <div className="header__organization">기업 서비스</div>            
                 </div>
             </header>
-        </div>
+        // </div>
     );
 }
 

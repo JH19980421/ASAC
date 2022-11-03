@@ -1,6 +1,7 @@
 .searchbar__container {
     position: fixed;
     top: 0;
+    left: 0;
 
     width: 100%;
 
@@ -64,4 +65,18 @@
     padding: 15px 25px;
 
     font-size: 14px;
+}
+
+.hider-visible {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 4;
+
+    background-color: rgba(105, 105, 105, 0.7);
 }
