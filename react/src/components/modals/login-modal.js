@@ -11,6 +11,7 @@ function LoginModal(props) {
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isPasswordValid, setIsPasswordValid] = useState(true);
     const [activateButton, setActivateButton] = useState(false);
+    const [completeJoinButton, setCompleteJoinButton] = useState(false);
 
     const hider = useRef();
     const loginModal = useRef();
@@ -19,7 +20,7 @@ function LoginModal(props) {
     useEffect(() => {
         initLoginModal();
         setIsEmailValid(true);
-        setIsPasswordValid(true)
+        setIsPasswordValid(true);
         // console.log('temp', agreementItems.find((item) => item.id == 1));
     }, []);
 
@@ -37,9 +38,11 @@ function LoginModal(props) {
 
     useMemo(() => {
         if(!Validation.passwordValidation(password)) {
-            setIsPasswordValid(false)
+            setIsPasswordValid(false);
+            setCompleteJoinButton(false);
         } else {
-            setIsPasswordValid(true)
+            setIsPasswordValid(true);
+            setCompleteJoinButton(true);
         }
 
         return isPasswordValid;
@@ -70,6 +73,7 @@ function LoginModal(props) {
     }
 
     const completeJoin = () => {
+        console.log('clvkjslkc');
         alert('회원가입 완료');
         closeModals();
     }
@@ -260,6 +264,7 @@ function LoginModal(props) {
                     <button 
                         className="join-submit" 
                         onClick={completeJoin}
+                        disabled={!completeJoinButton}
                     >회원가입하기</button>
                 </div>
             </div>

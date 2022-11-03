@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/header";
 import Floating from "../components/job-detail/floating";
@@ -11,6 +11,22 @@ import jobDetail from "../job-detail.json";
 
 function JobDetail() {
     const params = useParams();
+    const mapRef = useRef(null);
+
+    const initMap = useCallback(() => {
+        const map = new window.google.maps.Map(mapRef.current, {
+            center: { lat: 37.5504271, lng: 126.9725464 },
+            zoom: 16,
+        });
+        const marker = new window.google.maps.Marker({
+            position: { lat: 37.5504271, lng: 126.9725464 },
+            map: map,
+        });
+    }, [mapRef]);
+
+    useEffect(() => {
+        initMap();
+    }, [initMap]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -73,10 +89,12 @@ function JobDetail() {
                         <p>근무지역</p>
                         <p>서울 용산구 한강대로 366 트윈시티 남산 2 패스트파이브</p>
                     </div>
-
-                    <div className="company-map">
-                        <div id="map"></div>
-                    </div>
+                </div>
+                <div className="company-map">
+                    <div
+                        style={{ width: "700px", height: "250px" }}
+                        ref={mapRef}
+                    ></div>
                 </div>
 
                 <div className="company-badge">

@@ -275,6 +275,11 @@ button {
 
     padding: 15px 0;
 }
+.join-submit:disabled {
+    background-color: #aaa;
+
+    cursor: auto;
+}
 
 .divider-horizontal {
     width: 100%;
