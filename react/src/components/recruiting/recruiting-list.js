@@ -1,29 +1,12 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../css/recruiting/recruiting-list.css";
 
 import * as Formatting from "../../utils/formatting";
 
-const recruitingList = require('../../recruiting-list.json');
-let recruitingListForDisplay = [];
+// const recruitingList = require('../../recruiting-list.json');
 
-
-function RecruitingList() {
-
-    // useEffect(() => {
-    //     console.log('input', searchInput);
-
-    //     if(!searchInput) {
-    //         recruitingListForDisplay = recruitingList;
-    //     } else {
-    //         recruitingListForDisplay = recruitingList.filter(function (element) {
-    //             return element.title.includes(searchInput);
-    //         });
-    //     }
-    //     console.log('filtered', recruitingListForDisplay);
-        
-    // }, []);
-
+function RecruitingList(props) {
+    const recruitingList = props.recruitingList;
 
     return (
         <div className="card-container">

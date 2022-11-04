@@ -10,6 +10,10 @@ function SearchBar(props) {
 
     const searchBar = useRef();
 
+    useEffect(() => {
+        searchBar.current.focus();
+    }, []);
+
     const onClickHider = () => {
         setShowHider(!showHider);
         closeSearchBar();
@@ -20,6 +24,8 @@ function SearchBar(props) {
     }
 
     const onPressEnter = (e) => {
+        if(!e.target.value) return;
+
         if(e.keyCode === 13) {
             props.showSearchBar(false);
             navigate(`/search?query=${e.target.value}`);

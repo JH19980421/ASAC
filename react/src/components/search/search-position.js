@@ -1,8 +1,10 @@
 import "../../css/search/search-position.css";
 import RecruitingList from "../recruiting/recruiting-list";
 
-function SearchPosition() {
-    const positionCount = 7;
+function SearchPosition(props) {
+
+    const recruitingList = props.recruitingList;
+    const positionCount = recruitingList.length;
 
     return (
         <div className="search-position__container">
@@ -58,7 +60,7 @@ function SearchPosition() {
                 </div>
             </div>
 
-            <RecruitingList />
+            <RecruitingList recruitingList={recruitingList}/>
 
         </div>
     )
