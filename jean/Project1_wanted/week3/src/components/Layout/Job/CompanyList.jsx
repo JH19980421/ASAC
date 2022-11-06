@@ -1,14 +1,16 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
 
-const CompanyList = () => {
+const CompanyList = ({ page, loading }) => {
     const toString = e => {
         return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
     function List_UI() {
         var arr = [];
-        for (var i = 0; i < 30; i += 2) {
+
+        for (var i = 0; i < 4 * page; i++) {
             arr.push(
                 <>
                     <div className="item">
@@ -45,9 +47,13 @@ const CompanyList = () => {
         <div className="company_list">
             {List_UI()}
 
-            <div className="loading" style={{ display: 'none' }}>
-                <img src={require('../../../images/loading.gif')} alt="" />
-            </div>
+            {loading ? (
+                <div className="loading">
+                    <img src={require('../../../images/loading.gif')} alt="" />
+                </div>
+            ) : (
+                ''
+            )}
         </div>
     );
 };

@@ -1901,7 +1901,7 @@ p {
     border: 0;
     border-radius: 27px;
     background-color: #36f;
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -1946,7 +1946,6 @@ p {
     border-radius: 100%;
 }
 .modal_input_body {
-    display: none;
     padding: 20px;
     color: #767676;
 }
@@ -1987,6 +1986,23 @@ select {
 }
 .certification .left {
     width: 68%;
+}
+
+.certification .left input::placeholder {
+    opacity: 0.4;
+}
+.certificationOk {
+    color: green;
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.certificationError {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-top: 8px;
 }
 .certification .left input {
     width: 100%;
@@ -2050,13 +2066,25 @@ select {
 }
 .sign {
     text-align: center;
-    background-color: #f2f4f7;
-    border-color: none;
-    color: #cacaca;
-    cursor: not-allowed;
     height: 60px;
     line-height: 60px;
+}
+.sign button {
+    width: 90%;
+    height: 60px;
     border-radius: 30px;
+    background-color: #f2f4f7;
+    border-color: none;
+    border: none;
+    color: #cacaca;
+    /* cursor: not-allowed; */
+}
+#on {
+    cursor: pointer;
+    background-color: blue;
+}
+#off {
+    cursor: not-allowed;
 }
 .modal_footer {
     margin-top: 26px;

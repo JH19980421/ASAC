@@ -10,7 +10,7 @@ const Header = ({ setmodalOpen }) => {
         setSearch(true);
     };
     const handleClickButton = () => {
-        setmodalOpen(true);
+        setmodalOpen(0);
     };
 
     return (

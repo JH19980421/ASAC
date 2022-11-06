@@ -8,12 +8,12 @@ import Jobdetail from './Jobdetail/Jobdetail';
 import Modal from './Header/Modal';
 import TagSearch from './TagSearch/TagSearch';
 const Layout = props => {
-    const [modalOpen, setmodalOpen] = useState(false);
+    const [modalOpen, setmodalOpen] = useState(-1);
 
     return (
         <>
             <Header setmodalOpen={setmodalOpen} />
-            {modalOpen && <Modal setmodalOpen={setmodalOpen} />}
+            {modalOpen != -1 && <Modal setmodalOpen={setmodalOpen} modalOpen={modalOpen} />}
             <Routes>
                 <Route path="TagSearch" element={<TagSearch />} />
                 <Route path="Job" element={<Job />} />

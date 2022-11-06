@@ -154,7 +154,7 @@
 .listContainer {
     width: 100%;
     background-color: rgb(248, 246, 246);
-    height: 1000px;
+    height: 100%;
 }
 
 .list {
@@ -229,7 +229,7 @@
 }
 
 button {
-    font-size: 50px !important;
+    font-size: 50px;
 }
 /* // return () => {
 //     window.removeEventListener('click', OneClick);

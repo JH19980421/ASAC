@@ -1,12 +1,34 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
 import CompanyList from './CompanyList';
 import Hiring from './Hiring';
 const Job = props => {
-    // const [ style, setStyle ] = useState({display: 'none'})
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false);
+    const handleScroll = useCallback(() => {
+        const { innerHeight } = window;
+        const { scrollHeight } = document.body;
+        const { scrollTop } = document.documentElement;
+        console.log('aaaaaaaa');
+        if (Math.round(scrollTop + innerHeight) >= scrollHeight && !loading) {
+            setLoading(true);
+            setTimeout(() => {
+                setLoading(false);
+                setPage(prev => prev + 1);
+            }, 2000);
+        }
+    });
+    console.log(page);
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, true);
+        // 스크롤이 발생할때마다 handleScroll 함수를 호출하도록 추가합니다.
 
-    // setStyle({display: 'block'})
-    // /setStyle({display: 'none'})
+        return () => {
+            window.removeEventListener('scroll', handleScroll, true);
+            // 해당 컴포넌트가 언마운트 될때, 스크롤 이벤트를 제거합니다.
+        };
+    }, [handleScroll]);
     return (
         <div>
             <div className="category">
@@ -84,7 +106,71 @@ const Job = props => {
                 </div>
                 <div className="keywords">
                     <ul className="keywordslides">
-                        <li> <button>연봉이 최고의 복지</button> </li> <li> <button>재택 근무</button> </li> <li> <button>퇴사율 10%이하</button> </li> <li> <button>급성장 중</button> </li> <li> <button> 벙역특례</button> </li> <li> <button>50인 이하</button> </li> <li> <button>50인 이상</button> </li> <li> <button>업력 5년 이상</button> </li> <li> <button>50인 이상</button> </li> <li> <button>업력 5년 이상</button> </li> <li> <button>급성장 중</button> </li> <li> <button> 벙역특례</button> </li> <li> <button>50인 이하</button> </li> <li> <button>50인 이상</button> </li> <li> <button>급성장 중</button> </li> <li> <button> 벙역특례</button> </li> </ul>
+                        <li>
+                            {' '}
+                            <button>연봉이 최고의 복지</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>재택 근무</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>퇴사율 10%이하</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>급성장 중</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button> 벙역특례</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>50인 이하</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>50인 이상</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>업력 5년 이상</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>50인 이상</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>업력 5년 이상</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>급성장 중</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button> 벙역특례</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>50인 이하</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>50인 이상</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button>급성장 중</button>{' '}
+                        </li>{' '}
+                        <li>
+                            {' '}
+                            <button> 벙역특례</button>{' '}
+                        </li>{' '}
+                    </ul>
                     <p className="keywordsbutton">
                         <span className="prev">
                             <img src={require('../../../images/left-arrow.png')} alt="" />
@@ -122,7 +208,7 @@ const Job = props => {
                     </Link>
                 </div>
                 <Hiring />
-                <CompanyList />
+                <CompanyList page={page} loading={loading} />
             </div>
         </div>
     );
