@@ -8,7 +8,6 @@ import LoginModal from "../components/modals/login-modal";
 import { useState } from "react";
 import SearchBar from "./search-bar";
 
-
 function Header() {
     const [openLoginModal, setOpenLoginModal] = useState(false);
     const [showSearchBar, setShowSearchBar] = useState(false);
@@ -36,7 +35,7 @@ function Header() {
                 </Link>
 
                 <ul className="category">
-                    <li><Link to="/recruting">채용</Link></li>
+                    <li><Link to="./recruting">채용</Link></li>
                     <li><Link to="./loading.html">로딩창</Link></li>
                     <li><Link to="/">직군별 연봉</Link></li>
                     <li><Link to="/">이력서</Link></li>

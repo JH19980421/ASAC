@@ -3,10 +3,10 @@ import "../../css/recruiting/recruiting-list.css";
 
 import * as Formatting from "../../utils/formatting";
 
-// const recruitingList = require('../../recruiting-list.json');
+import recruitingListAll from "../../recruiting-list.json";
 
 function RecruitingList(props) {
-    const recruitingList = props.recruitingList;
+    const recruitingList = props.length? props.recruitingList: recruitingListAll;
 
     return (
         <div className="card-container">

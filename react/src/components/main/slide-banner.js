@@ -71,7 +71,7 @@ function SlideBanner() {
             <ul className='slide' ref={slideList}>
                 {
                     slideItem.map((item) => (
-                        <li className="slide__item" key={item.id}> 
+                        <li className="slide__item"> 
                             <img className="slide__item--image" src={item.imageUrl} alt="banner"/>
                             <div className="slide__item--description">
                                 <p>{item.title}</p>
