@@ -130,21 +130,14 @@ const Header = ({ setmodalOpen }) => {
                 </div>
 
                 <div className="right">
-                    <ul>
-                        {/* /<li><Link to="/"><svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"> <defs> <path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"> </path> </defs> <g fill="none" fillRule="evenodd"> <use fill="#333" fillRule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use> </g> </svg></Link></li> */}
-                        <li id="btn-modal" onClick={clickSearch}>
-                            {SerachSVG()}
-                        </li>
-                        <li id="btn-modal" onClick={handleClickButton}>
-                            회원가입/로그인
-                        </li>
-                        <li id="vborder"></li>
-                        <li>
-                            <a className="dashboardButton" href="/">
-                                기업 서비스
-                            </a>
-                        </li>
-                    </ul>
+                    <div id="searchbutton" onClick={clickSearch}>
+                        {SerachSVG()}
+                    </div>
+                    <div id="modalbutton" onClick={handleClickButton}>
+                        회원가입/로그인
+                    </div>
+                    <div id="vborder"></div>
+                    <div className="dashboardButton">기업 서비스</div>
                 </div>
             </div>
             {search ? <Search setSearch={setSearch} /> : ''}

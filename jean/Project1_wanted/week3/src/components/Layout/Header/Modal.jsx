@@ -39,7 +39,7 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [name, setName] = useState('');
     const [nameerror, setNameError] = useState(false);
     const namecheck = e => {
-        const value = e.target.value; // 우선 e.target 에서 name 과 value 를 추출
+        const value = e.target.value;
 
         if (value.length < 2 || value.length > 5) {
             setNameError(false);
@@ -53,7 +53,7 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [email, setEmail] = useState('');
     const [emailerror, setEmailerror] = useState(false);
     const emailcheck = e => {
-        const value = e.target.value; // 우선 e.target 에서 name 과 value 를 추출
+        const value = e.target.value;
         var reg = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
 
         if (!reg.test(value)) {
@@ -68,8 +68,8 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [phone, setPhone] = useState('');
     const [phoneerror, setphoneerror] = useState(false);
     const phonecheck = e => {
-        const value = e.target.value; // 우선 e.target 에서 name 과 value 를 추출
-        var reg = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}/;
+        const value = e.target.value;
+        var reg = /^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/;
         if (!reg.test(value)) {
             setphoneerror(false);
         } else if (!phoneerror) {
@@ -81,8 +81,8 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [password, setPassword] = useState('');
     const [passworderror, setPassworderror] = useState(false);
     const passwordcheck = e => {
-        const value = e.target.value; // 우선 e.target 에서 name 과 value 를 추출
-        var reg = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+        const value = e.target.value;
+        var reg = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
         if (!reg.test(value)) {
             setPassworderror(false);
         } else if (!passworderror) {
@@ -94,7 +94,7 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [passwordConfirm, setPasswordConfirm] = useState('');
     const [passwordcommiterror, setPasswordcommiterror] = useState(false);
     const passwordcommitcheck = e => {
-        const value = e.target.value; // 우선 e.target 에서 name 과 value 를 추출
+        const value = e.target.value;
 
         if (value != password) {
             setPasswordcommiterror(false);
@@ -162,7 +162,6 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
                                     className="login_email_button"
                                     onClick={toNext}
                                     style={emailerror ? { backgroundColor: 'blue' } : { backgroundColor: 'gray' }}
-                                    // disabled={emailerror ? false : true}
                                     disabled={!emailerror}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -326,7 +325,7 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
                             </div>
                             <div className="certification">
                                 <div className="left">
-                                    <input name="phonenumber" type="text" placeholder="(예시) 01034567890" onChange={phonecheck} />
+                                    <input name="phonenumber" type="text" placeholder="(예시) 01034567890" onChange={phonecheck} value={phone} />
                                 </div>
                                 <div className="right">인증번호 받기</div>
                             </div>

@@ -14,7 +14,9 @@ const Search = ({ setSearch }) => {
                 str = '#' + str;
             }
 
-            navi('/TagSearch', { state: str });
+            const list = [str, -1];
+
+            navi('/TagSearch', { state: list });
             setSearch(false);
         }
     }

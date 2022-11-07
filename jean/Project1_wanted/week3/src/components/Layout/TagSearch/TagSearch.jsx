@@ -28,10 +28,25 @@ const TagSearch = () => {
 
     useEffect(() => {
         if (location.state != null) {
-            console.log(location);
-            const temp = { id: location.state[1], content: location.state[0] };
-            onAddTag(temp);
-            window.history.replaceState({}, document.title);
+            if (location.state[1] === -1) {
+                let ida = -1;
+                dum.tags.map(l =>
+                    l.tags.map(t => {
+                        if (t.tag === location.state) {
+                            ida = t.id;
+                            return;
+                        }
+                    })
+                );
+                if (ida === -1) return;
+                const temp = { id: ida, content: location.state[0] };
+                onAddTag(temp);
+                window.history.replaceState({}, document.title);
+            } else {
+                const temp = { id: location.state[1], content: location.state[0] };
+                onAddTag(temp);
+                window.history.replaceState({}, document.title);
+            }
         }
     }, [location.key]);
 
@@ -56,28 +71,28 @@ const TagSearch = () => {
         // console.log(data);
     }, [tagList]);
 
-    // const findByTags = T => {
-    //     var res = false;
-    //     tagList.map(tag => {
-    //         for (let e of T) {
-    //             if (e == tag.content) {
-    //                 res = true;
-    //                 return;
-    //             }
-    //         }
-    //     });
-    //     return res;
-    // };
-    // const findByList = L => {
-    //     var array = [];
+    const findByTags = T => {
+        var res = false;
+        tagList.map(tag => {
+            for (let e of T) {
+                if (e == tag.content) {
+                    res = true;
+                    return;
+                }
+            }
+        });
+        return res;
+    };
+    const findByList = L => {
+        var array = [];
 
-    //     for (let e of L) {
-    //         if (findByTags(e.tags)) {
-    //             array = [...array, e];
-    //         }
-    //     }
-    //     return array;
-    // };
+        for (let e of L) {
+            if (findByTags(e.tags)) {
+                array = [...array, e];
+            }
+        }
+        return array;
+    };
 
     function onAddTag(e) {
         var innerText;

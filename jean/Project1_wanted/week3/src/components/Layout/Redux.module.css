@@ -1,0 +1,9 @@
+.root {
+    border: 1px solid red;
+    width: 300px;
+}
+
+.box {
+    width: 90%;
+    border: 1px solid red;
+}

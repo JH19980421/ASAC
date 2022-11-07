@@ -7,6 +7,7 @@ import Mainpage from './Main/Main';
 import Jobdetail from './Jobdetail/Jobdetail';
 import Modal from './Header/Modal';
 import TagSearch from './TagSearch/TagSearch';
+import Redux from './Redux';
 const Layout = props => {
     const [modalOpen, setmodalOpen] = useState(-1);
 
@@ -14,7 +15,9 @@ const Layout = props => {
         <>
             <Header setmodalOpen={setmodalOpen} />
             {modalOpen != -1 && <Modal setmodalOpen={setmodalOpen} modalOpen={modalOpen} />}
+
             <Routes>
+                <Route path="Redux" element={<Redux />} />
                 <Route path="TagSearch" element={<TagSearch />} />
                 <Route path="Job" element={<Job />} />
                 <Route path="Jobdetail/:id" element={<Jobdetail />} />

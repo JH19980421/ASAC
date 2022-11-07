@@ -6,11 +6,12 @@ import Hiring from './Hiring';
 const Job = props => {
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
+
     const handleScroll = useCallback(() => {
         const { innerHeight } = window;
         const { scrollHeight } = document.body;
         const { scrollTop } = document.documentElement;
-        console.log('aaaaaaaa');
+
         if (Math.round(scrollTop + innerHeight) >= scrollHeight && !loading) {
             setLoading(true);
             setTimeout(() => {
@@ -19,14 +20,11 @@ const Job = props => {
             }, 2000);
         }
     });
-    console.log(page);
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, true);
-        // 스크롤이 발생할때마다 handleScroll 함수를 호출하도록 추가합니다.
-
         return () => {
             window.removeEventListener('scroll', handleScroll, true);
-            // 해당 컴포넌트가 언마운트 될때, 스크롤 이벤트를 제거합니다.
         };
     }, [handleScroll]);
     return (
@@ -107,69 +105,53 @@ const Job = props => {
                 <div className="keywords">
                     <ul className="keywordslides">
                         <li>
-                            {' '}
-                            <button>연봉이 최고의 복지</button>{' '}
-                        </li>{' '}
+                            <button>연봉이 최고의 복지</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>재택 근무</button>{' '}
-                        </li>{' '}
+                            <button>재택 근무</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>퇴사율 10%이하</button>{' '}
-                        </li>{' '}
+                            <button>퇴사율 10%이하</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>급성장 중</button>{' '}
-                        </li>{' '}
+                            <button>급성장 중</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button> 벙역특례</button>{' '}
-                        </li>{' '}
+                            <button> 벙역특례</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>50인 이하</button>{' '}
-                        </li>{' '}
+                            <button>50인 이하</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>50인 이상</button>{' '}
-                        </li>{' '}
+                            <button>50인 이상</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>업력 5년 이상</button>{' '}
-                        </li>{' '}
+                            <button>업력 5년 이상</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>50인 이상</button>{' '}
-                        </li>{' '}
+                            <button>50인 이상</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>업력 5년 이상</button>{' '}
-                        </li>{' '}
+                            <button>업력 5년 이상</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>급성장 중</button>{' '}
-                        </li>{' '}
+                            <button>급성장 중</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button> 벙역특례</button>{' '}
-                        </li>{' '}
+                            <button> 벙역특례</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>50인 이하</button>{' '}
-                        </li>{' '}
+                            <button>50인 이하</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>50인 이상</button>{' '}
-                        </li>{' '}
+                            <button>50인 이상</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button>급성장 중</button>{' '}
-                        </li>{' '}
+                            <button>급성장 중</button>
+                        </li>
                         <li>
-                            {' '}
-                            <button> 벙역특례</button>{' '}
-                        </li>{' '}
+                            <button> 벙역특례</button>
+                        </li>
                     </ul>
                     <p className="keywordsbutton">
                         <span className="prev">
@@ -186,16 +168,11 @@ const Job = props => {
                 <div className="bookmark">
                     <Link to="/#">
                         <p>
-                            <svg width="13" height="17" viewBox="0 0 13 17" style={{ color: '#36f' }}>
-                                <defs>
-                                    <path
-                                        id="bookmarkIconFill"
-                                        d="M6.25 13.21L.905 16.22c-.403.228-.905-.06-.905-.517V.596C0 .267.27 0 .605 0h11.29c.334 0 .605.267.605.596v15.107c0 .458-.502.745-.905.518L6.25 13.209z"
-                                    ></path>
-                                </defs>
-                                <g fillRule="none" fillRule="evenodd" transform="translate(.188)">
-                                    <use fillRule="currentColor" href="#bookmarkIconFill"></use>
-                                </g>
+                            <svg width="22px" height="22px" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+                                <path
+                                    d="M6.875 2.75C6.116 2.75 5.5 3.366 5.5 4.125V18.443C5.5 19.617 6.878 20.251 7.77 19.487L10.553 17.102C10.81 16.881 11.19 16.881 11.447 17.102L14.23 19.487C15.122 20.251 16.5 19.617 16.5 18.443V4.125C16.5 3.366 15.884 2.75 15.125 2.75H6.875Z"
+                                    fill="#3A52EE"
+                                />
                             </svg>
                             북마크모아보기
                             <svg width="12" height="12" viewBox="0 0 12 12">

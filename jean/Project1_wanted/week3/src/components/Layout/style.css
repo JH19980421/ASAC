@@ -478,7 +478,7 @@ header {
 
 header .mainbar {
     width: 87.72%;
-
+    margin-bottom: 0px;
     max-width: 1060px;
     display: flex;
     align-items: center;
@@ -538,11 +538,15 @@ header .mainbar .center {
 }
 
 header .mainbar .center a {
-    padding: 12px;
+    padding: 15px;
 }
-
+header .mainbar .center a:hover {
+    border-bottom: 1px solid blue;
+}
 header .mainbar .right {
     display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 header .mainbar .right a {
@@ -566,6 +570,7 @@ header .mainbar .right li {
 }
 
 .dashboardButton {
+    cursor: pointer;
     font-size: 13px;
     color: #666;
     height: 30px;
@@ -1505,6 +1510,8 @@ p {
 }
 
 .job_main .bookmark p {
+    display: flex;
+    align-items: center;
     color: #36f;
     font-size: 15px;
     font-weight: 600;
@@ -1613,6 +1620,14 @@ p {
     padding: 0 5px;
 }
 
+#normal {
+    border: 1px solid blue;
+    color: blue;
+}
+#low {
+    border: 1px solid red;
+    color: red;
+}
 .job_main .company_list .item .detail h1 {
     color: #333;
     font-size: 18px;
@@ -2578,4 +2593,14 @@ select {
 
 .email_box input {
     background-color: rgb(216, 214, 214);
+}
+
+#searchbutton {
+    cursor: pointer;
+}
+#modalbutton {
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
 }

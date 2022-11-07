@@ -1,13 +1,5 @@
 const SerachSVG = props => (
-    <svg
-        xmlns="https://www.w3.org/2000/svg"
-        xmlnsXlink="https://www.w3.org/1999/xlink"
-        width={16}
-        height={16}
-        viewBox="0 0 16 16"
-        role="img"
-        {...props}
-    >
+    <svg xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink" width={18} height={18} viewBox="0 0 18 18" {...props}>
         <defs>
             <path
                 id="qt2dnsql4a"
