@@ -1,0 +1,110 @@
+{
+    "SearchTitle": 
+[
+
+{
+"id":1,
+"title":"웹디자이너"
+},
+{
+"id":2,
+"title":"웹개발자"
+},  
+{
+"id":3,
+"title":"웹퍼블리셔"
+},
+
+{
+"id":4,
+"title":"퍼블리셔"
+},
+
+{
+"id":5,
+"title":"개발자"
+},
+
+
+{
+"id":6,
+ "title":"디자이너"
+},
+
+{
+"id":7 ,
+"title":"아트디렉터"
+},
+
+{
+"id":8 ,
+"title":"게임아티스트"
+}
+
+    
+
+],
+
+"SearchContent": 
+[
+
+{
+"id":1,
+"img":"https://static.wanted.co.kr/images/wdes/0_5_71465ccd-9809-421b-927e-4e4dcbc7ec82.jpg",
+"title":"웹스프레드(webspread)",
+"category":"IT, 컨텐츠"
+},
+{
+"id":2,
+"img":"https://static.wanted.co.kr/images/wdes/0_5_71465ccd-9809-421b-927e-4e4dcbc7ec82.jpg",
+"title":"웹스프레드(webspread)",
+"category":"IT, 컨텐츠"
+},  
+{
+"id":3,
+"img":"https://static.wanted.co.kr/images/wdes/0_5_71465ccd-9809-421b-927e-4e4dcbc7ec82.jpg",
+"title":"웹스프레드(webspread)",
+"category":"IT, 컨텐츠"
+},
+
+{
+"id":4,
+"img":"https://static.wanted.co.kr/images/wdes/0_5_71465ccd-9809-421b-927e-4e4dcbc7ec82.jpg",
+"title":"웹스프레드(webspread)",
+"category":"IT, 컨텐츠"
+},
+
+{
+"id":5,
+"img":"https://static.wanted.co.kr/images/wdes/0_5.d63c5e41.jpg",
+"title":"Dyson Korea",
+"category":"제조"
+
+},
+
+
+{
+"id":6,
+"img":"https://static.wanted.co.kr/images/wdes/0_5.d63c5e41.jpg",
+"title":"Dyson Korea",
+"category":"제조"
+},
+
+{
+"id":7 ,
+"img":"https://static.wanted.co.kr/images/wdes/0_5.d63c5e41.jpg",
+"title":"Dyson Korea",
+"category":"제조"
+},
+
+{
+"id":8 ,
+"img":"https://static.wanted.co.kr/images/wdes/0_5.d63c5e41.jpg",
+"title":"Dyson Korea",
+"category":"제조"
+}
+
+    
+
+]
+}

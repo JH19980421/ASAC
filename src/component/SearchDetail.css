@@ -1,0 +1,197 @@
+.SearchDetail{
+
+    border: 1px solid blue;
+}
+
+.SearchInputBox{
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 160px;
+    background: #fff;
+    border-bottom: 1px solid #e1e2e3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+}
+
+.SearchInput{
+    display: flex;
+    justify-content: center;
+    height: 96px;
+    font-size: 48px;
+    line-height: 2;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    
+}
+
+.SearchContentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 30px 0;
+    background-color: #f8f8f8;
+    flex-direction: column;
+}
+.SearchContentJob{
+    display: flex;
+    flex-direction: column;
+    width: 1060px;
+    height: 100px;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchContentJob > h2{
+    width: 1060px;
+    height: 36px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: 0 0 18px 0;
+    color: #333;
+    }
+
+.SearchContentJob > h2 > span{
+    font-weight: 400;
+    color: #333333;
+    font-size: 23px;
+    }
+
+
+
+.CategoryName{
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    padding: 0 18px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e1e2e3;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin: 0 6px 6px 0;
+}
+
+.SearchContentCompany{
+    display: flex;
+    width: 1080px;
+    margin-bottom: 60px;
+    flex-direction: column;
+}
+
+.SearchContentCompany > h2{
+    width: 1060px;
+    height: 36px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: 0 0 18px 0;
+    color: #333;
+    }
+
+.SearchContentCompany > h2 >span{
+    font-weight: 400;
+    color: #333333;
+    font-size: 23px;
+    }
+
+
+.SearchContentCategory{
+        display: flex;
+        margin: 0 auto;
+        width: 1080px;
+        flex-wrap: wrap;
+    
+    }
+
+.CompanyItem{
+    width: 480px;
+    height: 58px;
+    padding: 21px 20px 21px 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 2px;
+}
+
+.CompanyItem_left{
+    margin: 0;
+    padding: 0;
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+}
+
+.CompanyItem_left_img{
+    margin: 0 20px 0 0;
+    height: 58px;
+    width: 58px;
+}
+
+.CompanyItem_left_img > img{
+    height: 58px;
+    width: 58px;
+    object-fit: cover;
+}
+
+.CompanyItem_left_title{
+    display: flex;
+    flex-direction: column;
+}
+.CompanyItem_left_title >h5{
+    padding: 0;
+    display: flex;
+    width: 292px;
+    height: 27px;
+    color: #333;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0 0 4px 0;
+}
+.CompanyItem_left_title>h6{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 292px;
+    height: 20px;
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+.CompanyItem_right{
+    border: 1px solid black;
+    height: 40px;
+    width: 94.9px;
+    color: #36f;
+    background-color: #fff;;
+    border: 1px solid #e1e2e3;
+    border-radius: 25px;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 15px;
+    
+    
+}
