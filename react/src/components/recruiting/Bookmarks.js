@@ -1,30 +1,30 @@
-const BookmarkItem = ({ id, bookmarks }) => {
-    return (
-        <img 
-            src={ bookmarks.bookmarks.has(id)? require('../../assets/images/bookmark.png'): require('../../assets/images/bookmark-outline.png') } 
-            alt="bookmark"
-        /> 
-    )
-}
+import { useDispatch, useSelector } from "react-redux";
 
+import "../../css/recruiting/Bookmarks.css";
 
-const Bookmarks = ({ id, bookmarks, checkBookmark, uncheckBookmark }) => {
-    const onClickBookmark = e => {
+import { checkBookmark, uncheckBookmark } from "../../modules/bookmarks";
+
+const Bookmarks = (props) => {
+    const bookmarks = useSelector(state => state.bookmarks);
+    const dispatch = useDispatch();
+
+    const onClickBookmark = (e) => {
         e.preventDefault();
-        if(bookmarks.bookmarks.has(id)) {
-            uncheckBookmark();
+        
+        if(bookmarks.bookmarks.has(props.id)) {
+            dispatch(uncheckBookmark(props.id))
         } else {
-            checkBookmark();
+            dispatch(checkBookmark(props.id))
         }
     }
 
     return (
         <div onClick={onClickBookmark}>
-            <BookmarkItem
-                key={id}
-                id={id}
-                bookmarks={bookmarks}
-            />       
+            <img
+                className={ bookmarks.bookmarks.has(props.id)? "bookmark-module-item": null }
+                src={ bookmarks.bookmarks.has(props.id)? require('../../assets/images/bookmark.png'): require('../../assets/images/bookmark-outline.png') }
+                alt="bookmark"
+            />
         </div>
     )
 }

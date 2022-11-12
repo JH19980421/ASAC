@@ -11,8 +11,8 @@ const BookmarksContainer = (props) => {
         <Bookmarks
             id={props.id}
             bookmarks={bookmarks}
-            checkBookmark={() => dispatch(checkBookmark(props.id))}
-            uncheckBookmark={() => dispatch(uncheckBookmark(props.id))}
+            checkBookmark={dispatch(() => checkBookmark())}
+            uncheckBookmark={dispatch(() => uncheckBookmark())}
         />
     );
 };

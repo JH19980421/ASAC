@@ -1,0 +1,5 @@
+.bookmark-module-item {
+    width: 25px !important;
+    height: 25px;
+    transform: translate(7px, 7px);
+}

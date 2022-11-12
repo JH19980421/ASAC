@@ -4,11 +4,15 @@ import "../../css/recruiting/recruiting-list.css";
 import * as Formatting from "../../utils/formatting";
 
 import recruitingListAll from "../../recruiting-list.json";
-import BookmarksContainer from "../../containers/BookmarksContainer";
 import Bookmarks from "./Bookmarks";
+import { useEffect } from "react";
 
 function RecruitingList(props) {
-    const recruitingList = props.length? props.recruitingList: recruitingListAll;
+    const recruitingList = props.recruitingList? props.recruitingList: recruitingListAll;
+
+    useEffect(() => {
+        console.log('recruit', props, recruitingList);
+    }, []);
 
     return (
         <div className="card-container">
@@ -17,9 +21,8 @@ function RecruitingList(props) {
                     <Link to={`/job-detail/${item.id}`}>
                         <div className="card-item" key={item.id}>
                             <div id="bookmark-outline">
-                                <BookmarksContainer id={item.id}/>
+                                <Bookmarks id={item.id}/>
                             </div>
-                            {/* <img id="bookmark-outline" src={ require('../../assets/images/bookmark-outline.png') } alt="bookmark"/> */}
                             <img src={item.imageUrl} alt="image"/>
                             <p className="card-title">{item.title}</p>
                             <p>{item.company}</p>

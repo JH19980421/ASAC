@@ -6,7 +6,7 @@ const UNCHECK_BOOKMARK = 'bookmarks/UNCHECK_BOOKMARK';
 /** Action Functions */
 export const checkBookmark = (id) => ({ 
     type: CHECK_BOOKMARK,
-    id: id 
+    id 
 });
 
 export const uncheckBookmark = (id) => ({ 
@@ -25,15 +25,13 @@ const initialState = {
 function bookmarks(state=initialState, action) {
     switch(action.type) {
         case CHECK_BOOKMARK:
-            console.log('as', state, action);
             return {
                 ...state,
                 bookmarks: state.bookmarks.add(action.id)
             };
         case UNCHECK_BOOKMARK:
             return {
-                ...state,
-                bookmarks: state.bookmarks.delete(action.id)
+                bookmarks: state.bookmarks.delete(action.id)? state.bookmarks: null 
             };
         default:
             return state
