@@ -1,8 +1,11 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
 import Data from './JobData.json';
+import bookmarkwhite from '../../../images/bookmarkwhite.png';
+import bookmarkdark from '../../../images/bookmarkdark.png';
+import { Provider, useSelector, useDispatch, connect } from 'react-redux';
 
-const CompanyList = ({ page, loading }) => {
+const CompanyList = ({ page, loading, bookMark }) => {
     const toString = e => {
         return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
@@ -15,7 +18,14 @@ const CompanyList = ({ page, loading }) => {
     useEffect(() => {
         if (!page) setCompany([...company, { ...Data }, { ...Data }, { ...Data }, { ...Data }]);
     }, []);
-    
+
+    const dispatch = useDispatch();
+    const state = useSelector(state => state);
+    useEffect(() => {}, [state]);
+
+    function bookMarkClick(e) {
+        dispatch({ type: 'ADD', id: e.target.id });
+    }
     return (
         <div className="company_list">
             {company.map(L =>
@@ -36,6 +46,13 @@ const CompanyList = ({ page, loading }) => {
                                 <p>채용보상금 {toString(`${e.채용보상금}`)} 원</p>
                             </div>
                         </Link>
+                        <div className="bookmark_check">
+                            {state.includes(`${e.id}`) ? (
+                                <img src={bookmarkdark} alt="" id={e.id} onClick={bookMarkClick} />
+                            ) : (
+                                <img src={bookmarkwhite} alt="" id={e.id} onClick={bookMarkClick} />
+                            )}
+                        </div>
                     </div>
                 ))
             )}

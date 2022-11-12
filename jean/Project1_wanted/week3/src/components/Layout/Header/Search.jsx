@@ -42,7 +42,7 @@ const Search = ({ setSearch }) => {
 
                     <div className={styles.movebar}>
                         <div className={styles.left}>추천태그를 검색해보세요</div>
-                        <div className={styles.right}>기업태그 홈 이동하기 ></div>
+                        <div className={styles.right}>기업태그 홈 이동하기 > </div>
                     </div>
 
                     <div className={styles.tagcontainer}>

@@ -1594,8 +1594,20 @@ p {
     display: block;
     width: 24%;
     margin-bottom: 20px;
+    position: relative;
 }
 
+.bookmark_check {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.bookmark_check img {
+    width: 18px !important;
+    height: 18px !important;
+}
 .job_main .company_list .item img {
     height: 187px;
     width: 100%;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './TagSearch.module.css';
+
 import { useState, useEffect } from 'react';
 import TagCategory from './TagCategory';
 import TagCompany from './TagCompany';
@@ -55,45 +56,37 @@ const TagSearch = () => {
             ? setData(dum.list)
             : setData(
                   dum.list.filter(function (list) {
-                      var res = false;
-                      list.tags.filter(function (tag) {
-                          tagList.map(T => {
-                              if (tag === T.content) {
-                                  res = true;
-                                  return res;
+                      return list.tags.map(
+                          tag =>
+                              function (tag) {
+                                  return tagList.map(
+                                      T =>
+                                          function (T) {
+                                              if (tag === T.content) {
+                                                  return true;
+                                              }
+                                          }
+                                  );
                               }
-                              if (res) return res;
-                          });
-                      });
-                      return res;
+                      );
                   })
               );
-        // console.log(data);
     }, [tagList]);
-
-    const findByTags = T => {
-        var res = false;
-        tagList.map(tag => {
-            for (let e of T) {
-                if (e == tag.content) {
-                    res = true;
-                    return;
-                }
-            }
-        });
-        return res;
-    };
-    const findByList = L => {
-        var array = [];
-
-        for (let e of L) {
-            if (findByTags(e.tags)) {
-                array = [...array, e];
-            }
-        }
-        return array;
-    };
-
+    // setData(
+    //     dum.list.filter(function (list) {
+    //         var res = false;
+    //         list.tags.filter(function (tag) {
+    //             tagList.map(T => {
+    //                 if (tag === T.content) {
+    //                     res = true;
+    //                     return res;
+    //                 }
+    //                 if (res) return res;
+    //             });
+    //         });
+    //         return res;
+    //     })
+    // );
     function onAddTag(e) {
         var innerText;
         var id;
@@ -172,10 +165,32 @@ const TagSearch = () => {
                 </div>
             )}
 
-            {/* {loading ? <div className={styles.loading}></div> : <TagCompany props={(data, loading)} />} */}
             <TagCompany company={data} loading={loading} />
         </>
     );
 };
 
 export default TagSearch;
+
+// const findByTags = T => {
+//     var res = false;
+//     tagList.map(tag => {
+//         for (let e of T) {
+//             if (e == tag.content) {
+//                 res = true;
+//                 return;
+//             }
+//         }
+//     });
+//     return res;
+// };
+// const findByList = L => {
+//     var array = [];
+
+//     for (let e of L) {
+//         if (findByTags(e.tags)) {
+//             array = [...array, e];
+//         }
+//     }
+//     return array;
+// };

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import Header from './Header/Header';
-import Job from './Job/Job';
-import Mainpage from './Main/Main';
-import Jobdetail from './Jobdetail/Jobdetail';
-import Modal from './Header/Modal';
+
 import TagSearch from './TagSearch/TagSearch';
-import Redux from './Redux';
+import Jobdetail from './Jobdetail/Jobdetail';
+import Header from './Header/Header';
+import Mainpage from './Main/Main';
+import Modal from './Header/Modal';
+import Job from './Job/Job';
+import BookMark from './BookMark/BookMark';
 const Layout = props => {
     const [modalOpen, setmodalOpen] = useState(-1);
 
@@ -17,7 +17,7 @@ const Layout = props => {
             {modalOpen != -1 && <Modal setmodalOpen={setmodalOpen} modalOpen={modalOpen} />}
 
             <Routes>
-                <Route path="Redux" element={<Redux />} />
+                <Route path="BookMark" element={<BookMark />} />
                 <Route path="TagSearch" element={<TagSearch />} />
                 <Route path="Job" element={<Job />} />
                 <Route path="Jobdetail/:id" element={<Jobdetail />} />

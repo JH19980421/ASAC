@@ -8,6 +8,7 @@ const TagCompany = props => {
 
     function tagReturn(e) {
         let str = '';
+        console.log(e);
         for (let t of e) {
             str = str + '  ' + t;
         }
@@ -31,9 +32,6 @@ const TagCompany = props => {
                             </div>
                             <div className={styles.tags} key={index + 600}>
                                 {tagReturn(A.tags)}
-                                {/* {A.tags.map(B => (
-                                <>{B}</>
-                            ))} */}
                             </div>
                         </div>
                     ))}

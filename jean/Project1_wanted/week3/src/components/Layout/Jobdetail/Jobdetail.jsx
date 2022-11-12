@@ -10,13 +10,14 @@ import user3 from '../../../images/user (3).png';
 import user4 from '../../../images/user (4).png';
 
 const Jobdetail = props => {
-    const [height, setHeight] = useState(0);
     const [top, setTop] = useState(70);
     const [position, setPosition] = useState('fixed');
     const [flag, setflag] = useState(false);
+
     const [likeflag, setLikeflag] = useState(false);
     const [likeimg, setLikeimg] = useState(likeGray);
     const [like, setLike] = useState(2);
+
     const ref = useRef(null);
 
     const user = [user1, user2, user3, user4];
@@ -32,6 +33,7 @@ const Jobdetail = props => {
         setLikeflag(!likeflag);
     }
     const handleFollow = () => {
+        let height = ref.current.clientHeight;
         if (window.pageYOffset > height - 500) {
             if (!flag) {
                 setflag(true);
@@ -48,8 +50,6 @@ const Jobdetail = props => {
     };
 
     useEffect(() => {
-        setHeight(ref.current.clientHeight);
-
         const watch = () => {
             window.addEventListener('scroll', handleFollow);
         };
@@ -281,7 +281,6 @@ const Jobdetail = props => {
                                     id="_09_-_Bookmark"
                                     data-name="09 - Bookmark"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    {...props}
                                 >
                                     <path
                                         id="_09_-_Bookmark-2"

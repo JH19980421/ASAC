@@ -9,30 +9,8 @@ import dummy from './data.json';
 import { useState } from 'react';
 
 const Main = props => {
-    // const navi = useNavigate();
-
-    // function gotoPage(link) {
-    //     navi(link);
-    // }
-
-    // const pages = [
-    //     { key: 0, link: '/AA', name: 'A PAGE' },
-    //     { key: 1, link: '/BB', name: 'B PAGE' },
-    //     { key: 2, link: '/CC', name: 'C PAGE' },
-    // ];
-
     return (
         <>
-            {/* {pages.map(page => {
-                return (
-                    <>
-                        <h1 key={page.key} onClick={gotoPage(page.link)}>
-                            {page.name}
-                        </h1>
-                    </>
-                );
-            })} */}
-
             <div className="main">
                 <SlideShow />
                 <div className="section">

@@ -43,7 +43,7 @@ const Header = ({ setmodalOpen }) => {
                             <Link to="/Job">채용</Link>
                         </li>
                         <li>
-                            <Link to="/">이벤트</Link>
+                            <Link to="/BookMark">이벤트</Link>
                         </li>
                         <li>
                             <Link to="/">직군별 연봉</Link>
