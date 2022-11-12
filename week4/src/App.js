@@ -1,9 +1,10 @@
-import Main from "./main";
+import Redux from "./redux";
+
 
 function App() {
   return (
     <>
-      <Main/>
+      <Redux/>
     </>
   );
 }
