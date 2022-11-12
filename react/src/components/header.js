@@ -5,12 +5,17 @@ import '../css/common.css';
 import '../css/header.css';
 
 import LoginModal from "../components/modals/login-modal";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import SearchBar from "./search-bar";
 
 function Header() {
     const [openLoginModal, setOpenLoginModal] = useState(false);
     const [showSearchBar, setShowSearchBar] = useState(false);
+    const [isLogin, setIsLogin] = useState(false);
+
+    useEffect(() => {
+        console.log(window.localStorage.getItem('id'));
+    }, [])
 
     const onClickJoinLogin = () => {
         openLoginModal = setOpenLoginModal(!openLoginModal);
@@ -20,11 +25,16 @@ function Header() {
         setShowSearchBar(!showSearchBar);
     }
 
+    const onClickLogout = () => {
+        setIsLogin(false);
+        window.localStorage.clear();
+    }
+
     return (
         // <div className="header__container">
             <header>
                 {
-                    openLoginModal? <LoginModal openModal={setOpenLoginModal}/>: null
+                    openLoginModal? <LoginModal openModal={setOpenLoginModal} isLogin={setIsLogin}/>: null
                 }
                 {
                     showSearchBar? <SearchBar showSearchBar={setShowSearchBar}/>: null
@@ -56,16 +66,36 @@ function Header() {
                         src={ require('../assets/images/search.png') } 
                         alt="search"
                         onClick={onClickSearchButton}
-                        />
-                    <div 
-                        className="login"
-                        onClick={onClickJoinLogin}
-                    >
-                        회원가입/로그인
-                    </div>
+                    />
+                    {
+                        isLogin?
+                        <div>
+                            <img
+                                className="notification"
+                                src={ require("../assets/images/notification.png") } 
+                                alt="notification"
+                            />
+                            <img
+                                className="profile"
+                                src={ require("../assets/images/user-profile.png") } 
+                                alt="profile"
+                            />
+                        </div>
+                        :
+                        <div 
+                            className="login"
+                            onClick={onClickJoinLogin}
+                        >
+                            회원가입/로그인
+                        </div>
+                    }
                     <p className="divider__vertical"></p>
             
-                    <div className="header__organization">기업 서비스</div>            
+                    {/* <div className="header__organization">기업 서비스</div>*/}
+                    <div 
+                        className="header__organization"
+                        onClick={onClickLogout}
+                    >로그아웃</div>
                 </div>
             </header>
         // </div>

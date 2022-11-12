@@ -74,8 +74,12 @@ function LoginModal(props) {
     }
 
     const completeJoin = () => {
-        console.log('clvkjslkc');
         alert('회원가입 완료');
+
+        props.isLogin(true);
+        window.localStorage.setItem('userId', email);
+        window.localStorage.setItem('userPassword', password);
+
         closeModals();
     }
 
@@ -89,7 +93,6 @@ function LoginModal(props) {
         } else if(!checked && checkedItems.includes(id)) {
             setCheckedItems(checkedItems.filter((el) => el !== id));
         }
-        // setCheckedItems(checkedItems);
     }
 
     const onClickAllCheck = (checked) => {

@@ -49,6 +49,19 @@ img.search {
 
     cursor: pointer;
 }
+img.notification {
+    width: 18px;
+    margin-right: 18px;
+    margin-top: 4px;
+
+    cursor: pointer;
+}
+img.profile {
+    width: 18px;
+    margin-top: 4px;
+
+    cursor: pointer;
+}
 
 .login {
     cursor: pointer;
@@ -62,6 +75,8 @@ img.search {
     padding: 5px 10px;
     
     color: gray;
+
+    cursor: pointer;
 }
 
 .badge--new {
