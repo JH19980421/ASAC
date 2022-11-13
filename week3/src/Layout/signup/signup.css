@@ -70,10 +70,10 @@
 
 .emailBox {
 	border-radius: 5px;
-	border-color: blue;
 	margin: 10px 0 0;
 	width: inherit;
 	padding: 15px 0 15px;
+	outline: none;
 }
 
 .choice {

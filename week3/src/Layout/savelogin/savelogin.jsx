@@ -1,18 +1,13 @@
-import './header.css';
+import './savelogin.css';
 
-function Header(props) {
-	const openSignup = () => {
-		props.setModal(true);
-		props.setSaveLogin(false);
-	};
-
+function SaveLogin(props) {
 	const openSearchBar = () => {
 		props.setSearchBar(true);
 	};
 
 	console.log(props);
 	return (
-		<header className="mainheader">
+		<header className="loginheader">
 			<div className="headerWidth">
 				<div className="header_left">
 					<img className="menu" src="../source/menu.png" alt="menu" />
@@ -58,9 +53,27 @@ function Header(props) {
 						alt="search"
 						onClick={openSearchBar}
 					/>
-					<div className="login">
-						<button className="btn_signup" onClick={openSignup}>
-							회원가입/로그인
+					<div className="svlogin">
+						<div>{JSON.stringify(props.sessionStorage)}</div>
+						<button
+							className="logout"
+							onClick={() => {
+								props.sessionStorage.clear();
+								props.setSavedLoginId(
+									props.sessionStorage.getItem(
+										'Id'
+									)
+								);
+								props.setSavedLoginPw(
+									props.sessionStorage.getItem(
+										'Pw'
+									)
+								);
+
+								props.setHeads(true);
+							}}
+						>
+							로그아웃
 						</button>
 					</div>
 					<p className="col"></p>
@@ -75,4 +88,4 @@ function Header(props) {
 	);
 }
 
-export default Header;
+export default SaveLogin;

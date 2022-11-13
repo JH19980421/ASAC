@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-.mainheader {
-	z-index: 1000;
+.loginheader {
+	z-index: 1001;
 	position: fixed;
 	display: flex;
 	font-size: 14px;

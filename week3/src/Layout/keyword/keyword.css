@@ -1,6 +1,12 @@
 .area_keywords {
+	position: relative;
 	width: 250px;
 	margin-bottom: 50px;
+}
+
+.area_keywords > a {
+	position: relative;
+	display: inline;
 }
 
 .area_keywordsLink {
@@ -25,4 +31,18 @@
 	font-size: 14px;
 	text-align: left;
 	font-weight: bold;
+}
+
+.bookmarkBtn {
+	position: absolute;
+	background: none;
+	width: 42px;
+	height: 42px;
+	top: 0px;
+	right: 0;
+	flex-direction: row;
+	z-index: 1;
+	justify-content: flex-end;
+	align-items: flex-start;
+	border: none;
 }

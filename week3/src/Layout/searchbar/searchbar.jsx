@@ -1,29 +1,41 @@
 import './searchbar.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = ({ setSearchBar }) => {
+	const navigate = useNavigate();
+
 	const closeSearchBar = () => {
 		setSearchBar(false);
+	};
+
+	// const goToSearchResultOnClick = () => {
+	// 	navigate(`/searchresult`);
+	// };
+
+	const goToSearchResultKeyPress = (e) => {
+		if (e.key === 'Enter') {
+			console.log('!');
+			navigate('../result');
+		}
 	};
 
 	return (
 		<div className="SearchBarBackground">
 			<div className="SearchBar">
 				<div className="SearchBar_Container">
-					<form
-						role="presentation"
-						action="."
-					>
+					<form role="presentation" action=".">
 						<input
 							type="search"
 							placeholder="#태그, 회사, 포지션 검색"
 							autoComplete="off"
+							onKeyPress={goToSearchResultKeyPress}
 						/>
 					</form>
 					<div className="Result_Container">
 						<div>
 							<h4 className="RecentSearchResults">
-								추천태그로
-								검색해보세요
+								추천태그로 검색해보세요
 							</h4>
 							<a
 								href="/tag_search"
@@ -31,9 +43,7 @@ const SearchBar = ({ setSearchBar }) => {
 								aria-label=""
 								data-attribute-id="search__goCompanyTag"
 							>
-								기업태그
-								홈
-								이동하기
+								기업태그 홈 이동하기
 								<svg
 									width="12"
 									height="12"
@@ -91,10 +101,7 @@ const SearchBar = ({ setSearchBar }) => {
 					</div>
 				</div>
 			</div>
-			<div
-				className="closeSearch"
-				onClick={closeSearchBar}
-			/>
+			<div className="closeSearch" onClick={closeSearchBar} />
 		</div>
 	);
 };
