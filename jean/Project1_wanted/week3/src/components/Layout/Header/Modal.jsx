@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Modal = ({ setmodalOpen, modalOpen }) => {
     const [choice, setChoice] = useState([false, false, false]);
-    const [visual, setVisual] = useState(false);
     const modal = useRef();
 
     function choiceChange(e) {
@@ -82,7 +82,7 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [passworderror, setPassworderror] = useState(false);
     const passwordcheck = e => {
         const value = e.target.value;
-        var reg = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+        var reg = /^(?=.*[a-zA-Z])((?=.*\d)(?=.*\W)).{8,16}$/;
         if (!reg.test(value)) {
             setPassworderror(false);
         } else if (!passworderror) {
@@ -103,14 +103,19 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
         }
         setPasswordConfirm(value);
     };
+    const dispatch = useDispatch();
+    function SignUp() {
+        alert('회원가입완료\n이메일 : ' + email);
+        dispatch({ type: 'LOGIN' });
 
+        handleClickButton();
+    }
     function outsideClick(e) {
-        console.log(e.target);
-        console.log(modal);
+        if (!modal.current.contains(e.target)) handleClickButton();
     }
     return (
-        <div id="modal" className="modal-overlay" ref={modal} nClick={outsideClick}>
-            <div className="modal-window">
+        <div id="modal" className="modal-overlay" onClick={outsideClick}>
+            <div ref={modal} className="modal-window">
                 <div className="modal-header">
                     <img src={require('../../../images/logo.png')} alt="" />
                     <h1> </h1>
@@ -407,9 +412,14 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
                         </div>
                         <div className="sign">
                             {nameerror && phoneerror && passworderror && passwordcommiterror && choice[0] ? (
-                                <button id="on">회원가입</button>
+                                <button id="on" onClick={SignUp}>
+                                    회원가입
+                                </button>
                             ) : (
-                                <button id="off">회원가입</button>
+                                <button id="on" onClick={SignUp}>
+                                    회원가입
+                                </button>
+                                // <button id="off">회원가입</button>
                             )}
                         </div>
                     </div>

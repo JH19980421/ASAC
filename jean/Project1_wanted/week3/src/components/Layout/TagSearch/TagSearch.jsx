@@ -56,21 +56,20 @@ const TagSearch = () => {
             ? setData(dum.list)
             : setData(
                   dum.list.filter(function (list) {
-                      return list.tags.map(
-                          tag =>
-                              function (tag) {
-                                  return tagList.map(
-                                      T =>
-                                          function (T) {
-                                              if (tag === T.content) {
-                                                  return true;
-                                              }
-                                          }
-                                  );
+                      var res = false;
+                      list.tags.filter(function (tag) {
+                          tagList.map(T => {
+                              if (tag === T.content) {
+                                  res = true;
+                                  return res;
                               }
-                      );
+                              if (res) return res;
+                          });
+                      });
+                      return res;
                   })
               );
+        // console.log(data);
     }, [tagList]);
     // setData(
     //     dum.list.filter(function (list) {

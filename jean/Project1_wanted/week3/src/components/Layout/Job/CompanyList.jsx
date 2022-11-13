@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Data from './JobData.json';
 import bookmarkwhite from '../../../images/bookmarkwhite.png';
 import bookmarkdark from '../../../images/bookmarkdark.png';
-import { Provider, useSelector, useDispatch, connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 const CompanyList = ({ page, loading, bookMark }) => {
     const toString = e => {
@@ -20,8 +20,7 @@ const CompanyList = ({ page, loading, bookMark }) => {
     }, []);
 
     const dispatch = useDispatch();
-    const state = useSelector(state => state);
-    useEffect(() => {}, [state]);
+    const state = useSelector(state => state.BookMark);
 
     function bookMarkClick(e) {
         dispatch({ type: 'ADD', id: e.target.id });

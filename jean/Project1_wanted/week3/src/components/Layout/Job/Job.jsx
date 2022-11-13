@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
 import CompanyList from './CompanyList';
 import Hiring from './Hiring';
+import KeyWord from './JobData.json';
 const Job = props => {
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
@@ -104,54 +105,11 @@ const Job = props => {
                 </div>
                 <div className="keywords">
                     <ul className="keywordslides">
-                        <li>
-                            <button>연봉이 최고의 복지</button>
-                        </li>
-                        <li>
-                            <button>재택 근무</button>
-                        </li>
-                        <li>
-                            <button>퇴사율 10%이하</button>
-                        </li>
-                        <li>
-                            <button>급성장 중</button>
-                        </li>
-                        <li>
-                            <button> 벙역특례</button>
-                        </li>
-                        <li>
-                            <button>50인 이하</button>
-                        </li>
-                        <li>
-                            <button>50인 이상</button>
-                        </li>
-                        <li>
-                            <button>업력 5년 이상</button>
-                        </li>
-                        <li>
-                            <button>50인 이상</button>
-                        </li>
-                        <li>
-                            <button>업력 5년 이상</button>
-                        </li>
-                        <li>
-                            <button>급성장 중</button>
-                        </li>
-                        <li>
-                            <button> 벙역특례</button>
-                        </li>
-                        <li>
-                            <button>50인 이하</button>
-                        </li>
-                        <li>
-                            <button>50인 이상</button>
-                        </li>
-                        <li>
-                            <button>급성장 중</button>
-                        </li>
-                        <li>
-                            <button> 벙역특례</button>
-                        </li>
+                        {KeyWord.KeyWord.map(key => (
+                            <li>
+                                <button>{key}</button>
+                            </li>
+                        ))}
                     </ul>
                     <p className="keywordsbutton">
                         <span className="prev">

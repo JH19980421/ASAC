@@ -457,7 +457,6 @@ img {
 }
 
 body {
-    padding-top: 50px;
     margin: 0;
     font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
         Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
@@ -585,7 +584,7 @@ header .mainbar .right li {
     display: flex;
     width: 1060px;
     background: #fff;
-    padding-top: 40px;
+    padding-top: 80px;
     margin: auto;
 }
 .message h2 {
@@ -759,7 +758,7 @@ header .mainbar .right li {
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 100px;
 }
 
 .main .section {
@@ -1498,12 +1497,22 @@ p {
     border: none;
 }
 
+.emptybookmark {
+    margin: 200px auto;
+    font-size: 30px;
+    color: gainsboro;
+}
 .job_main {
+    padding-top: 50px;
     display: block;
     width: 1060px;
     margin: auto;
 }
 
+.job_main h5 {
+    margin-top: 50px;
+    font-size: 24px;
+}
 .job_main .bookmark {
     display: flex;
     margin: 30px 0;
@@ -1596,7 +1605,10 @@ p {
     margin-bottom: 20px;
     position: relative;
 }
-
+.bookmarkback {
+    background-color: #f8f8fa;
+    height: 100vh;
+}
 .bookmark_check {
     cursor: pointer;
     position: absolute;
@@ -1610,7 +1622,7 @@ p {
 }
 .job_main .company_list .item img {
     height: 187px;
-    width: 100%;
+    width: 250px;
     object-fit: cover;
 }
 
@@ -2615,4 +2627,42 @@ select {
     font-size: 14px;
     color: #333;
     font-weight: 600;
+}
+
+.headerprofile {
+}
+
+.headerprofile img {
+    cursor: pointer;
+    width: 20px;
+    margin-right: 10px;
+}
+
+#profileMenu {
+    position: absolute;
+    top: 50px;
+    border: 1px solid cdcdcd;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 2px 10px 0 rgb(0 0 0 / 30%);
+    box-shadow: 1px 2px 10px 0 rgb(0 0 0 / 30%);
+    width: 200px;
+}
+#profileMenu hr {
+    margin: 0;
+}
+#profileMenu a {
+    font-weight: 400;
+}
+#profileMenu li {
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    text-align: center;
+}
+#profileMenu li:last-child {
+    background-color: rgb(243, 243, 243);
 }

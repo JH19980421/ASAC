@@ -2,9 +2,21 @@ import SerachSVG from './SerachSVG';
 import Search from './Search';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+
+import bell from '../../../images/bell.png';
+import user from '../../../images/user.png';
 
 const Header = ({ setmodalOpen }) => {
     const [search, setSearch] = useState(false);
+    const [profileMenu, setProfileMenu] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log('Location changed');
+        setProfileMenu(false);
+    }, [location]);
 
     const clickSearch = () => {
         setSearch(true);
@@ -13,6 +25,15 @@ const Header = ({ setmodalOpen }) => {
         setmodalOpen(0);
     };
 
+    const dispatch = useDispatch();
+    const Login = useSelector(state => state.Login);
+
+    function Logout() {
+        dispatch({ type: 'LOGOUT' });
+    }
+    function dropMenu() {
+        setProfileMenu(!profileMenu);
+    }
     return (
         <header>
             <div className="mainbar">
@@ -64,23 +85,11 @@ const Header = ({ setmodalOpen }) => {
                                             fontWeight="500"
                                         >
                                             <g fill="#36F">
-                                                <g>
-                                                    <g>
-                                                        <g>
-                                                            <g>
-                                                                <g>
-                                                                    <g>
-                                                                        <text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)">
-                                                                            <tspan x="0" y="8">
-                                                                                New
-                                                                            </tspan>
-                                                                        </text>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
+                                                <text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)">
+                                                    <tspan x="0" y="8">
+                                                        New
+                                                    </tspan>
+                                                </text>
                                             </g>
                                         </g>
                                     </svg>
@@ -103,23 +112,11 @@ const Header = ({ setmodalOpen }) => {
                                             fontWeight="500"
                                         >
                                             <g fill="#36F">
-                                                <g>
-                                                    <g>
-                                                        <g>
-                                                            <g>
-                                                                <g>
-                                                                    <g>
-                                                                        <text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)">
-                                                                            <tspan x="0" y="8">
-                                                                                Beta
-                                                                            </tspan>
-                                                                        </text>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
+                                                <text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)">
+                                                    <tspan x="0" y="8">
+                                                        Beta
+                                                    </tspan>
+                                                </text>
                                             </g>
                                         </g>
                                     </svg>
@@ -133,9 +130,41 @@ const Header = ({ setmodalOpen }) => {
                     <div id="searchbutton" onClick={clickSearch}>
                         {SerachSVG()}
                     </div>
-                    <div id="modalbutton" onClick={handleClickButton}>
-                        회원가입/로그인
-                    </div>
+                    {Login ? (
+                        <>
+                            <div className="headerprofile">
+                                <img src={bell} alt="bell" />
+                                <img src={user} onClick={dropMenu} alt="user" />
+                            </div>
+                            {profileMenu ? (
+                                <div id="profileMenu">
+                                    <ul>
+                                        <li>MY 윈티드</li>
+                                        <li>프로필</li>
+                                        <hr />
+                                        <li>지원 현황</li>
+                                        <li>제안받기 현황</li>
+                                        <li>좋아요 </li>
+                                        <li>
+                                            <Link to="/BookMark"> 북마크</Link>
+                                        </li>
+                                        <hr />
+                                        <li>추천</li>
+                                        <li>포인트</li>
+                                        <hr />
+                                        <li onClick={Logout}>로그아웃</li>
+                                    </ul>
+                                </div>
+                            ) : (
+                                ''
+                            )}
+                        </>
+                    ) : (
+                        <div id="modalbutton" onClick={handleClickButton}>
+                            회원가입/로그인
+                        </div>
+                    )}
+
                     <div id="vborder"></div>
                     <div className="dashboardButton">기업 서비스</div>
                 </div>
