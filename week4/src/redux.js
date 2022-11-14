@@ -31,6 +31,7 @@ const Redux = () => {
                 <Provider store={store}>
                     <Left1/>
                     <Right1/>
+                    
                 </Provider>
             </div>
         </div>
