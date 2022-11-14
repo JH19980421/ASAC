@@ -11,7 +11,7 @@ function Keyword(props) {
 					<Link to={`/job/${dbs.id}`}>
 						<img
 							style={{
-								width: '250px',
+								width: '251px',
 								height: '150px',
 							}}
 							key={dbs.id}
