@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import styled from 'styled-components';
 
 import bell from '../../../images/bell.png';
 import user from '../../../images/user.png';
@@ -14,8 +15,7 @@ const Header = ({ setmodalOpen }) => {
     const location = useLocation();
 
     useEffect(() => {
-        console.log('Location changed');
-        setProfileMenu(false);
+        if (profileMenu) setProfileMenu(false);
     }, [location]);
 
     const clickSearch = () => {
@@ -130,6 +130,7 @@ const Header = ({ setmodalOpen }) => {
                     <div id="searchbutton" onClick={clickSearch}>
                         {SerachSVG()}
                     </div>
+
                     {Login ? (
                         <>
                             <div className="headerprofile">
@@ -174,4 +175,7 @@ const Header = ({ setmodalOpen }) => {
     );
 };
 
+const Vborder = styled.div`
+    border: 1px solid gray;
+`;
 export default Header;

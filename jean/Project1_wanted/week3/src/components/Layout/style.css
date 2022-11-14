@@ -2109,6 +2109,7 @@ select {
     line-height: 60px;
 }
 .sign button {
+    font-size: 24px;
     width: 90%;
     height: 60px;
     border-radius: 30px;

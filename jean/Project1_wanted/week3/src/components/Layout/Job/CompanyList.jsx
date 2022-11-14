@@ -20,7 +20,7 @@ const CompanyList = ({ page, loading, bookMark }) => {
     }, []);
 
     const dispatch = useDispatch();
-    const state = useSelector(state => state.BookMark);
+    const BookMark = useSelector(state => state.BookMark);
 
     function bookMarkClick(e) {
         dispatch({ type: 'ADD', id: e.target.id });
@@ -46,7 +46,7 @@ const CompanyList = ({ page, loading, bookMark }) => {
                             </div>
                         </Link>
                         <div className="bookmark_check">
-                            {state.includes(`${e.id}`) ? (
+                            {BookMark.includes(`${e.id}`) ? (
                                 <img src={bookmarkdark} alt="" id={e.id} onClick={bookMarkClick} />
                             ) : (
                                 <img src={bookmarkwhite} alt="" id={e.id} onClick={bookMarkClick} />

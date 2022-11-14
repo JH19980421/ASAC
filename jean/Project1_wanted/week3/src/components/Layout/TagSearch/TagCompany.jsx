@@ -8,7 +8,7 @@ const TagCompany = props => {
 
     function tagReturn(e) {
         let str = '';
-        console.log(e);
+
         for (let t of e) {
             str = str + '  ' + t;
         }

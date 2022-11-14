@@ -10,9 +10,6 @@ const Search = ({ setSearch }) => {
     function onkeypress(e) {
         if (e.key == 'Enter') {
             let str = e.target.value;
-            if (str.charAt(0) != '#') {
-                str = '#' + str;
-            }
 
             const list = [str, -1];
 

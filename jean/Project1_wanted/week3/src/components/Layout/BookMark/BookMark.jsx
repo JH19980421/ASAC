@@ -9,18 +9,23 @@ import bookmarkdark from '../../../images/bookmarkdark.png';
 const BookMark = () => {
     const state = useSelector(state => state.BookMark);
     const Login = useSelector(state => state.Login);
+
     const [data, setData] = useState(Data.CompanyList);
+
     const dispatch = useDispatch();
     function bookMarkClick(e) {
         dispatch({ type: 'ADD', id: e.target.id });
     }
+
+    const BookMark = useSelector(state => state.BookMark);
     useEffect(() => {
         setData(
             Data.CompanyList.filter(e => {
-                return state.includes('' + e.id);
+                return BookMark.includes('' + e.id);
             })
         );
-    }, [state]);
+    }, [BookMark]);
+
     const toString = e => {
         return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
@@ -30,7 +35,7 @@ const BookMark = () => {
             <div className="job_main">
                 <h5>북마크</h5>
                 <div className="company_list">
-                    {state.length &&Login ? (
+                    {BookMark.length && Login ? (
                         data.map(e => (
                             <div className="item">
                                 <Link to={`../Jobdetail/${e.id}`}>
