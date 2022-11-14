@@ -42,6 +42,7 @@
 	right: 0;
 	flex-direction: row;
 	z-index: 1;
+
 	justify-content: flex-end;
 	align-items: flex-start;
 	border: none;
