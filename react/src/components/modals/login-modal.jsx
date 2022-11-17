@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import styled from 'styled-components';
 
 import "../../css/modals/login-modal.css";
 
@@ -275,5 +276,7 @@ function LoginModal(props) {
         </>
     )
 }
+
+
 
 export default LoginModal;
