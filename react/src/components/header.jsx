@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
@@ -23,12 +23,8 @@ function Header() {
     const [isLogin, setIsLogin] = useState(false);
 
     useEffect(() => {
-        console.log(window.localStorage.getItem('id'));
+        // console.log(window.localStorage.getItem('id'));
     }, []);
-
-    // useMemo(() => {
-    //     setMenuName(menuName);
-    // }, [menuName]);
 
     const onClickJoinLogin = () => {
         openLoginModal = setOpenLoginModal(!openLoginModal);
@@ -185,9 +181,9 @@ const HeaderContainer = styled.div`
 
     flex-grow: 1;
 
-    font-size: 14px;
+    font-size: 0.875rem;
 
-    padding: 0 225px;
+    padding: 0 14.0625rem;
 
     height: 50px;
 `;

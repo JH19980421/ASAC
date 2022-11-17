@@ -11,7 +11,7 @@ function RecruitingList(props) {
     const recruitingList = props.recruitingList? props.recruitingList: recruitingListAll;
 
     useEffect(() => {
-        console.log('recruit', props, recruitingList);
+        // console.log('recruit', props, recruitingList);
     }, []);
 
     return (
