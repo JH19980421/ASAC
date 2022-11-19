@@ -402,7 +402,8 @@ template {
 }
 
 .filter .filterlist {
-    width: 1060px;
+    width: 90%;
+    max-width: 1060px;
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -489,14 +490,20 @@ header .mainbar {
     position: relative;
     display: inline-block;
 }
-
-.dropdown-content {
-    border: 1px solid gainsboro;
+.dropbtn {
+    padding: 17px;
+    padding-left: 0px;
+    margin-right: 25px;
+}
+/* .dropdown-content {
+    overscroll-behavior: contain;
+    border: 1px solid rgb(247, 238, 238);
     display: none;
     position: absolute;
-    margin-top: 0px;
+    top: 35px;
+    left: -10px;
     z-index: 1;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 200px);
     width: 220px;
     background-color: #fff;
     overflow-y: auto;
@@ -511,15 +518,82 @@ header .mainbar {
     line-height: 40px;
     letter-spacing: normal;
 }
-.dropdown-content a:first-child {
+.dropdown-content a:hover {
+    background-color: gainsboro;
+    color: #046afe;
 }
+.sub_dropdown-content {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+}
+.dropdown-content a:hover .sub_dropdown-content {
+    display: block;
+} */
+
 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -10px;
+    z-index: 1;
+    width: 200px;
+    background-color: #fff;
+}
+.dropdown-content ul {
+    overscroll-behavior: contain;
+    border: 1px solid gainsboro;
+    width: 200px;
+    height: calc(70vh - 150px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.customizescrollbar::-webkit-scrollbar {
+    display: block;
+}
+
+.dropdown-content ul:hover::-webkit-scrollbar {
+    width: 0px;
+    opacity: 0;
+    display: none;
+}
+.dropdown-content li {
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0px 10px;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: normal;
+}
+
+.dropdown-content li:hover {
+    background-color: gainsboro;
+}
+
+.dropdown-content ul ul {
+    background-color: #fff;
+    border-left: 1px solid gainsboro;
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+.dropdown-content li:hover > ul {
     display: block;
 }
 
 header .mainbar .left {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 15px;
 }
 
@@ -533,12 +607,13 @@ header .mainbar img.logo {
 
 header .mainbar .center {
     display: flex;
-    justify-content: space-evenly;
+    width: 50%;
+    justify-content: space-between;
 }
 
-header .mainbar .center a {
+/* header .mainbar .center a {
     padding: 15px;
-}
+} */
 header .mainbar .center a:hover {
     border-bottom: 1px solid blue;
 }
@@ -582,7 +657,8 @@ header .mainbar .right li {
 
 .category {
     display: flex;
-    width: 1060px;
+    width: 90%;
+    max-width: 1060px;
     background: #fff;
     padding-top: 80px;
     margin: auto;
@@ -689,15 +765,22 @@ header .mainbar .right li {
     display: flex;
 }
 
+.keywordsgradient {
+    width: 100px;
+    height: 32px;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
 .filter .keywords {
     display: flex;
-    margin: 30px 0;
+
     position: relative;
     margin: auto;
     overflow: hidden;
-
-    width: 1060px;
-    height: 40px;
+    max-width: 1060px;
+    width: 90%;
+    height: 32px;
 }
 
 .filter .keywords .keywordslides {
@@ -741,7 +824,7 @@ header .mainbar .right li {
 }
 
 .filter .keywords .keywordsbutton img {
-    width: 16px;
+    width: 12px;
 }
 
 .filter .keywords .keywordsbutton span:first-child {
@@ -1590,11 +1673,9 @@ p {
 .job_main .company_list {
     display: flex;
     flex-wrap: wrap;
-    flex-wrap: wrap;
     justify-content: flex-start;
-
     flex-direction: row;
-    gap: 10px;
+    gap: 1%;
 
     margin-top: 50px;
 }
@@ -1621,8 +1702,8 @@ p {
     height: 18px !important;
 }
 .job_main .company_list .item img {
-    height: 187px;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -2666,4 +2747,128 @@ select {
 }
 #profileMenu li:last-child {
     background-color: rgb(243, 243, 243);
+}
+#singup {
+    cursor: pointer;
+    line-height: 15px;
+    display: none;
+    color: blue;
+    border: 1px solid rgb(63, 63, 238);
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+}
+
+@media all and (max-width: 1060px) {
+    .dropdown-content {
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 55px;
+    }
+    header {
+        height: 110px;
+    }
+    header .mainbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    header .mainbar .left {
+        padding: 5px 0;
+        width: 100%;
+
+        margin-bottom: 15px;
+    }
+    header .mainbar .center {
+        padding: 1% 0;
+        width: 70%;
+    }
+
+    #modalbutton {
+        display: none;
+    }
+    #singup {
+        display: block;
+    }
+    header .mainbar .right {
+    }
+    .headerprofile {
+        display: none;
+    }
+
+    #vborder {
+        display: none;
+    }
+    .dashboardButton {
+        display: none;
+    }
+    .category {
+        padding-top: 150px;
+    }
+    .filter {
+        top: 110px;
+    }
+    .filter .filterlist {
+        max-width: none;
+    }
+    .filter .keywords {
+        max-width: none;
+    }
+    .job_main {
+        width: 90%;
+        padding-top: 20px;
+    }
+    .job_main .company_list .item {
+        max-width: 400px;
+        width: 49%;
+    }
+    .dropdown-content ul {
+        width: 100%;
+    }
+    .dropdown-content ul ul {
+        left: 50%;
+        width: 50%;
+    }
+    .dropdown-content ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* .dropdown-content ul:hover::-webkit-scrollbar {
+        width: 0px;
+        opacity: 0;
+        display: none;
+    }
+    .dropdown-content li {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 0px 10px;
+        font-style: normal;
+        line-height: 40px;
+        letter-spacing: normal;
+    } */
+}
+@media all and (max-width: 650px) {
+    .center li:nth-child(7) {
+        display: none;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .center li:nth-child(6) {
+        display: none;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .center li:nth-child(5) {
+        display: none;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .center li:nth-child(4) {
+        display: none;
+    }
 }

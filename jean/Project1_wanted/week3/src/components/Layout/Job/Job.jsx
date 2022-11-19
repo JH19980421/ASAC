@@ -111,6 +111,7 @@ const Job = props => {
                             </li>
                         ))}
                     </ul>
+                    <div className="keywordsgradient"></div>
                     <p className="keywordsbutton">
                         <span className="prev">
                             <img src={require('../../../images/left-arrow.png')} alt="" />
@@ -124,7 +125,7 @@ const Job = props => {
 
             <div className="job_main">
                 <div className="bookmark">
-                    <Link to="/#">
+                    <Link to="/BookMark">
                         <p>
                             <svg width="22px" height="22px" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
                                 <path
@@ -142,7 +143,7 @@ const Job = props => {
                         </p>
                     </Link>
                 </div>
-                <Hiring />
+                {/* <Hiring /> */}
                 <CompanyList page={page} loading={loading} />
             </div>
         </div>

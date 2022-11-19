@@ -6,9 +6,14 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
     const [choice, setChoice] = useState([false, false, false]);
     const modal = useRef();
 
+    useEffect(() => {
+        console.log('아무거나');
+    }, [choice]);
+
     function choiceChange(e) {
         const idArray = [];
         choice.forEach(el => idArray.push(el));
+
         const value = e.target.alt;
         console.log(e.target.value);
         if (value == 0) {
