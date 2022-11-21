@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import styled from 'styled-components';
 
 import "../../css/modals/login-modal.css";
 
 import * as Validation from "../../utils/validation";
+import { ButtonPrimary } from "../styled/styled-common";
 
 const agreementItems = require("../../agreement-item.json");
 
@@ -102,7 +102,7 @@ function LoginModal(props) {
         if(checked) {
             agreementItems.forEach((item) => {
                 checkedItems.push(item.id);
-                setCheckedItems(checkedItems);
+                setCheckedItems([...checkedItems]);
             });
         } else {
             setCheckedItems([]);
@@ -147,11 +147,11 @@ function LoginModal(props) {
                     : null
                 }
 
-                <button 
-                    className="email-continue"
+                <ButtonPrimary
+                    width={"100%"}
                     onClick={() => gotoJoinModal(email)}
                     disabled={!activateButton}
-                >이메일로 계속하기</button>
+                >이메일로 계속하기</ButtonPrimary>
                 <p>or</p>
                 <p>다음 계정으로 계속하기</p>
                 <div className="sns-login-container">
@@ -266,11 +266,12 @@ function LoginModal(props) {
                 <div className="empty-space__medium"></div>
 
                 <div className="join-submit-container">
-                    <button 
-                        className="join-submit" 
+                    <ButtonPrimary 
+                        width={"93%"}
+                        className="join-submit"
                         onClick={completeJoin}
                         disabled={!completeJoinButton}
-                    >회원가입하기</button>
+                    >회원가입하기</ButtonPrimary>
                 </div>
             </div>
         </>

@@ -262,18 +262,7 @@ button {
 }
 
 .join-submit {
-    width: 93%;
-
     margin: 10px 10px;
-
-    background-color: #36f;
-    color: white;
-    font-size: 14px;
-
-    border: none;
-    border-radius: 30px;
-
-    padding: 15px 0;
 }
 .join-submit:disabled {
     background-color: #aaa;
