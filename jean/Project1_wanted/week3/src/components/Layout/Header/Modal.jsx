@@ -116,6 +116,20 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
 
         handleClickButton();
     }
+    const [minutes, setMinutes] = useState(4);
+    const [seconds, setSeconds] = useState(59);
+    const [timer, setTimer] = useState(false);
+    function timerStart() {
+        setTimer(true);
+    }
+
+    useEffect(() => {
+        if (!timer) return;
+        const t = setInterval(() => {
+            setSeconds(prev => parseInt(prev) - 1);
+        }, 1000);
+        return () => clearTimeout(t);
+    }, [timer, seconds]);
 
     function outsideClick(e) {
         if (!modal.current.contains(e.target)) handleClickButton();
@@ -257,13 +271,21 @@ const Modal = ({ setmodalOpen, modalOpen }) => {
                                 <div className="left">
                                     <input name="phonenumber" type="text" placeholder="(예시) 01034567890" onChange={phonecheck} value={phone} />
                                 </div>
-                                <div className="right">인증번호 받기</div>
+                                <div className="right" onClick={timerStart}>
+                                    인증번호 받기
+                                </div>
                             </div>
                             {phoneerror || phone.length == 0 ? '' : <div className="certificationError">올바른 전화번호를 입력해주세요.</div>}
-
                             <div className="certification_number">
                                 <input type="text" placeholder="인증번호를 입력해 주세요." id="certification_number" />
                             </div>
+                            {timer ? (
+                                <div id="timer">
+                                    {minutes}:{seconds}{' '}
+                                </div   >
+                            ) : (
+                                ''
+                            )}
                         </div>
                         <div className="password">
                             <h1>비밀번호</h1>
