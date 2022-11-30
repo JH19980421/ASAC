@@ -26,7 +26,7 @@ function Header() {
   }, []);
 
   const onClickJoinLogin = () => {
-    openLoginModal = setOpenLoginModal(!openLoginModal);
+    setOpenLoginModal(!openLoginModal);
   };
 
   const onClickSearchButton = () => {
