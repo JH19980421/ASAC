@@ -1,11 +1,11 @@
-import recruitingList from "../recruiting-list.json";
+import recruitingList from "../datas/recruiting-list.json";
 
 export function recruitingListByQuery(query) {
-    if(!query) {
+    if (!query) {
         return recruitingList;
     }
 
-    const filterResult = recruitingList.filter((item) => 
+    const filterResult = recruitingList.filter((item) =>
         new RegExp(query, "i").test(item.title)
     );
 
