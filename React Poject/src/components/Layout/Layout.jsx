@@ -7,9 +7,10 @@ import Header from './Header/Header';
 import Mainpage from './Main/Main';
 import Modal from './Header/Modal';
 import Job from './Job/Job';
+import CV from './CV/CV';
 import BookMark from './BookMark/BookMark';
-import Search from './Search';
-const Layout = props => {
+
+const Layout = (props) => {
     const [modalOpen, setmodalOpen] = useState(-1);
 
     return (
@@ -18,7 +19,7 @@ const Layout = props => {
             {modalOpen != -1 && <Modal setmodalOpen={setmodalOpen} modalOpen={modalOpen} />}
 
             <Routes>
-                <Route path="Search" element={<Search />} />
+                <Route path="CV" element={<CV />} />
                 <Route path="BookMark" element={<BookMark />} />
                 <Route path="TagSearch" element={<TagSearch />} />
                 <Route path="Job" element={<Job />} />

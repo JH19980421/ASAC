@@ -27,7 +27,7 @@ const Header = ({ setmodalOpen }) => {
     };
 
     const dispatch = useDispatch();
-    const Login = useSelector(state => state.Login);
+    const Login = useSelector((state) => state.Login);
 
     function Logout() {
         dispatch({ type: 'LOGOUT' });
@@ -47,11 +47,11 @@ const Header = ({ setmodalOpen }) => {
                         {/* overscroll-behavior: contain; */}
                         <DropdownContent>
                             <ul>
-                                {Number.menu.map(e => (
+                                {Number.menu.map((e) => (
                                     <li>
                                         {e}
                                         <ul>
-                                            {Number.menu.map(b => (
+                                            {Number.menu.map((b) => (
                                                 <li>{e} </li>
                                             ))}
                                         </ul>
@@ -62,7 +62,7 @@ const Header = ({ setmodalOpen }) => {
 
                         <Link to="/">
                             <img className="logo" src={require('../../../images/logo.png')} alt="logo" />
-                        </Link>                 
+                        </Link>
                     </Dropdown>
                     {/* <img src={ require('./images/logo.png') } /> */}
                     <Singup onClick={handleClickButton}>회원가입/로그인</Singup>
@@ -79,7 +79,7 @@ const Header = ({ setmodalOpen }) => {
                         <Link to="/">직군별 연봉</Link>
                     </li>
                     <li>
-                        <Link to="/">이력서</Link>
+                        <Link to="/CV">이력서</Link>
                     </li>
                     <li>
                         <Link to="/" className="" aria-label="">

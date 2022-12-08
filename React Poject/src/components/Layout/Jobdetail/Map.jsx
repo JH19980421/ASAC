@@ -19,6 +19,9 @@ const Map = () => {
             map: map,
             icon: {
                 url: markericon,
+                size: new naver.maps.Size(50, 50),
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(25, 25),
             },
         });
     }, []);

@@ -2,13 +2,12 @@ import React from 'react';
 import Data from '../Job/JobData.json';
 import { useState, useEffect, useCallback } from 'react';
 import { Provider, useSelector, useDispatch, connect } from 'react-redux';
-import CompanyList from '../Job/CompanyList';
 import { Routes, Route, Link } from 'react-router-dom';
 import bookmarkwhite from '../../../images/bookmarkwhite.png';
 import bookmarkdark from '../../../images/bookmarkdark.png';
 const BookMark = () => {
-    const state = useSelector(state => state.BookMark);
-    const Login = useSelector(state => state.Login);
+    const state = useSelector((state) => state.BookMark);
+    const Login = useSelector((state) => state.Login);
 
     const [data, setData] = useState(Data.CompanyList);
 
@@ -17,16 +16,16 @@ const BookMark = () => {
         dispatch({ type: 'ADD', id: e.target.id });
     }
 
-    const BookMark = useSelector(state => state.BookMark);
+    const BookMark = useSelector((state) => state.BookMark);
     useEffect(() => {
         setData(
-            Data.CompanyList.filter(e => {
+            Data.CompanyList.filter((e) => {
                 return BookMark.includes('' + e.id);
             })
         );
     }, [BookMark]);
 
-    const toString = e => {
+    const toString = (e) => {
         return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
@@ -36,7 +35,7 @@ const BookMark = () => {
                 <h5>북마크</h5>
                 <div className="company_list">
                     {BookMark.length && Login ? (
-                        data.map(e => (
+                        data.map((e) => (
                             <div className="item">
                                 <Link to={`../Jobdetail/${e.id}`}>
                                     <img src={e.src} alt="" />
